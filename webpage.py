@@ -445,5 +445,25 @@ def delete_user(username):
     
     return {"error": "User not found"}, 404
 
+@app.route("/api/toggle_search_lock", methods=["POST"])
+def toggle_search_lock():
+    if not session.get("user"):
+        return {"error": "Not logged in"}, 401
+    
+    state = load_state()
+    state["allow_searches"] = not state.get("allow_searches", True)
+    
+    # Clear searches when locking
+    if not state["allow_searches"]:
+        state["searches"] = []
+        
+    save_state(state)
+    
+    return {
+        "success": True, 
+        "allow_searches": state["allow_searches"],
+        "searches": state["searches"]
+    }
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)

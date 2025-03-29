@@ -10,6 +10,7 @@ from shared_state import load_state, save_state, start_file_monitor
 
 searches = []
 Rainbow = False 
+allow_searches = True
 
     
 
@@ -105,7 +106,10 @@ def update_searches():
     
 
 def search_data(searchphrase):
-    global root
+    global root, allow_searches
+    if not allow_searches:
+        messagebox.showerror("Error - blocked by admin", "Searches are disabled by admin")
+        return
     json_filepath = os.path.join(os.path.dirname(__file__), "dat", "utilities.json")
     with open(json_filepath, "r", encoding="utf-8") as file:
         data = json.load(file)
@@ -221,9 +225,10 @@ def main_ui():
         root.bind('<F11>', toggle_fullscreen)
 
     def update_from_state(state):
-        global searches, Rainbow
+        global searches, Rainbow, allow_searches
         searches = state["searches"]
         Rainbow = state["rainbow"]
+        allow_searches = state.get("allow_searches", True)
         if hasattr(root, 'search_history_frame'):
             root.after(0, update_searches)
             root.after(0, toggle_lights)
@@ -259,7 +264,7 @@ def main_ui():
             third_options_label.place(x=section_width*2.5, rely=0.2, anchor="center")
             
             close_button = tk.Button(root.settings_canvas, text="X", command=settings, font=("Arial", 12), bg='#808080', fg='red')
-            close_button.place(relx=0.999, rely=0.03, anchor="e")
+            close_button.place(relx=0.999, rely=0.03, anchor='e')
 
             def create_toggle(locationX, locationY, callFunction, sidetext, canvas_to_place_on, use_pack=False):
                 frame = tk.Frame(canvas_to_place_on, width=60, height=30, bg='#a0a0a0')
@@ -650,7 +655,10 @@ def main_ui():
         search_history_title.place(x=screen_width - 200, y=150)
         
         def clear_searches():
-            global searches
+            global searches, allow_searches
+            if not allow_searches:
+                messagebox.showerror("Error - blocked by admin", "clearing is disabled by admin")
+                return
             searches = []
             save_state({"searches": searches, "rainbow": Rainbow})  
             update_searches()

@@ -357,6 +357,9 @@
                     <button class="btn btn-terminal nav-button" onclick="window.location.href='/terminal'">
                         <i class="fas fa-terminal"></i> Terminal
                     </button>
+                    <button id="searchLockBtn" class="btn btn-warning nav-button" onclick="toggleSearchLock()">
+                        Lock Searches
+                    </button>
                 </div>
             </div>
             <div class="navbar-user">
@@ -379,6 +382,10 @@
     <div id="errorMessage" class="error-message">
         <span class="checkmark">✕</span>
         <span id="errorText">Error occurred</span>
+    </div>
+
+    <div id="searchLockedWarning" class="alert alert-warning" style="display: none; position: fixed; top: 70px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+        Searches are currently disabled by admin
     </div>
 
     <div id="confirmModal" class="confirm-modal">
@@ -603,6 +610,21 @@
                         const isActive = state.searches.includes(item.dataset.id);
                         item.classList.toggle('active', isActive);
                     });
+
+                    // Update search lock UI
+                    const btn = document.getElementById('searchLockBtn');
+                    const warning = document.getElementById('searchLockedWarning');
+                    if (state.allow_searches) {
+                        btn.textContent = 'Lock Searches';
+                        btn.classList.remove('btn-success');
+                        btn.classList.add('btn-warning');
+                        warning.style.display = 'none';
+                    } else {
+                        btn.textContent = 'Unlock Searches';
+                        btn.classList.remove('btn-warning');
+                        btn.classList.add('btn-success');
+                        warning.style.display = 'block';
+                    }
                 })
                 .catch(console.error);
         }, 1000);
@@ -1009,6 +1031,36 @@
             .catch(error => {
                 showErrorMessage('Error: ' + error);
             });
+        }
+
+        function toggleSearchLock() {
+            showConfirmModal(
+                'Toggle Search Lock',
+                'Are you sure you want to toggle the search lock?',
+                () => {
+                    fetch('/api/toggle_search_lock', {
+                        method: 'POST'
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            const btn = document.getElementById('searchLockBtn');
+                            const warning = document.getElementById('searchLockedWarning');
+                            if (data.allow_searches) {
+                                btn.textContent = 'Lock Searches';
+                                btn.classList.remove('btn-success');
+                                btn.classList.add('btn-warning');
+                                warning.style.display = 'none';
+                            } else {
+                                btn.textContent = 'Unlock Searches';
+                                btn.classList.remove('btn-warning');
+                                btn.classList.add('btn-success');
+                                warning.style.display = 'block';
+                            }
+                        }
+                    });
+                }
+            );
         }
 
         // Update button onclick handlers

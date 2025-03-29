@@ -7,7 +7,7 @@ STATE_FILE = os.path.join(os.path.dirname(__file__), "state.json")
 
 def init_state():
     if not os.path.exists(STATE_FILE):
-        save_state({"searches": [], "rainbow": False})
+        save_state({"searches": [], "rainbow": False, "allow_searches": True})
 
 def save_state(state):
     with open(STATE_FILE, 'w') as f:
@@ -16,10 +16,15 @@ def save_state(state):
 def load_state():
     try:
         with open(STATE_FILE, 'r') as f:
-            return json.load(f)
+            state = json.load(f)
+            # Ensure allow_searches exists in state
+            if "allow_searches" not in state:
+                state["allow_searches"] = True
+                save_state(state)
+            return state
     except:
         init_state()
-        return {"searches": [], "rainbow": False}
+        return {"searches": [], "rainbow": False, "allow_searches": True}
 
 def start_file_monitor(callback):
     def monitor():
