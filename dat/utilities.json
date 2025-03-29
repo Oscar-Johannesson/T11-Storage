@@ -1,0 +1,2783 @@
+[
+    [
+        {
+            "utility": "\u00ad10 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "10 ohm resistor",
+            "keywords": "10 ohm",
+            "Id": "1"
+        },
+        {
+            "utility": "\u00ad12 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "12 ohm resistor",
+            "keywords": "12 ohm",
+            "Id": "2"
+        },
+        {
+            "utility": "\u00ad15 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "15 ohm resistor",
+            "keywords": "15 ohm",
+            "Id": "3"
+        },
+        {
+            "utility": "\u00ad18 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "18 ohm resistor",
+            "keywords": "18 ohm",
+            "Id": "4"
+        },
+        {
+            "utility": "\u00ad22 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "22 ohm resistor",
+            "keywords": "22 ohm",
+            "Id": "5"
+        },
+        {
+            "utility": "\u00ad27 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "27 ohm resistor",
+            "keywords": "27 ohm",
+            "Id": "6"
+        },
+        {
+            "utility": "\u00ad33 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "33 ohm resistor",
+            "keywords": "\u00ad33 ohm",
+            "Id": "7"
+        },
+        {
+            "utility": "39 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "39 ohm resistor",
+            "keywords": "39 ohm",
+            "Id": "8"
+        },
+        {
+            "utility": "\u00ad47 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "47 ohm resistor",
+            "keywords": "\u00ad47 ohm",
+            "Id": "9"
+        },
+        {
+            "utility": "\u00ad56 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "56 ohm resistor",
+            "keywords": "\u00ad56 ohm",
+            "Id": "10"
+        },
+        {
+            "utility": "\u00ad68 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "68 ohm resistor",
+            "keywords": "\u00ad68 ohm",
+            "Id": "11"
+        },
+        {
+            "utility": "\u00ad82 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "82 ohm",
+            "keywords": "\u00ad82 ohm",
+            "Id": "12"
+        },
+        {
+            "utility": "\u00ad100 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "100 ohm resistor",
+            "keywords": "\u00ad100ohm",
+            "Id": "13"
+        },
+        {
+            "utility": "\u00ad120 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "120 ohm resistor",
+            "keywords": "120 ohm",
+            "Id": "14"
+        },
+        {
+            "utility": "\u00ad150 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "150 ohm resistor",
+            "keywords": "150 ohm",
+            "Id": "15"
+        },
+        {
+            "utility": "\u00ad180 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "180 ohm resistor",
+            "keywords": "180 ohm",
+            "Id": "16"
+        },
+        {
+            "utility": "220 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "220 ohm resistor",
+            "keywords": "220 ohm",
+            "Id": "17"
+        },
+        {
+            "utility": "\u00ad270 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad270 ohm resistor",
+            "keywords": "\u00ad270 ohm",
+            "Id": "18"
+        },
+        {
+            "utility": "\u00ad330 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad330 ohm resistor",
+            "keywords": "\u00ad330 ohm",
+            "Id": "19"
+        },
+        {
+            "utility": "\u00ad390 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad390 ohm resistor",
+            "keywords": "\u00ad390 ohm",
+            "Id": "20"
+        },
+        {
+            "utility": "\u00ad470 ohm ",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad470 ohm resistor",
+            "keywords": "\u00ad470 ohm ",
+            "Id": "21"
+        },
+        {
+            "utility": "\u00ad560 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad560 ohm resistor",
+            "keywords": "\u00ad560 ohm",
+            "Id": "22"
+        },
+        {
+            "utility": "\u00ad680 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad680 ohm resistor",
+            "keywords": "\u00ad680 ohm",
+            "Id": "23"
+        },
+        {
+            "utility": "\u00ad\u00ad820 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad\u00ad820 ohm resistor",
+            "keywords": "\u00ad\u00ad820 ohm",
+            "Id": "24"
+        },
+        {
+            "utility": "\u00ad1k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad1k ohm resistor",
+            "keywords": "\u00ad1k 1000 ohm",
+            "Id": "25"
+        },
+        {
+            "utility": "\u00ad1.2k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad1.2 ohm resistor",
+            "keywords": "\u00ad1.2k 1200 ohm",
+            "Id": "26"
+        },
+        {
+            "utility": "\u00ad1.5k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad1.5k ohm resistor",
+            "keywords": "\u00ad1.5k 1500 ohm",
+            "Id": "27"
+        },
+        {
+            "utility": "\u00ad1.8k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad1.8k ohm resistor",
+            "keywords": "\u00ad1.8k 1800 ohm",
+            "Id": "28"
+        },
+        {
+            "utility": "\u00ad2.2k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad2.2k ohm resistor",
+            "keywords": "\u00ad2.2k 2200 ohm",
+            "Id": "29"
+        },
+        {
+            "utility": "\u00ad2.7k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad2.7k ohm resistor",
+            "keywords": "\u00ad2.7k 2700 ohm",
+            "Id": "30"
+        },
+        {
+            "utility": "\u00ad3.3k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad3.3k ohm resistor",
+            "keywords": "\u00ad3.3k 3300 ohm",
+            "Id": "31"
+        },
+        {
+            "utility": "\u00ad3.9k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad3.9k ohm resistor",
+            "keywords": "\u00ad3.9k 3900 ohm",
+            "Id": "32"
+        },
+        {
+            "utility": "\u00ad4.7k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad4.7k ohm resistor",
+            "keywords": "\u00ad4.7k 4700 ohm",
+            "Id": "33"
+        },
+        {
+            "utility": "\u00ad\u00ad5.6k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad\u00ad5.6k ohm resistor",
+            "keywords": "\u00ad\u00ad5.6k 5600 ohm",
+            "Id": "34"
+        },
+        {
+            "utility": "\u00ad6.8k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad6.8k ohm resistor",
+            "keywords": "\u00ad6.8k 6800 ohm",
+            "Id": "35"
+        },
+        {
+            "utility": "\u00ad8.2k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad8.2k ohm resistor",
+            "keywords": "\u00ad8.2k 8200 ohm",
+            "Id": "36"
+        },
+        {
+            "utility": "\u00ad10k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad\u00ad10k ohm resistor",
+            "keywords": "\u00ad10k ohm",
+            "Id": "37"
+        },
+        {
+            "utility": "\u00ad12k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad12k ohm resistor",
+            "keywords": "\u00ad12k ohm",
+            "Id": "38"
+        },
+        {
+            "utility": "\u00ad\u00ad15k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad\u00ad15k ohm resistor",
+            "keywords": "\u00ad\u00ad15k ohm",
+            "Id": "39"
+        },
+        {
+            "utility": "\u00ad18k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad18k ohm resistor",
+            "keywords": "\u00ad18k ohm",
+            "Id": "40"
+        },
+        {
+            "utility": "\u00ad22k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad22k ohm resistor",
+            "keywords": "\u00ad22k ohm",
+            "Id": "41"
+        },
+        {
+            "utility": "\u00ad27k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad27k ohm resistor",
+            "keywords": "\u00ad27k ohm",
+            "Id": "42"
+        },
+        {
+            "utility": "\u00ad33k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad33k ohm resistor",
+            "keywords": "\u00ad33k ohm",
+            "Id": "43"
+        },
+        {
+            "utility": "\u00ad39k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad39k ohm resistor",
+            "keywords": "\u00ad39k ohm",
+            "Id": "44"
+        },
+        {
+            "utility": "\u00ad47k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad47k ohm resistor",
+            "keywords": "\u00ad47k ohm",
+            "Id": "45"
+        },
+        {
+            "utility": "\u00ad56k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad56k ohm resistor",
+            "keywords": "\u00ad56k ohm",
+            "Id": "46"
+        },
+        {
+            "utility": "\u00ad68k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad68k ohm resistor",
+            "keywords": "\u00ad68k ohm",
+            "Id": "47"
+        },
+        {
+            "utility": "\u00ad82k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad82k ohm resistor ",
+            "keywords": "\u00ad82k ohm",
+            "Id": "48"
+        },
+        {
+            "utility": "\u00ad100k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad100k ohm resistor",
+            "keywords": "\u00ad100k ohm",
+            "Id": "49"
+        },
+        {
+            "utility": "\u00ad120k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad120k ohm resistor",
+            "keywords": "\u00ad120k ohm",
+            "Id": "50"
+        },
+        {
+            "utility": "\u00ad150k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad150k ohm resistor",
+            "keywords": "\u00ad150k ohm",
+            "Id": "51"
+        },
+        {
+            "utility": "\u00ad180k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad180k ohm resistor",
+            "keywords": "\u00ad180k ohm",
+            "Id": "52"
+        },
+        {
+            "utility": "\u00ad220k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad220k ohm resistor",
+            "keywords": "\u00ad220k ohm",
+            "Id": "53"
+        },
+        {
+            "utility": "\u00ad270k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad270k ohm resistor",
+            "keywords": "\u00ad270k ohm",
+            "Id": "54"
+        },
+        {
+            "utility": "\u00ad330k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad330k ohm resistor",
+            "keywords": "\u00ad330k ohm",
+            "Id": "55"
+        },
+        {
+            "utility": "\u00ad390k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad390k ohm resistor",
+            "keywords": "\u00ad390k ohm",
+            "Id": "56"
+        },
+        {
+            "utility": "\u00ad470k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad470k ohm resistor",
+            "keywords": "\u00ad470k ohm",
+            "Id": "57"
+        },
+        {
+            "utility": "560k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "560k ohm resistor",
+            "keywords": "560k ohm",
+            "Id": "58"
+        },
+        {
+            "utility": "\u00ad680k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad680k ohm resistor",
+            "keywords": "\u00ad680k ohm",
+            "Id": "59"
+        },
+        {
+            "utility": "\u00ad820k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "\u00ad820k ohm resistor",
+            "keywords": "\u00ad820k ohm",
+            "Id": "60"
+        }
+    ],
+    [
+        {
+            "utility": "\u00ad1M ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "1M ohm resistor",
+            "keywords": "1M ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "61"
+        },
+        {
+            "utility": "\u00adSIL 100 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "SIL 100 ohm resistor",
+            "keywords": "SIL 100 ohm ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "62"
+        },
+        {
+            "utility": "\u00adSIL 220 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "SIL 220 ohm resistor",
+            "keywords": "SIL 220 ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "63"
+        },
+        {
+            "utility": "\u00adSIL 470 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "SIL 470 ohm resistor",
+            "keywords": "SIL 470 ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "64"
+        },
+        {
+            "utility": "\u00adSIL 1k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "SIL 1k ohm resistor",
+            "keywords": "SIL 1k ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "65"
+        },
+        {
+            "utility": "\u00adSIL 2.2k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "SIL 2.2k ohm resistor",
+            "keywords": "SIL 2.2k ohm ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "66"
+        },
+        {
+            "utility": "\u00adSIL 4.7k ohm ",
+            "icon": "..img/icons/resistor.png",
+            "description": "SIL 4.7k ohm resistor",
+            "keywords": "SIL 4.7k ohm ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "67"
+        },
+        {
+            "utility": "\u00adSIL 6.8k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "SIL 6.8k ohm resistor",
+            "keywords": "SIL 6.8k ohm resistor",
+            "favourite": "false",
+            "number": "1",
+            "Id": "68"
+        },
+        {
+            "utility": "\u00adSIL 10k ohm ",
+            "icon": "..img/icons/resistor.png",
+            "description": "SIL 10k ohm resistor",
+            "keywords": "SIL 10k ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "69"
+        },
+        {
+            "utility": "\u00adSIL 68k ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "SIL 68k ohm resistor",
+            "keywords": "SIL 68k ohm ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "70"
+        },
+        {
+            "utility": "\u00ad10pF-27pF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "10pF-27pF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "71"
+        },
+        {
+            "utility": "\u00ad33pF-47pF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "33pF-47pF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "72"
+        },
+        {
+            "utility": "\u00ad100pF-150pF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "100pF-150pF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "73"
+        },
+        {
+            "utility": "\u00ad220pF-470pF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "220pF-470pF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "74"
+        },
+        {
+            "utility": "\u00ad1nF-2.2nF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "1nF-2.2nF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "75"
+        },
+        {
+            "utility": "\u00ad3.3nF-10nF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "3.3nF-10nF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "76"
+        },
+        {
+            "utility": "\u00ad22nF-47nF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "22nF-47nF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "77"
+        },
+        {
+            "utility": "\u00ad100nF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "100nF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "78"
+        },
+        {
+            "utility": "\u00ad220nF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "220nF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "79"
+        },
+        {
+            "utility": "\u00ad330nF-470nF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "330nF-470nF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "80"
+        },
+        {
+            "utility": "\u00ad1uF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "1uF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "81"
+        },
+        {
+            "utility": "\u00ad2.2uF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "2.2uF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "82"
+        },
+        {
+            "utility": "\u00ad3.3uF-4.7uF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "3.3uF-4.7uF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "83"
+        },
+        {
+            "utility": "\u00ad10uF/40v/63v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "10uF/40v/63v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "84"
+        },
+        {
+            "utility": "\u00ad22uF/16v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "22uF/16v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "85"
+        },
+        {
+            "utility": "\u00ad22uF/25v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "22uF/25v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "86"
+        },
+        {
+            "utility": "\u00ad22uF/50v-100v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "22uF/50v-100v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "87"
+        },
+        {
+            "utility": "\u00ad33uF-47uF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "33uF-47uF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "88"
+        },
+        {
+            "utility": "\u00ad100uF/16v/25v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "100uF/16v/25v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "89"
+        },
+        {
+            "utility": "\u00ad100uF/35v np",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "100uF/35v np",
+            "favourite": "false",
+            "number": "1",
+            "Id": "90"
+        },
+        {
+            "utility": "\u00ad100uF/63v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "100uF/63v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "91"
+        },
+        {
+            "utility": "\u00ad220uF/16v np",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "220uF/16v np",
+            "favourite": "false",
+            "number": "1",
+            "Id": "92"
+        },
+        {
+            "utility": "\u00ad220uF/25v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "220uF/25v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "93"
+        },
+        {
+            "utility": "\u00ad470uF",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "470uF",
+            "favourite": "false",
+            "number": "1",
+            "Id": "94"
+        },
+        {
+            "utility": "\u00ad1000uF/16v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "1000uF/16v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "95"
+        },
+        {
+            "utility": "\u00ad1000uF/25v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "1000uF/25v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "96"
+        },
+        {
+            "utility": "\u00ad1000uF/35v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "1000uF/35v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "97"
+        },
+        {
+            "utility": "\u00ad1000uF/50v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "1000uF/50v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "98"
+        },
+        {
+            "utility": "\u00ad2200uF/25v",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "2200uF/25v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "99"
+        },
+        {
+            "utility": "\u00adLED bl\u00e5",
+            "icon": "..img/icons/led.png",
+            "description": "",
+            "keywords": "LED bl\u00e5",
+            "favourite": "false",
+            "number": "1",
+            "Id": "100"
+        },
+        {
+            "utility": "\u00adTrimmkondensator",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "Trimmkondensator",
+            "favourite": "false",
+            "number": "1",
+            "Id": "101"
+        },
+        {
+            "utility": "\u00adLED r\u00f6d",
+            "icon": "..img/icons/led.png",
+            "description": "",
+            "keywords": "LED r\u00f6d",
+            "favourite": "false",
+            "number": "1",
+            "Id": "102"
+        },
+        {
+            "utility": "\u00adLED gr\u00f6n",
+            "icon": "..img/icons/led.png",
+            "description": "",
+            "keywords": "LED gr\u00f6n",
+            "favourite": "false",
+            "number": "1",
+            "Id": "103"
+        },
+        {
+            "utility": "\u00adLED gul",
+            "icon": "..img/icons/led.png",
+            "description": "",
+            "keywords": "LED gul",
+            "favourite": "false",
+            "number": "1",
+            "Id": "104"
+        },
+        {
+            "utility": "\u00adLED vit",
+            "icon": "..img/icons/led.png",
+            "description": "",
+            "keywords": "LED vit",
+            "favourite": "false",
+            "number": "1",
+            "Id": "105"
+        },
+        {
+            "utility": "\u00adPOT 220 ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "",
+            "keywords": "POT 220 ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "106"
+        },
+        {
+            "utility": "\u00adPOT 10k ohm",
+            "icon": "..img/icons/led.png",
+            "description": "",
+            "keywords": "POT 10k ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "107"
+        },
+        {
+            "utility": "\u00adPOT 100k ohm ",
+            "icon": "..img/icons/resistor.png",
+            "description": "",
+            "keywords": "POT 100k ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "108"
+        },
+        {
+            "utility": "\u00adPOT 1M ohm",
+            "icon": "..img/icons/resistor.png",
+            "description": "",
+            "keywords": "POT 1M ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "109"
+        },
+        {
+            "utility": "\u00adDIL 8x330 ohm",
+            "icon": "..img/icons/led.png",
+            "description": "",
+            "keywords": "DIL 8x330 ohm",
+            "favourite": "false",
+            "number": "1",
+            "Id": "110"
+        },
+        {
+            "utility": "\u00adNTC-sensor",
+            "icon": "..img/icons/sensor.png",
+            "description": "",
+            "keywords": "NTC-sensor",
+            "favourite": "false",
+            "number": "1",
+            "Id": "111"
+        },
+        {
+            "utility": "\u00adR.fuktsensor",
+            "icon": "..img/icons/sensor.png",
+            "description": "",
+            "keywords": "Rfuktsensor",
+            "favourite": "false",
+            "number": "1",
+            "Id": "112"
+        },
+        {
+            "utility": "\u00adLDR-sensor",
+            "icon": "..img/icons/sensor.png",
+            "description": "",
+            "keywords": "LDR-sensor",
+            "favourite": "false",
+            "number": "1",
+            "Id": "113"
+        },
+        {
+            "utility": "\u00ad801S-sensor",
+            "icon": "..img/icons/motor.png",
+            "description": "",
+            "keywords": "801S-sensor",
+            "favourite": "false",
+            "number": "1",
+            "Id": "114"
+        },
+        {
+            "utility": "\u00adKTY84-sensor",
+            "icon": "..img/icons/sensor.png",
+            "description": "",
+            "keywords": "KTY84-sensor",
+            "favourite": "false",
+            "number": "1",
+            "Id": "115"
+        },
+        {
+            "utility": "\u00adPTC-resistor B598",
+            "icon": "..img/icons/resistor.png",
+            "description": "",
+            "keywords": "PTC-resistor B598",
+            "favourite": "false",
+            "number": "1",
+            "Id": "116"
+        },
+        {
+            "utility": "\u00adKond.Mikrofon",
+            "icon": "..img/icons/speaker.png",
+            "description": "",
+            "keywords": "Kond.Mikrofon",
+            "favourite": "false",
+            "number": "1",
+            "Id": "117"
+        },
+        {
+            "utility": "\u00adFerrit drossel 100uH/370mA",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "Ferrit drossel 100uH/370mA",
+            "favourite": "false",
+            "number": "1",
+            "Id": "118"
+        },
+        {
+            "utility": "Effektrossel 100uH/1.1A",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Effektrossel 100uH/1.1A",
+            "favourite": "false",
+            "number": "1",
+            "Id": "119"
+        },
+        {
+            "utility": "\u00adFerrit drossel 100mH/20mA",
+            "icon": "..img/icons/kondensator.png",
+            "description": "",
+            "keywords": "Ferrit drossel 100mH/20mA",
+            "favourite": "false",
+            "number": "1",
+            "Id": "120"
+        }
+    ],
+    [
+        {
+            "utility": "\u00adBC327/25",
+            "icon": "..img/icons/transistor.png",
+            "description": "PNP",
+            "keywords": "BC327/25 PNP",
+            "favourite": "false",
+            "number": "1",
+            "Id": "121"
+        },
+        {
+            "utility": "\u00adBC327/40",
+            "icon": "..img/icons/transistor.png",
+            "description": "PNP",
+            "keywords": "BC327/40 PNP",
+            "favourite": "false",
+            "number": "1",
+            "Id": "122"
+        },
+        {
+            "utility": "\u00adBC337/25",
+            "icon": "..img/icons/transistor.png",
+            "description": "NPN",
+            "keywords": "BC337/25 NPN",
+            "favourite": "false",
+            "number": "1",
+            "Id": "123"
+        },
+        {
+            "utility": "\u00adBC337/16",
+            "icon": "..img/icons/transistor.png",
+            "description": "NPN",
+            "keywords": "BC337/16 NPN",
+            "favourite": "false",
+            "number": "1",
+            "Id": "124"
+        },
+        {
+            "utility": "\u00adBC337/40",
+            "icon": "..img/icons/transistor.png",
+            "description": "NPN",
+            "keywords": "BC337/40 NPN",
+            "favourite": "false",
+            "number": "1",
+            "Id": "125"
+        },
+        {
+            "utility": "\u00adBD680G",
+            "icon": "..img/icons/transistor.png",
+            "description": "PNP",
+            "keywords": "BD680G PNP",
+            "favourite": "false",
+            "number": "1",
+            "Id": "126"
+        },
+        {
+            "utility": "\u00adBD139/16",
+            "icon": "..img/icons/transistor.png",
+            "description": "NPN",
+            "keywords": "BD139/16 NPN",
+            "favourite": "false",
+            "number": "1",
+            "Id": "127"
+        },
+        {
+            "utility": "\u00ad2N3055G",
+            "icon": "..img/icons/transistor.png",
+            "description": "NPN",
+            "keywords": "2N3055G NPN",
+            "favourite": "false",
+            "number": "1",
+            "Id": "128"
+        },
+        {
+            "utility": "BD178",
+            "icon": "..img/icons/transistor.png",
+            "description": "PNP",
+            "keywords": "BD178 PNP",
+            "favourite": "false",
+            "number": "1",
+            "Id": "129"
+        },
+        {
+            "utility": "\u00adBD649",
+            "icon": "..img/icons/transistor.png",
+            "description": "NPN",
+            "keywords": "BD649 NPN",
+            "favourite": "false",
+            "number": "1",
+            "Id": "130"
+        },
+        {
+            "utility": "BD137/16",
+            "icon": "..img/icons/transistor.png",
+            "description": "NPN",
+            "keywords": "BD137/16 NPN",
+            "favourite": "false",
+            "number": "1",
+            "Id": "131"
+        },
+        {
+            "utility": "BD138",
+            "icon": "..img/icons/transistor.png",
+            "description": "PNP",
+            "keywords": "BD138 PNP",
+            "favourite": "false",
+            "number": "1",
+            "Id": "131"
+        },
+        {
+            "utility": "\u00adBD679",
+            "icon": "..img/icons/transistor.png",
+            "description": "NPN",
+            "keywords": "BD679 NPN",
+            "favourite": "false",
+            "number": "1",
+            "Id": "132"
+        },
+        {
+            "utility": "\u00adIRL3502",
+            "icon": "..img/icons/transistor.png",
+            "description": "MOSFET",
+            "keywords": "IRL3502 MOSFET",
+            "favourite": "false",
+            "number": "1",
+            "Id": "133"
+        },
+        {
+            "utility": "\u00adLM358N",
+            "icon": "..img/icons/transistor.png",
+            "description": "Dual-Operational Amplifiers",
+            "keywords": "LM358N Dual Operational Amplifiers",
+            "favourite": "false",
+            "number": "1",
+            "Id": "134"
+        },
+        {
+            "utility": "\u00adNE5534P",
+            "icon": "..img/icons/transistor.png",
+            "description": "Low-Noise Operational Amplifiers",
+            "keywords": "NE5534P Low-Noise Operational Amplifiers",
+            "favourite": "false",
+            "number": "1",
+            "Id": "135"
+        },
+        {
+            "utility": "\u00adL7805 ",
+            "icon": "..img/icons/transistor.png",
+            "description": "Precision 1A Positive-Voltage Regulator",
+            "keywords": "L7805 Positive Voltage Regulators ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "136"
+        },
+        {
+            "utility": "L7809",
+            "icon": "..img/icons/transistor.png",
+            "description": " Precision 1A Positive-Voltage Regulator",
+            "keywords": "L7809 Positive Voltage Regulators ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "136"
+        },
+        {
+            "utility": "\u00adL7905",
+            "icon": "..img/icons/transistor.png",
+            "description": "Negative Voltage Regulators ",
+            "keywords": "L7905 Negative Voltage Regulators",
+            "favourite": "false",
+            "number": "1",
+            "Id": "137"
+        },
+        {
+            "utility": "\u00adLM317T",
+            "icon": "..img/icons/ic.png",
+            "description": "3-Terminal Positive Adjustable Voltage regulator",
+            "keywords": "LM317T 3-Terminal Positive Adjustable Voltage Regulator",
+            "favourite": "false",
+            "number": "1",
+            "Id": "138"
+        },
+        {
+            "utility": "LM7824",
+            "icon": "..img/icons/ic.png",
+            "description": "3-Terminal Positive Adjustable Voltage Regulator",
+            "keywords": "LM7824 3-Terminal Positive Voltage Regulator",
+            "favourite": "false",
+            "number": "1",
+            "Id": "138"
+        },
+        {
+            "utility": "\u00adMC7812CT",
+            "icon": "..img/icons/transistor.png",
+            "description": "3-Terminal Positive Voltage Regulator ",
+            "keywords": "MC7812CT 3-Terminal Positive Voltage Regulators",
+            "favourite": "false",
+            "number": "1",
+            "Id": "139"
+        },
+        {
+            "utility": "\u00ad2N5064",
+            "icon": "..img/icons/transistor.png",
+            "description": "MOSTFET",
+            "keywords": "2N5064  MOS Field Effect Transistor MOSTFET",
+            "favourite": "false",
+            "number": "1",
+            "Id": "140"
+        },
+        {
+            "utility": "\u00adTIC106D",
+            "icon": "..img/icons/transistor.png",
+            "description": "PNP",
+            "keywords": "TIC106D PNP",
+            "favourite": "false",
+            "number": "1",
+            "Id": "141"
+        },
+        {
+            "utility": "\u00ad2N5060",
+            "icon": "..img/icons/transistor.png",
+            "description": "Silicon Controlled Rectifiers",
+            "keywords": "2N5060 Silicon controlled Rectifiers",
+            "favourite": "false",
+            "number": "1",
+            "Id": "142"
+        },
+        {
+            "utility": "\u00adJ-FET n-transistor",
+            "icon": "..img/icons/transistor.png",
+            "description": "J-FET n-transistor N-CHANNEL",
+            "keywords": "J-FET n-trasistor N-CHANNEL",
+            "favourite": "false",
+            "number": "1",
+            "Id": "143"
+        },
+        {
+            "utility": "\u00adULN2003",
+            "icon": "..img/icons/ic.png",
+            "description": "Darlington Transistor Array Driver",
+            "keywords": "ULN2003 Darlington Transistor Array Driver ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "144"
+        },
+        {
+            "utility": "\u00adULN2803",
+            "icon": "..img/icons/ic.png",
+            "description": "Dalington Pair",
+            "keywords": "ULN2803 Dalington Pair",
+            "favourite": "false",
+            "number": "1",
+            "Id": "145"
+        },
+        {
+            "utility": "\u00adIN5822",
+            "icon": "..img/icons/diode.png",
+            "description": "Low Drop Power Schottky Rectifier",
+            "keywords": "IN5822 Low Drop Power Schottky Rectifier",
+            "favourite": "false",
+            "number": "1",
+            "Id": "146"
+        },
+        {
+            "utility": "\u00adIN4007",
+            "icon": "..img/icons/diode.png",
+            "description": "General Purpose Plastic Rectifier ",
+            "keywords": "IN4007 General Purpose Plastic Rectifier",
+            "favourite": "false",
+            "number": "1",
+            "Id": "147"
+        },
+        {
+            "utility": "\u00adIN4148",
+            "icon": "..img/icons/diode.png",
+            "description": "Small Signal Fast Switching Diodes",
+            "keywords": "IN4148 \u015amall Signal Fast Switching Diodes",
+            "favourite": "false",
+            "number": "1",
+            "Id": "148"
+        },
+        {
+            "utility": "\u00adADC0804LCN",
+            "icon": "..img/icons/ic.png",
+            "description": "Analog to Digital Converters ",
+            "keywords": "ADC0804LCN analog to Digital Converters ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "149"
+        },
+        {
+            "utility": "\u00adZenerdiod 5.1v",
+            "icon": "..img/icons/ic.png",
+            "description": "Silicon Planer Power Zener Diodes ",
+            "keywords": "Zenerdiod 5.1v Silicon Planer Power Zener Diodes",
+            "favourite": "false",
+            "number": "1",
+            "Id": "150"
+        },
+        {
+            "utility": "\u00adZenerdiod 3v-24v",
+            "icon": "..img/icons/diode.png",
+            "description": "Silicon Planer Power Zener Diodes",
+            "keywords": "Zenerdiod 3v-24v Silicon Planer Power Zener diodes ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "151"
+        },
+        {
+            "utility": "\u00adZenerdiod 2.4v-11v",
+            "icon": "..img/icons/diode.png",
+            "description": "Silicon Planer Power Zener Diodes",
+            "keywords": "Zenerdiod 2.4v-11v Silicon Planer Power Zener Diodes",
+            "favourite": "false",
+            "number": "1",
+            "Id": "153"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "155"
+        },
+        {
+            "utility": "\u00ad3st 7-segment display",
+            "icon": "..img/icons/diode.png",
+            "description": "Displays 3 Numbers ",
+            "keywords": "3st 7-segment display",
+            "favourite": "false",
+            "number": "1",
+            "Id": "161"
+        },
+        {
+            "utility": "\u00ad7-segment display",
+            "icon": "..img/icons/diode.png",
+            "description": "Displays 1 Number ",
+            "keywords": "7-segment display",
+            "favourite": "false",
+            "number": "1",
+            "Id": "163"
+        },
+        {
+            "utility": "\u00ad4st 7-segment display",
+            "icon": "..img/icons/diode.png",
+            "description": "Displays 4 Numbers",
+            "keywords": "4st 7-segment display",
+            "favourite": "false",
+            "number": "1",
+            "Id": "165"
+        },
+        {
+            "utility": "\u00adS\u00e4kring 200mA",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "S\u00e4kring 200mA",
+            "favourite": "false",
+            "number": "1",
+            "Id": "166"
+        },
+        {
+            "utility": "S\u00e4kring 500mA",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "S\u00e4kring 500mA",
+            "favourite": "false",
+            "number": "1",
+            "Id": "168"
+        },
+        {
+            "utility": "\u00adS\u00e4kring 10A/600v",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "S\u00e4kring 10A/600v",
+            "favourite": "false",
+            "number": "1",
+            "Id": "170"
+        },
+        {
+            "utility": "\u00adFiberoptik Kablage",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Fiberoptik Kablage",
+            "favourite": "false",
+            "number": "1",
+            "Id": "178"
+        }
+    ],
+    [
+        {
+            "utility": "\u00adTOCP155",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "TOCP155",
+            "favourite": "false",
+            "number": "1",
+            "Id": "181"
+        },
+        {
+            "utility": "\u00adTOTX173",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "TOTX173",
+            "favourite": "false",
+            "number": "1",
+            "Id": "182"
+        },
+        {
+            "utility": "\u00adTOTX141",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "TOTX141",
+            "favourite": "false",
+            "number": "1",
+            "Id": "183"
+        },
+        {
+            "utility": "\u00adDammk\u00e5pa",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Dammk\u00e5pa",
+            "favourite": "false",
+            "number": "1",
+            "Id": "184"
+        },
+        {
+            "utility": "\u00adTOTX179/P",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "TOTX179/P",
+            "favourite": "false",
+            "number": "1",
+            "Id": "185"
+        },
+        {
+            "utility": "\u00adTORX173",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "TORX173",
+            "favourite": "false",
+            "number": "1",
+            "Id": "186"
+        },
+        {
+            "utility": "\u00adTORX141",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "TORX141",
+            "favourite": "false",
+            "number": "1",
+            "Id": "187"
+        },
+        {
+            "utility": "\u00adTORX179",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "TORX179",
+            "favourite": "false",
+            "number": "1",
+            "Id": "188"
+        },
+        {
+            "utility": "\u00adTORX111 ",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "TORX111 ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "189"
+        },
+        {
+            "utility": "TOTX111",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "description",
+            "keywords": "TOTX111",
+            "favourite": "false",
+            "number": "1",
+            "Id": "189"
+        },
+        {
+            "utility": "\u00adBPW34 ",
+            "icon": "..img/icons/diode.png",
+            "description": "Silicon PIN Photodiode ",
+            "keywords": "BPW34 Silicon PIN Photodiode",
+            "favourite": "false",
+            "number": "1",
+            "Id": "190"
+        },
+        {
+            "utility": "BPW41N",
+            "icon": "..img/icons/diode.png",
+            "description": "Silicon PIN Photodiode",
+            "keywords": "BPW41N Silicon PIN Photodiode",
+            "favourite": "false",
+            "number": "1",
+            "Id": "190"
+        },
+        {
+            "utility": "\u00adBP104F",
+            "icon": "..img/icons/diode.png",
+            "description": "Silicon PIN Photodiode",
+            "keywords": "BP104F Silicon PIN Photodiode ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "191"
+        },
+        {
+            "utility": "S1337-66BR",
+            "icon": "..img/icons/diode.png",
+            "description": "Si Photodiode",
+            "keywords": "S1337-66BR Si Photodiode",
+            "favourite": "false",
+            "number": "1",
+            "Id": "191"
+        },
+        {
+            "utility": "PT5529B",
+            "icon": "..img/icons/transistor.png",
+            "description": "Silicon Phototransistor",
+            "keywords": "PT5529B Silicon Phototransistor ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "192"
+        },
+        {
+            "utility": "\u00adSFH300 ",
+            "icon": "..img/icons/transistor.png",
+            "description": "Silicon NPN Phototransistor ",
+            "keywords": "SFH300 NPN Phototransistor ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "192"
+        },
+        {
+            "utility": "\u00adPC817 ",
+            "icon": "..img/icons/ic.png",
+            "description": "DIP 4 Pin General Purpose Photocoupler ",
+            "keywords": "PC817 DIP 4 Pin Generial Purpose Photocoupler",
+            "favourite": "false",
+            "number": "1",
+            "Id": "193"
+        },
+        {
+            "utility": "SFH617A-3",
+            "icon": "..img/icons/ic.png",
+            "description": "Optocoupler",
+            "keywords": "SFH617A-3 Optocoupler",
+            "favourite": "false",
+            "number": "1",
+            "Id": "193"
+        },
+        {
+            "utility": "\u00adPC845",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "PC845 HIGH DENSITY MOUNTING PHOTOCOUPLER",
+            "favourite": "false",
+            "number": "1",
+            "Id": "194"
+        },
+        {
+            "utility": "\u00adITR8102 ",
+            "icon": "..img/icons/diode.png",
+            "description": "",
+            "keywords": "ITR8102 ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "195"
+        },
+        {
+            "utility": "ITR9608",
+            "icon": "..img/icons/diode.png",
+            "description": "description",
+            "keywords": "keywordITR9608",
+            "favourite": "false",
+            "number": "1",
+            "Id": "195"
+        },
+        {
+            "utility": "TCST1103",
+            "icon": "..img/icons/diode.png",
+            "description": "description",
+            "keywords": "TCST1103",
+            "favourite": "false",
+            "number": "1",
+            "Id": "196"
+        },
+        {
+            "utility": "\u00adTCST2103 ",
+            "icon": "..img/icons/diode.png",
+            "description": "",
+            "keywords": "TCST2103 ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "196"
+        },
+        {
+            "utility": "\u00adOP290A",
+            "icon": "..img/icons/diode.png",
+            "description": "",
+            "keywords": "OP290A ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "197"
+        },
+        {
+            "utility": "SFH485-2",
+            "icon": "..img/icons/diode.png",
+            "description": "description",
+            "keywords": "SFH485-2",
+            "favourite": "false",
+            "number": "1",
+            "Id": "197"
+        },
+        {
+            "utility": "LD271",
+            "icon": "..img/icons/diode.png",
+            "description": "description",
+            "keywords": "LD271",
+            "favourite": "false",
+            "number": "1",
+            "Id": "198"
+        },
+        {
+            "utility": "\u00adOP295A ",
+            "icon": "..img/icons/diode.png",
+            "description": "",
+            "keywords": "OP295A ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "198"
+        },
+        {
+            "utility": "\u00adIR7373C",
+            "icon": "..img/icons/diode.png",
+            "description": "",
+            "keywords": "IR7373C",
+            "favourite": "false",
+            "number": "1",
+            "Id": "199"
+        },
+        {
+            "utility": "\u00adHIR323C",
+            "icon": "..img/icons/diode.png",
+            "description": "",
+            "keywords": "HIR323C",
+            "favourite": "false",
+            "number": "1",
+            "Id": "200"
+        },
+        {
+            "utility": "\u00adIRM3628N3",
+            "icon": "..img/icons/diode.png",
+            "description": "",
+            "keywords": "IRM3638N3",
+            "favourite": "false",
+            "number": "1",
+            "Id": "201"
+        },
+        {
+            "utility": "\u00adDB154G",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "DB154G Bridge Rectifier",
+            "favourite": "false",
+            "number": "1",
+            "Id": "202"
+        },
+        {
+            "utility": "\u00ad\u00f6vrig likriktare",
+            "icon": "..img/icons/diode.png",
+            "description": "",
+            "keywords": "\u00f6vrig likriktare",
+            "favourite": "false",
+            "number": "1",
+            "Id": "203"
+        },
+        {
+            "utility": "\u00adOP741",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "OP741 Operational Amplifier ",
+            "favourite": "false",
+            "number": "1",
+            "Id": "204"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "205"
+        },
+        {
+            "utility": "\u00ad74LS00",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS00 NAND GATE",
+            "favourite": "false",
+            "number": "1",
+            "Id": "206"
+        },
+        {
+            "utility": "\u00ad74LS02",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS02 NOR GATE",
+            "favourite": "false",
+            "number": "1",
+            "Id": "207"
+        },
+        {
+            "utility": "\u00ad74LS04",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS04 NOT GATE",
+            "favourite": "false",
+            "number": "1",
+            "Id": "208"
+        },
+        {
+            "utility": "\u00ad74LS08",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS08 AND GATE",
+            "favourite": "false",
+            "number": "1",
+            "Id": "209"
+        },
+        {
+            "utility": "74LS32\u00ad",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS32 OR GATE",
+            "favourite": "false",
+            "number": "1",
+            "Id": "210"
+        },
+        {
+            "utility": "\u00ad74LS74",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS74 Dual D Flip-Flop",
+            "favourite": "false",
+            "number": "1",
+            "Id": "211"
+        },
+        {
+            "utility": "\u00ad74LS76",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74KLS76 Dual JK Flip-Flop",
+            "favourite": "false",
+            "number": "1",
+            "Id": "212"
+        },
+        {
+            "utility": "\u00ad74LS86",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS86 XOR GATE",
+            "favourite": "false",
+            "number": "1",
+            "Id": "213"
+        },
+        {
+            "utility": "\u00ad74LS132",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS132 Schmitt trigger NAND GATE",
+            "favourite": "false",
+            "number": "1",
+            "Id": "214"
+        },
+        {
+            "utility": "\u00ad74LS138",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS138 Decoders/demultiplexers",
+            "favourite": "false",
+            "number": "1",
+            "Id": "215"
+        },
+        {
+            "utility": "\u00ad74LS151",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS151 Selectors/Multiplexers",
+            "favourite": "false",
+            "number": "1",
+            "Id": "216"
+        },
+        {
+            "utility": "\u00ad74HC190",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74HC190 Presettable synchronous BCD decade up/down counter",
+            "favourite": "false",
+            "number": "1",
+            "Id": "217"
+        },
+        {
+            "utility": "\u00ad74LS194",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "74LS194 Bidirectional Universal shift Register",
+            "favourite": "false",
+            "number": "1",
+            "Id": "218"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "219"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "220"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "221"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "222"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "223"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "224"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "225"
+        },
+        {
+            "utility": "\u00adGL\u00d6DLAMPA",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "GL\u00d6DLAMPA",
+            "favourite": "false",
+            "number": "1",
+            "Id": "226"
+        },
+        {
+            "utility": "\u00adDIP-switch",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "DIP-switch",
+            "favourite": "false",
+            "number": "1",
+            "Id": "228"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "230"
+        },
+        {
+            "utility": "\u00adZIF Sockel",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "ZIF Sockel",
+            "favourite": "false",
+            "number": "1",
+            "Id": "238"
+        }
+    ],
+    [
+        {
+            "utility": "74HC08",
+            "icon": "..img/icons/ic.png",
+            "description": "AND Gate",
+            "keywords": "AND Gate 74hc08",
+            "favourite": "false",
+            "number": "1",
+            "Id": "241"
+        },
+        {
+            "utility": "\u00adHCF4069",
+            "icon": "..img/icons/ic.png",
+            "description": "HEX inverter",
+            "keywords": "HEX inverter HCF4069",
+            "favourite": "false",
+            "number": "1",
+            "Id": "241"
+        },
+        {
+            "utility": "HEF4081",
+            "icon": "..img/icons/ic.png",
+            "description": "AND Gate",
+            "keywords": "AND Gate HEF4081",
+            "favourite": "false",
+            "number": "1",
+            "Id": "241"
+        },
+        {
+            "utility": "74ALS00",
+            "icon": "..img/icons/ic.png",
+            "description": "NAND Gate",
+            "keywords": "NAND Gate 74ALS00",
+            "favourite": "false",
+            "number": "1",
+            "Id": "242"
+        },
+        {
+            "utility": "\u00adNTE74LSB",
+            "icon": "..img/icons/transistor.png",
+            "description": "NPN Transistor",
+            "keywords": "NPN transistor NTE 74LS",
+            "favourite": "false",
+            "number": "1",
+            "Id": "242"
+        },
+        {
+            "utility": "\u00adHEF4093",
+            "icon": "..img/icons/ic.png",
+            "description": "NAND Schmitt Trigger",
+            "keywords": "NAND Schmitt Trigger HEF 4093",
+            "favourite": "false",
+            "number": "1",
+            "Id": "243"
+        },
+        {
+            "utility": "74HC32",
+            "icon": "..img/icons/ic.png",
+            "description": "OR Gate",
+            "keywords": "OR Gate 74HC32",
+            "favourite": "false",
+            "number": "1",
+            "Id": "244"
+        },
+        {
+            "utility": "\u00adHCE4071",
+            "icon": "..img/icons/ic.png",
+            "description": "OR Gate",
+            "keywords": "OR Gate HCE 4071",
+            "favourite": "false",
+            "number": "1",
+            "Id": "244"
+        },
+        {
+            "utility": "\u00ad74LS386",
+            "icon": "..img/icons/ic.png",
+            "description": "XOR Gate",
+            "keywords": "XOR Gate 74ls386",
+            "favourite": "false",
+            "number": "1",
+            "Id": "245"
+        },
+        {
+            "utility": "\u00ad74HC377x8D",
+            "icon": "..img/icons/ic.png",
+            "description": "octal positive-edge triggered D-type FLIP-FLOP",
+            "keywords": "octal positive-edge triggered D-type FLIP-FLOP 74HC377",
+            "favourite": "false",
+            "number": "1",
+            "Id": "246"
+        },
+        {
+            "utility": "74HCT74x2",
+            "icon": "..img/icons/ic.png",
+            "description": "dual positive-edge triggered D-type FLIP-FLIP",
+            "keywords": "dual positive-edge triggered D-type FLIP-FLIP 74HCT74",
+            "favourite": "false",
+            "number": "1",
+            "Id": "246"
+        },
+        {
+            "utility": "\u00ad74LS73",
+            "icon": "..img/icons/ic.png",
+            "description": "Dual in-line JK FLIP-FLOP",
+            "keywords": "Dual in-line JK FLIP-FLOP 74LS73",
+            "favourite": "false",
+            "number": "1",
+            "Id": "247"
+        },
+        {
+            "utility": "\u00ad74LS385",
+            "icon": "..img/icons/ic.png",
+            "description": "Positive-NAND buffer",
+            "keywords": "Positive-NAND buffer 74LS385",
+            "favourite": "false",
+            "number": "1",
+            "Id": "248"
+        },
+        {
+            "utility": "74LS83",
+            "icon": "..img/icons/ic.png",
+            "description": "4-bit binary full adder",
+            "keywords": "4-bit binary full adder 74LS83",
+            "favourite": "false",
+            "number": "1",
+            "Id": "248"
+        },
+        {
+            "utility": "4HCT194",
+            "icon": "..img/icons/ic.png",
+            "description": "4-bit universal shift register",
+            "keywords": "4-bit universal shift register 4HCT194",
+            "favourite": "false",
+            "number": "1",
+            "Id": "249"
+        },
+        {
+            "utility": "\u00ad4HCT393",
+            "icon": "..img/icons/ic.png",
+            "description": "dual 4-bit binary ripple counter",
+            "keywords": "dual 4-bit binary ripple counter 4HCT393",
+            "favourite": "false",
+            "number": "1",
+            "Id": "249"
+        },
+        {
+            "utility": "HEF4516",
+            "icon": "..img/icons/ic.png",
+            "description": "4-bit binary edge-triggered counter",
+            "keywords": "4-bit binary edge-triggered counter HEF4516",
+            "favourite": "false",
+            "number": "1",
+            "Id": "249"
+        },
+        {
+            "utility": "74HCT151",
+            "icon": "..img/icons/ic.png",
+            "description": "multiplexer",
+            "keywords": "multiplexer 74hct151",
+            "favourite": "false",
+            "number": "1",
+            "Id": "250"
+        },
+        {
+            "utility": "\u00ad74LS251",
+            "icon": "..img/icons/ic.png",
+            "description": "multiplexer",
+            "keywords": "multiplexer 74LS251",
+            "favourite": "false",
+            "number": "1",
+            "Id": "250"
+        },
+        {
+            "utility": "\u00ad74HCT138",
+            "icon": "..img/icons/ic.png",
+            "description": "3 to 8 line decoder demultiplexer",
+            "keywords": "3 to 8 line decoder demultiplexer 74HCT138",
+            "favourite": "false",
+            "number": "1",
+            "Id": "251"
+        },
+        {
+            "utility": "74HCT4052",
+            "icon": "..img/icons/ic.png",
+            "description": "4-channel analog multiplexer/demultiplexer",
+            "keywords": "4-channel analog multiplexer demultiplexer 74HCT4052",
+            "favourite": "false",
+            "number": "1",
+            "Id": "251"
+        },
+        {
+            "utility": "\u00ad74LS85",
+            "icon": "..img/icons/ic.png",
+            "description": "4-bit magnitude comparator",
+            "keywords": "4-bit magnitude comparator 74LS85",
+            "favourite": "false",
+            "number": "1",
+            "Id": "252"
+        },
+        {
+            "utility": "\u00ad74LS42",
+            "icon": "..img/icons/ic.png",
+            "description": "BCD to decimal decoder",
+            "keywords": "BCD to decimal decoder 74LS42",
+            "favourite": "false",
+            "number": "1",
+            "Id": "253"
+        },
+        {
+            "utility": "TLC7524CN",
+            "icon": "..img/icons/ic.png",
+            "description": "digital to analog converter",
+            "keywords": "digital to analog converter TLC 7524",
+            "favourite": "false",
+            "number": "1",
+            "Id": "253"
+        },
+        {
+            "utility": "A603B",
+            "icon": "..img/icons/ic.png",
+            "description": "description",
+            "keywords": "A603B",
+            "favourite": "false",
+            "number": "1",
+            "Id": "254"
+        },
+        {
+            "utility": "\u00adA732B",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "A732B",
+            "favourite": "false",
+            "number": "1",
+            "Id": "254"
+        },
+        {
+            "utility": "A902B",
+            "icon": "..img/icons/ic.png",
+            "description": "description",
+            "keywords": "A902B",
+            "favourite": "false",
+            "number": "1",
+            "Id": "254"
+        },
+        {
+            "utility": "\u00ad74LS249",
+            "icon": "..img/icons/ic.png",
+            "description": "BCD to 7-segment decoder/driver",
+            "keywords": "BCD to 7-segment decoder driver 74LS249",
+            "favourite": "false",
+            "number": "1",
+            "Id": "255"
+        },
+        {
+            "utility": "HEF4511BP",
+            "icon": "..img/icons/ic.png",
+            "description": "BCD to 7-segment decoder/driver",
+            "keywords": "BCD to 7-segment decoder driver HEF4511BP",
+            "favourite": "false",
+            "number": "1",
+            "Id": "255"
+        },
+        {
+            "utility": "74HCT367",
+            "icon": "..img/icons/ic.png",
+            "description": "HEX buffer/line driver",
+            "keywords": "HEX buffer line driver 74HCT367",
+            "favourite": "false",
+            "number": "1",
+            "Id": "256"
+        },
+        {
+            "utility": "\u00ad74LS47",
+            "icon": "..img/icons/ic.png",
+            "description": "BCD to 7-segment decoder/driver",
+            "keywords": "BCD to 7-segment decoder driver 74LS47",
+            "favourite": "false",
+            "number": "1",
+            "Id": "256"
+        },
+        {
+            "utility": "74LS241",
+            "icon": "..img/icons/ic.png",
+            "description": "octal buffer line driver",
+            "keywords": "octal buffer line driver 74LS241",
+            "favourite": "false",
+            "number": "1",
+            "Id": "257"
+        },
+        {
+            "utility": "\u00ad74LS244",
+            "icon": "..img/icons/ic.png",
+            "description": "octal buffer line driver",
+            "keywords": "octal buffer line driver 74ls244",
+            "favourite": "false",
+            "number": "1",
+            "Id": "257"
+        },
+        {
+            "utility": "\u00ad74LS245",
+            "icon": "..img/icons/ic.png",
+            "description": "octal bus transmitter/receiver",
+            "keywords": "octal bus transmitter receiver 74ls245",
+            "favourite": "false",
+            "number": "1",
+            "Id": "258"
+        },
+        {
+            "utility": "\u00ad4116RLF",
+            "icon": "..img/icons/ic.png",
+            "description": "isolated resistor network",
+            "keywords": "isolated resistor network 4116rlf",
+            "favourite": "false",
+            "number": "1",
+            "Id": "259"
+        },
+        {
+            "utility": "\u00adDM74LS181",
+            "icon": "..img/icons/ic.png",
+            "description": "4-bit arithmetic Logic Unit",
+            "keywords": "4-bit arithmetic Logic Unit DM74LS181",
+            "favourite": "false",
+            "number": "1",
+            "Id": "260"
+        },
+        {
+            "utility": "ST16C450",
+            "icon": "..img/icons/ic.png",
+            "description": "Universal async transmitter/receiver",
+            "keywords": "Universal async transmitter receiver ST16C450",
+            "favourite": "false",
+            "number": "1",
+            "Id": "260"
+        },
+        {
+            "utility": "\u00ad68HC908",
+            "icon": "..img/icons/ic.png",
+            "description": "Motorola Microcontroller",
+            "keywords": "Motorola Microcontroller 68HC908",
+            "favourite": "false",
+            "number": "1",
+            "Id": "261"
+        },
+        {
+            "utility": "IDT71256",
+            "icon": "..img/icons/ic.png",
+            "description": "32K x 8bit CMOS static RAM",
+            "keywords": "keyword32K x 8bit CMOS static RAM IDT71256",
+            "favourite": "false",
+            "number": "1",
+            "Id": "261"
+        },
+        {
+            "utility": "\u00adNE555",
+            "icon": "..img/icons/ic.png",
+            "description": "precision timer",
+            "keywords": "precision timer NE555 oscillator",
+            "favourite": "false",
+            "number": "1",
+            "Id": "262"
+        },
+        {
+            "utility": "\u00adIQXO",
+            "icon": "..img/icons/ic.png",
+            "description": "oscillator",
+            "keywords": "oscillator IQXO",
+            "favourite": "false",
+            "number": "1",
+            "Id": "263"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "264"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "265"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "266"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "267"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "268"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "269"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "270"
+        },
+        {
+            "utility": "\u00adPIC18F 458-I/P",
+            "icon": "..img/icons/ic.png",
+            "description": "Atmel microcontroller",
+            "keywords": "Atmel microcontroller PIC18F 458 I/P",
+            "favourite": "false",
+            "number": "1",
+            "Id": "271"
+        },
+        {
+            "utility": "\u00adPIC16F886",
+            "icon": "..img/icons/ic.png",
+            "description": "Atmel Microcontroller",
+            "keywords": "Atmel Microcontroller PIC16F 886",
+            "favourite": "false",
+            "number": "1",
+            "Id": "273"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "275"
+        },
+        {
+            "utility": "\u00adSUMMER",
+            "icon": "..img/icons/speaker.png",
+            "description": "makes a monotone sound",
+            "keywords": "Summer speaker sound",
+            "favourite": "false",
+            "number": "1",
+            "Id": "281"
+        },
+        {
+            "utility": "\u00adTRAFO ST-22",
+            "icon": "..img/icons/sensor.png",
+            "description": "thermostat",
+            "keywords": "thermostat ST-22",
+            "favourite": "false",
+            "number": "1",
+            "Id": "283"
+        },
+        {
+            "utility": "\u00adDC-Motor",
+            "icon": "..img/icons/motor.png",
+            "description": "",
+            "keywords": "DC Motor",
+            "favourite": "false",
+            "number": "1",
+            "Id": "285"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "286"
+        },
+        {
+            "utility": "M\u00f6rdarkabel\u00ad",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "kabel",
+            "favourite": "false",
+            "number": "1",
+            "Id": "288"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "290"
+        },
+        {
+            "utility": "\u00adH\u00f6gtalare",
+            "icon": "..img/icons/speaker.png",
+            "description": "",
+            "keywords": "Speaker H\u00f6gtalare sound",
+            "favourite": "false",
+            "number": "1",
+            "Id": "298"
+        }
+    ],
+    [
+        {
+            "utility": "\u00adIC-SOCKEL",
+            "icon": "..img/icons/ic.png",
+            "description": "",
+            "keywords": "IC-SOCKEL",
+            "favourite": "false",
+            "number": "1",
+            "Id": "301"
+        },
+        {
+            "utility": "\u00adIC-SOCKEL",
+            "icon": "..img/icons/diode.png",
+            "description": "",
+            "keywords": "IC-SOCKEL",
+            "favourite": "false",
+            "number": "1",
+            "Id": "302"
+        },
+        {
+            "utility": "\u00adNO brytare",
+            "icon": "..img/icons/brytare.png",
+            "description": "",
+            "keywords": "NO brytare",
+            "favourite": "false",
+            "number": "1",
+            "Id": "303"
+        },
+        {
+            "utility": "\u00adS\u00e4kringsh\u00e5llare",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "S\u00e4kringsh\u00e5llare",
+            "favourite": "false",
+            "number": "1",
+            "Id": "304"
+        },
+        {
+            "utility": "\u00adVinklad h\u00e5l Distansstycke",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Vinklad h\u00e5l Distansstycke",
+            "favourite": "false",
+            "number": "1",
+            "Id": "305"
+        },
+        {
+            "utility": "\u00adDistansr\u00f6r",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Distansr\u00f6r",
+            "favourite": "false",
+            "number": "1",
+            "Id": "306"
+        },
+        {
+            "utility": "\u00adKabelskor",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Kabelskor",
+            "favourite": "false",
+            "number": "1",
+            "Id": "307"
+        },
+        {
+            "utility": "\u00adStift-Hane",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Stift-Hane",
+            "favourite": "false",
+            "number": "1",
+            "Id": "308"
+        },
+        {
+            "utility": "Genshin Impact",
+            "icon": "images\\template.png",
+            "description": "The \"Best\" Game ",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "309"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "310"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "311"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "312"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "313"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "314"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "315"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "316"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "..img/icons/motor.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "317"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "318"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "319"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "320"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "321"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "322"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "323"
+        },
+        {
+            "utility": "\u00ad",
+            "icon": "images\\template.png",
+            "description": "",
+            "keywords": "",
+            "favourite": "false",
+            "number": "1",
+            "Id": "324"
+        },
+        {
+            "utility": "\u00adM5 skruvar ",
+            "icon": "..img/icons/zeng.png",
+            "description": "",
+            "keywords": "M5 skruvar",
+            "favourite": "false",
+            "number": "1",
+            "Id": "325"
+        },
+        {
+            "utility": "\u00adM5 skruvar",
+            "icon": "..img/icons/zeng.png",
+            "description": "",
+            "keywords": "M5 skruvar",
+            "favourite": "false",
+            "number": "1",
+            "Id": "326"
+        },
+        {
+            "utility": "\u00adM4 skruvar",
+            "icon": "..img/icons/zeng.png",
+            "description": "",
+            "keywords": "M4 skruvar",
+            "favourite": "false",
+            "number": "1",
+            "Id": "327"
+        },
+        {
+            "utility": "\u00adM1/M2/M3 Mutter",
+            "icon": "..img/icons/zeng.png",
+            "description": "",
+            "keywords": "M1/M2/M3/ Mutter",
+            "favourite": "false",
+            "number": "1",
+            "Id": "328"
+        },
+        {
+            "utility": "\u00adM2 skruvar",
+            "icon": "..img/icons/zeng.png",
+            "description": "",
+            "keywords": "M2 Skruvar",
+            "favourite": "false",
+            "number": "1",
+            "Id": "329"
+        },
+        {
+            "utility": "\u00adM3 Skruvar",
+            "icon": "..img/icons/zeng.png",
+            "description": "",
+            "keywords": "M3 Skruvar",
+            "favourite": "false",
+            "number": "1",
+            "Id": "330"
+        },
+        {
+            "utility": "\u00adM5-6 Mutter",
+            "icon": "..img/icons/zeng.png",
+            "description": "",
+            "keywords": "M5-6 Mutter",
+            "favourite": "false",
+            "number": "1",
+            "Id": "331"
+        },
+        {
+            "utility": "\u00adDivers Brickor",
+            "icon": "..img/icons/zeng.png",
+            "description": "",
+            "keywords": "Divers Brickor",
+            "favourite": "false",
+            "number": "1",
+            "Id": "333"
+        },
+        {
+            "utility": "\u00adDivers Skruvar",
+            "icon": "..img/icons/zeng.png",
+            "description": "",
+            "keywords": "Divers Skruvar",
+            "favourite": "false",
+            "number": "1",
+            "Id": "335"
+        },
+        {
+            "utility": "\u00adLab Proppe sv/r\u00f6d",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Lab Proppe sv/r\u00f6d",
+            "favourite": "false",
+            "number": "1",
+            "Id": "341"
+        },
+        {
+            "utility": "\u00adBNC-hylsdom-2labpr",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "BNC-hylsdom-2labpr",
+            "favourite": "false",
+            "number": "1",
+            "Id": "343"
+        },
+        {
+            "utility": "\u00adKontakt (|)4mm r\u00f6/bl",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Kontakt (|)4mm r\u00f6/bl",
+            "favourite": "false",
+            "number": "1",
+            "Id": "345"
+        },
+        {
+            "utility": "\u00adLabhylsa (divers)",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Labhylsa (divers)",
+            "favourite": "false",
+            "number": "1",
+            "Id": "346"
+        },
+        {
+            "utility": "\u00ad9V-Batt kabelansl",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "9V-Batt kabelansl",
+            "favourite": "false",
+            "number": "1",
+            "Id": "348"
+        },
+        {
+            "utility": "\u00adKrokodilkl\u00e4mma",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Krokodilkl\u00e4mma",
+            "favourite": "false",
+            "number": "1",
+            "Id": "350"
+        },
+        {
+            "utility": "\u00adDivers tillbeh\u00f6r",
+            "icon": "..img/icons/miscellaneous.png",
+            "description": "",
+            "keywords": "Divers tillbeh\u00f6r",
+            "favourite": "false",
+            "number": "1",
+            "Id": "358"
+        },
+        {
+            "utility": "Bausus kristus",
+            "icon": "..img/icons/Bausus.png",
+            "description": "den heliga baumanns sanna sj\u00e4lv",
+            "keywords": "bausus",
+            "favourite": "false",
+            "number": "1",
+            "Id": "359"
+        },
+        {
+            "utility": "Theo",
+            "icon": "..img/icons/theo.png",
+            "description": "Den b\u00e4sta jokerl\u00e4rare!",
+            "keywords": "Theo",
+            "favourite": "false",
+            "number": "1",
+            "Id": "360"
+        }
+    ]
+]

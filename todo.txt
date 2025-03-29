@@ -1,0 +1,28 @@
+* Allmänt
+ - fixa "kiosk"-läge (stoppar folk från att röra filer/redigera)
+ - kanske strömsparläge (om jag har tid över)
+ - schemaläggning av uppgifter (kan vara en idé men ska prata med lärare om det är en bra idé)
+
+* Fixa settings med olika
+ - bakgrundsbilder
+ - myra?
+ - kanske nätverksinställningar (KOMMER KRÄVA ADMINLÖSENORD)
+ - ljus instälningar (om skärmen stöder det)
+
+* Lektionsförval (alltså man kan välja ut förvalda "paket" för att visas)
+ - lätt att skapa nya
+ - lätt att redigera gamla
+ - läraren ska via Adminhemsida förvälja det paket som ska vissas
+
+* Adminhemsida
+ - kräver inlogg (endast lärare med tillgång)
+ - lägga till nya/ta bort komponenter eller lektionsförval
+ - styra lamporna (ex. släcka lampor, tända lampor och "låsa" tillgången till datorn alltså stoppa nya lampor från att bli tända)
+ - hantera användarbehörigheter
+ - styra datorn trådlöst (terminal kommandon)
+
+* uppstarts skydd (altså en validering av filer och nerlåsning)
+ - vid uppstart starta programet som låser tillgång till rästen av datorn
+ - en back-up zipfil som innehåller allt man behöver för att instalera om programmet (github kan funka med)
+ - en loading screen medans den validerar
+ 

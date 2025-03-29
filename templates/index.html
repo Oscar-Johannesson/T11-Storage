@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>T11-Storage - Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #19cb07;
+            --dark-gray: #505050;
+            --light-gray: #f8f9fa;
+            --navbar-dark: #343a40;
+        }
+
+        body {
+            padding-top: 70px;  /* Add padding to prevent content from going under navbar */
+            background-color: #f0f2f5;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            gap: 4px;
+            padding: 20px;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .grid-item {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .grid-item.active {
+            background-color: var(--primary-color);
+            animation: pulse 1.5s infinite;
+        }
+
+        .search-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .search-result {
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #dee2e6;
+            transition: background-color 0.2s;
+        }
+
+        .search-result:hover {
+            background-color: var(--light-gray);
+            transform: translateX(5px);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .custom-navbar {
+            background-color: var(--navbar-dark);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .navbar-user {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .navbar-brand {
+            margin-right: 20px;
+        }
+
+        .navbar-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-button {
+            margin: 0 5px;
+            height: 38px;
+            padding: 6px 12px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-outline-danger:hover {
+            color: #fff;
+            background-color: #dc3545;
+            border-color: #dc3545;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(220, 53, 69, 0.3);
+        }
+
+        .btn-terminal {
+            margin: 0 5px;
+            height: 38px;
+            padding: 6px 12px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            border: 1px solid #6f42c1;
+            color: #6f42c1;
+            background: transparent;
+            font-family: inherit;
+            font-weight: normal;
+            text-transform: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-terminal:hover {
+            color: #fff;
+            background-color: #6f42c1;
+            border-color: #6f42c1;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(111, 66, 193, 0.3);
+        }
+
+        .btn-terminal .fas {
+            margin-right: 5px;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 10px;
+        }
+        
+        .btn-outline-light:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1100;
+        }
+
+        .menu-content {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .close-menu {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .component-form {
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .preset-list {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .selected-items {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .success-message, .error-message, .confirm-modal {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 2000;
+            pointer-events: none;  /* Don't block clicks when invisible */
+        }
+
+        .success-message.show, .error-message.show, .confirm-modal.show {
+            pointer-events: auto;  /* Allow clicks when visible */
+        }
+
+        /* Update confirm modal to always be clickable since it needs interaction */
+        .confirm-modal {
+            pointer-events: auto;
+            display: none;  /* Hide by default */
+        }
+
+        .confirm-modal.show {
+            display: block;  /* Show when needed */
+        }
+
+        @keyframes checkmark {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .checkmark {
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 20px;
+            animation: checkmark 0.5s ease-in-out;
+        }
+
+        .btn-terminal {
+            background: #2E3440;
+            color: #A3BE8C;
+            border: 1px solid #4C566A;
+            padding: 8px 15px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-terminal:hover {
+            background: #3B4252;
+            color: #8FBCBB;
+            border-color: #5E81AC;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(46, 52, 64, 0.3);
+        }
+
+        .btn-terminal:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(46, 52, 64, 0.3);
+        }
+
+        .confirm-modal {
+            position: fixed;
+            background: white;
+            color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2000;
+            display: none;
+        }
+
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0); 
+            z-index: 1999;
+            orphans: 0;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(10px);
+        }
+
+        .confirm-modal.show {
+            display: block;
+        }
+
+        .modal-backdrop.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark custom-navbar">
+        <div class="navbar-content">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="#">T11-Storage System</a>
+                <div class="navbar-buttons">
+                    <button class="btn btn-outline-light nav-button" onclick="showComponentMenu()">
+                        Add Component
+                    </button>
+                    <button class="btn btn-outline-light nav-button" onclick="togglePresetView()">
+                        Lesson Presets
+                    </button>
+                    <button class="btn btn-outline-light nav-button" onclick="showUserMenu()">
+                        Manage Users
+                    </button>
+                    <button class="btn btn-outline-danger nav-button" onclick="clearAll()">
+                        Clear All
+                    </button>
+                    <button class="btn btn-terminal nav-button" onclick="window.location.href='/terminal'">
+                        <i class="fas fa-terminal"></i> Terminal
+                    </button>
+                </div>
+            </div>
+            <div class="navbar-user">
+                <span class="navbar-text">Welcome, {{ user.name }}</span>
+                <a class="btn btn-outline-light" href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="successMessage" class="success-message">
+        <span class="checkmark">✓</span>
+        <span id="successText">Operation completed successfully!</span>
+    </div>
+
+    <div id="presetSuccessMessage" class="success-message">
+        <span class="checkmark">✓</span>
+        <span>Preset added successfully!</span>
+    </div>
+
+    <div id="errorMessage" class="error-message">
+        <span class="checkmark">✕</span>
+        <span id="errorText">Error occurred</span>
+    </div>
+
+    <div id="confirmModal" class="confirm-modal">
+        <h5 id="confirmTitle">Confirm Action</h5>
+        <p id="confirmText">Are you sure you want to proceed?</p>
+        <div class="buttons">
+            <button class="btn btn-secondary" onclick="hideConfirmModal()">Cancel</button>
+            <button class="btn btn-danger" id="confirmButton">Confirm</button>
+        </div>
+    </div>
+
+    <div id="componentMenu" class="menu-overlay">
+        <div class="menu-content">
+            <span class="close-menu" onclick="closeComponentMenu()">&times;</span>
+            <h3>Add New Component</h3>
+            <form class="component-form" onsubmit="submitComponent(event)">
+                <div class="form-group">
+                    <label>Component Name</label>
+                    <input type="text" class="form-control" name="componentName" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select class="form-control" name="componentCategory">
+                        <option value="resistor">Resistor</option>
+                        <option value="capacitor">Capacitor</option>
+                        <option value="diode">diode</option>
+                        <option value="transistor">transistor</option>
+                        <option value="led">LED</option>
+                        <option value="ic">IC</option>
+                        <option value="motor">motor</option>
+                        <option value="other">miscellaneous</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" name="componentDesc" id="componentDesc" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Component</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="presetMenu" class="menu-overlay">
+        <div class="menu-content">
+            <span class="close-menu" onclick="closePresetMenu()">&times;</span>
+            <h3>Create Lesson Preset</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control mb-3" placeholder="Search components..." 
+                           onkeyup="searchPresetItems(this.value)">
+                    <div id="presetSearchResults" class="preset-list"></div>
+                </div>
+                <div class="col-md-6">
+                    <h5>Selected Components</h5>
+                    <div id="selectedItems" class="selected-items"></div>
+                    <div class="mt-3">
+                        <input type="text" class="form-control mb-2" id="presetName" 
+                               placeholder="Preset name">
+                        <button class="btn btn-primary" onclick="savePreset()">Save Preset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="userMenu" class="menu-overlay" style="display: none;">
+        <div class="menu-content">
+            <span class="close-menu" onclick="closeUserMenu()">&times;</span>
+            <h3>User Management</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Add New User</h4>
+                    <form id="addUserForm" onsubmit="addUser(event)">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add User</button>
+                    </form>
+
+                    <h4 class="mt-4">Change Password</h4>
+                    <form id="changePasswordForm" onsubmit="changePassword(event)">
+                        <div class="mb-3">
+                            <input type="password" class="form-control" name="currentPassword" placeholder="Current Password" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" name="newPassword" placeholder="New Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Change Password</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Existing Users</h4>
+                    <div id="userList" class="list-group">
+                        <!-- Users will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="presetListContainer" class="container-fluid mt-4" style="display: none;">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h3>Lesson Presets</h3>
+                            <button class="btn btn-primary" onclick="showPresetMenu()">Add New Preset</button>
+                        </div>
+                        <div id="presetList" class="list-group">
+                            <!-- Presets will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3">
+                <div class="card search-card">
+                    <div class="card-body">
+                        <h5 class="section-title">Search Components</h5>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <i class="fas fa-search"></i>
+                            </span>
+                            <input type="text" class="form-control" id="searchInput" 
+                                   placeholder="Search items..." onkeyup="searchItems(this.value)">
+                        </div>
+                        <div id="searchResults" class="list-group mt-2" style="max-height: 300px; overflow-y: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title">Storage Grid</h2>
+                <div class="grid-container">
+                    {% for i in range(1, 361) %}
+                        <div class="grid-item {% if i|string in active_searches %}active{% endif %}" 
+                             data-id="{{ i }}"
+                             onclick="toggleItem(this)">
+                            {{ i }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalBackdrop" class="modal-backdrop"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        function toggleItem(element) {
+            element.classList.toggle('active');
+            
+            fetch('/toggle_item/' + element.dataset.id, {
+                method: 'POST',
+            }).then(response => response.json())
+              .then(data => {
+                  if (!data.success) {
+                      element.classList.toggle('active');
+                  }
+              });
+        }
+
+        function searchItems(query) {
+            if (query.length < 1) {
+                document.getElementById('searchResults').innerHTML = '';
+                return;
+            }
+
+            fetch('/search_items?query=' + encodeURIComponent(query))
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('searchResults');
+                    resultsDiv.innerHTML = '';
+                    
+                    data.results.forEach(item => {
+                        const div = document.createElement('div');
+                        div.className = 'search-result list-group-item';
+                        div.textContent = `${item.utility}: ${item.description}`;
+                        
+                        div.onclick = () => {
+                            const gridItem = document.querySelector(`.grid-item[data-id="${item.Id}"]`);
+                            if (gridItem) {
+                                toggleItem(gridItem);
+                                gridItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                        };
+                        resultsDiv.appendChild(div);
+                    });
+                });
+        }
+
+        // Auto-update state
+        setInterval(() => {
+            fetch('/api/state')
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(data => {
+                            if (data.redirect) {
+                                window.location.href = data.redirect;
+                            }
+                            throw new Error(data.error);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(state => {
+                    document.querySelectorAll('.grid-item').forEach(item => {
+                        const isActive = state.searches.includes(item.dataset.id);
+                        item.classList.toggle('active', isActive);
+                    });
+                })
+                .catch(console.error);
+        }, 1000);
+
+        function showComponentModal() {
+            // Component modal logic
+            console.log("Add component clicked");
+        }
+
+        function showPresetModal() {
+            // Preset modal logic
+            console.log("Add preset clicked");
+        }
+
+        function showComponentMenu() {
+            document.getElementById('componentMenu').style.display = 'block';
+            document.getElementById('presetListContainer').style.display = 'none';
+            document.querySelector('.container-fluid:not(#presetListContainer)').style.display = 'none';
+        }
+
+        function closeComponentMenu() {
+            document.getElementById('componentMenu').style.display = 'none';
+            document.querySelector('.container-fluid:not(#presetListContainer)').style.display = 'block';
+        }
+
+        function showPresetMenu() {
+            document.getElementById('presetMenu').style.display = 'block';
+            document.getElementById('presetListContainer').style.display = 'none';
+            document.querySelector('.container-fluid:not(#presetListContainer)').style.display = 'none';
+        }
+
+        function closePresetMenu() {
+            document.getElementById('presetMenu').style.display = 'none';
+            const wasPresetListVisible = document.getElementById('presetListContainer').style.display === 'block';
+            if (wasPresetListVisible) {
+                document.getElementById('presetListContainer').style.display = 'block';
+                document.querySelector('.container-fluid:not(#presetListContainer)').style.display = 'none';
+            } else {
+                document.querySelector('.container-fluid:not(#presetListContainer)').style.display = 'block';
+            }
+        }
+
+        let selectedPresetItems = [];
+
+        function searchPresetItems(query) {
+            if (query.length < 1) {
+                document.getElementById('presetSearchResults').innerHTML = '';
+                return;
+            }
+
+            fetch('/search_items?query=' + encodeURIComponent(query))
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('presetSearchResults');
+                    resultsDiv.innerHTML = '';
+                    
+                    data.results.forEach(item => {
+                        const div = document.createElement('div');
+                        div.className = 'list-group-item';
+                        div.textContent = `${item.utility}: ${item.description}`;
+                        div.onclick = () => {
+                            if (!selectedPresetItems.some(i => i.id === item.Id)) {
+                                selectedPresetItems.push({
+                                    id: item.Id,
+                                    name: item.utility
+                                });
+                                updateSelectedItems();
+                            }
+                        };
+                        resultsDiv.appendChild(div);
+                    });
+                });
+        }
+
+        function updateSelectedItems() {
+            const container = document.getElementById('selectedItems');
+            container.innerHTML = '';
+            selectedPresetItems.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'badge bg-primary m-1';
+                div.textContent = item.name;
+                div.onclick = () => {
+                    selectedPresetItems = selectedPresetItems.filter(i => i.id !== item.id);
+                    updateSelectedItems();
+                };
+                container.appendChild(div);
+            });
+        }
+
+        function savePreset() {
+            const name = document.getElementById('presetName').value;
+            if (!name) {
+                alert('Please enter a preset name');
+                return;
+            }
+            
+            fetch('/save_preset', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    items: selectedPresetItems.map(item => item.id)
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showSuccessMessage('Preset saved successfully');
+                    closePresetMenu();
+                    selectedPresetItems = [];
+                    loadPresets(); // Refresh the preset list
+                } else {
+                    alert('Error saving preset');
+                }
+            });
+        }
+
+        function showSuccessMessage(text) {
+            const message = document.getElementById('successMessage');
+            const successText = document.getElementById('successText');
+            successText.textContent = text;
+            message.style.backgroundColor = '#28a745';
+            message.classList.add('show');
+            setTimeout(() => {
+                message.classList.remove('show');
+            }, 3000);
+        }
+
+        function showErrorMessage(text) {
+            const message = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            errorText.textContent = text;
+            message.classList.add('show');
+            setTimeout(() => {
+                message.classList.remove('show');
+            }, 3000);
+        }
+
+        function showConfirmModal(title, text, onConfirm) {
+            const modal = document.getElementById('confirmModal');
+            const backdrop = document.getElementById('modalBackdrop');
+            document.getElementById('confirmTitle').textContent = title;
+            document.getElementById('confirmText').textContent = text;
+            document.getElementById('confirmButton').onclick = () => {
+                onConfirm();
+                hideConfirmModal();
+            };
+            modal.classList.add('show');
+            backdrop.classList.add('show');
+        }
+
+        function hideConfirmModal() {
+            const modal = document.getElementById('confirmModal');
+            const backdrop = document.getElementById('modalBackdrop');
+            modal.classList.remove('show');
+            backdrop.classList.remove('show');
+        }
+
+        function submitComponent(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            
+            fetch('/add_component', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showSuccessMessage('Component added successfully');
+                    event.target.reset();
+                    closeComponentMenu();
+                } else {
+                    showErrorMessage(data.error || 'Error adding component');
+                }
+            })
+            .catch(error => {
+                showErrorMessage('Error: ' + error);
+            });
+        }
+
+        function togglePresetView() {
+            const mainContent = document.querySelector('.container-fluid:not(#presetListContainer)');
+            const presetList = document.getElementById('presetListContainer');
+            
+            if (presetList.style.display === 'none') {
+                mainContent.style.display = 'none';
+                presetList.style.display = 'block';
+                loadPresets();
+            } else {
+                mainContent.style.display = 'block';
+                presetList.style.display = 'none';
+            }
+        }
+
+        function loadPresets() {
+            fetch('/api/presets')
+                .then(response => response.json())
+                .then(presets => {
+                    const presetList = document.getElementById('presetList');
+                    presetList.innerHTML = '';
+                    
+                    Object.entries(presets).forEach(([name, data]) => {
+                        const div = document.createElement('div');
+                        div.className = 'list-group-item list-group-item-action d-flex justify-content-between align-items-center';
+                        
+                        const contentDiv = document.createElement('div');
+                        contentDiv.innerHTML = `
+                            <h5 class="mb-1">${name}</h5>
+                            <p class="mb-1 text-muted">Components: ${data.components.join(', ')}</p>
+                        `;
+                        
+                        const btnGroup = document.createElement('div');
+                        btnGroup.className = 'btn-group';
+                        
+                        const loadBtn = document.createElement('button');
+                        loadBtn.className = 'btn btn-primary btn-sm';
+                        loadBtn.textContent = 'Load';
+                        loadBtn.onclick = () => loadPreset(data.items);
+                        
+                        const deleteBtn = document.createElement('button');
+                        deleteBtn.className = 'btn btn-danger btn-sm';
+                        deleteBtn.textContent = 'Delete';
+                        deleteBtn.onclick = () => deletePreset(name);
+                        
+                        btnGroup.appendChild(loadBtn);
+                        btnGroup.appendChild(deleteBtn);
+                        
+                        div.appendChild(contentDiv);
+                        div.appendChild(btnGroup);
+                        presetList.appendChild(div);
+                    });
+                });
+        }
+
+        function loadPreset(items) {
+            fetch('/api/load_preset', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ items })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showSuccessMessage('Preset loaded successfully');
+                    togglePresetView();
+                    // The state auto-update will handle updating the grid
+                }
+            });
+        }
+
+        function deletePreset(name) {
+            showConfirmModal(
+                'Delete Preset',
+                `Are you sure you want to delete the preset "${name}"?`,
+                () => {
+                    fetch('/api/delete_preset', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ name })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            loadPresets();
+                        } else {
+                            showErrorMessage('Failed to delete preset');
+                        }
+                    });
+                }
+            );
+        }
+
+        function clearAll() {
+            showConfirmModal(
+                'Clear All Searches',
+                'Are you sure you want to clear all active searches?',
+                () => {
+                    fetch('/api/clear_all', {
+                        method: 'POST',
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            showSuccessMessage('All searches cleared successfully');
+                        } else {
+                            showErrorMessage('Failed to clear searches');
+                        }
+                    });
+                }
+            );
+        }
+
+        function showUserMenu() {
+            document.getElementById('userMenu').style.display = 'block';
+            loadUsers();
+        }
+
+        function closeUserMenu() {
+            document.getElementById('userMenu').style.display = 'none';
+        }
+
+        function loadUsers() {
+            fetch('/api/users/list')
+                .then(response => response.json())
+                .then(data => {
+                    const userList = document.getElementById('userList');
+                    userList.innerHTML = '';
+                    data.users.forEach(username => {
+                        const div = document.createElement('div');
+                        div.className = 'list-group-item d-flex justify-content-between align-items-center';
+                        div.textContent = username;
+                        
+                        if (username !== 'admin') {
+                            const deleteBtn = document.createElement('button');
+                            deleteBtn.className = 'btn btn-danger btn-sm';
+                            deleteBtn.textContent = 'Delete';
+                            deleteBtn.onclick = () => deleteUser(username);
+                            div.appendChild(deleteBtn);
+                        }
+                        
+                        userList.appendChild(div);
+                    });
+                });
+        }
+
+        function deleteUser(username) {
+            showConfirmModal(
+                'Delete User',
+                `Are you sure you want to delete user "${username}"?`,
+                () => {
+                    fetch(`/api/users/delete/${username}`, {
+                        method: 'DELETE'
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            showSuccessMessage(data.message);
+                            loadUsers();
+                        } else {
+                            showErrorMessage(data.error);
+                        }
+                    });
+                }
+            );
+        }
+
+        function changePassword(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            
+            fetch('/api/users/change_password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    currentPassword: formData.get('currentPassword'),
+                    newPassword: formData.get('newPassword')
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showSuccessMessage(data.message);
+                    event.target.reset();
+                } else {
+                    showErrorMessage(data.error);
+                }
+            });
+        }
+
+        function addUser(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = {
+                username: formData.get('username'),
+                password: formData.get('password')
+            };
+            
+            fetch('/api/users/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showSuccessMessage(data.message || 'User added successfully');
+                    event.target.reset();
+                    loadUsers();
+                } else {
+                    showErrorMessage(data.error || 'Error adding user');
+                }
+            })
+            .catch(error => {
+                showErrorMessage('Error: ' + error);
+            });
+        }
+
+        // Update button onclick handlers
+        document.querySelector('[onclick="showComponentModal()"]').onclick = showComponentMenu;
+        document.querySelector('[onclick="showPresetModal()"]').onclick = showPresetMenu;
+    </script>
+</body>
+</html>
