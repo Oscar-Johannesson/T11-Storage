@@ -333,6 +333,87 @@
         .modal-backdrop.show {
             display: block;
         }
+
+        .settings-grid {
+            display: grid;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .settings-section {
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .settings-section h4 {
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+
+        /* Add these new styles */
+        .settings-section .dropdown-menu {
+            position: relative !important;
+            width: 100% !important;
+            transform: none !important;
+            margin-top: 0.5rem;
+            inset: unset !important;
+        }
+
+        .settings-section .dropdown {
+            position: static;
+        }
+
+        .settings-section .dropdown-menu {
+            position: relative !important;
+            width: 100% !important;
+            transform: none !important;
+            margin-top: 0.5rem;
+            inset: unset !important;
+            float: none;
+        }
+
+        .settings-section .dropdown-toggle {
+            width: 100%;
+            position: relative;
+        }
+
+        .settings-section .dropdown-toggle::after {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Update these dropdown styles */
+        .settings-section .dropdown {
+            position: relative;
+            width: 100%;
+        }
+
+        .settings-section .dropdown-menu {
+            position: absolute !important;
+            width: 100% !important;
+            transform: none !important;
+            margin-top: 0.5rem;
+            inset: auto auto auto 0 !important;
+            float: none;
+            top: 100% !important;
+            left: 0 !important;
+        }
+
+        .settings-section .dropdown-toggle {
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        .settings-section .dropdown-toggle::after {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     </style>
 </head>
 <body>
@@ -347,17 +428,11 @@
                     <button class="btn btn-outline-light nav-button" onclick="togglePresetView()">
                         Lesson Presets
                     </button>
-                    <button class="btn btn-outline-light nav-button" onclick="showUserMenu()">
-                        Manage Users
-                    </button>
                     <button class="btn btn-outline-danger nav-button" onclick="clearAll()">
                         Clear All
                     </button>
-                    <button class="btn btn-terminal nav-button" onclick="window.location.href='/terminal'">
-                        <i class="fas fa-terminal"></i> Terminal
-                    </button>
-                    <button id="searchLockBtn" class="btn btn-warning nav-button" onclick="toggleSearchLock()">
-                        Lock Searches
+                    <button class="btn btn-outline-light nav-button" onclick="showSettingsMenu()">
+                        <i class="fas fa-cog"></i> Settings
                     </button>
                 </div>
             </div>
@@ -401,6 +476,10 @@
             <span class="close-menu" onclick="closeComponentMenu()">&times;</span>
             <h3>Add New Component</h3>
             <form class="component-form" onsubmit="submitComponent(event)">
+                <div class="form-group">
+                    <label>Location (ID)</label>
+                    <input type="number" class="form-control" name="componentId" min="1" max="360" required>
+                </div>
                 <div class="form-group">
                     <label>Component Name</label>
                     <input type="text" class="form-control" name="componentName" required>
@@ -530,12 +609,21 @@
             <div class="col-12">
                 <h2 class="section-title">Storage Grid</h2>
                 <div class="grid-container">
-                    {% for i in range(1, 361) %}
-                        <div class="grid-item {% if i|string in active_searches %}active{% endif %}" 
-                             data-id="{{ i }}"
-                             onclick="toggleItem(this)">
-                            {{ i }}
-                        </div>
+                    {% for i in range(1, 21) %}
+                        {% for j in range(1, 20) %}
+                            {% set index = (i-1) * 19 + j %}
+                            {% if index <= 360 %}
+                                <div class="grid-item {% if index|string in active_searches %}active{% endif %}" 
+                                     data-id="{{ index }}"
+                                     onclick="toggleItem(this)">
+                                    <span class="item-content" data-id="{{ index }}" 
+                                          data-name="{% if components[index|string] and components[index|string].name and components[index|string].name != '-' and components[index|string].name != '\u00ad' and components[index|string].name != ' ' and components[index|string].name != '' %}{{ components[index|string].name[:10] }}{% endif %}">
+
+                                        {{ index }}
+                                    </span>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                     {% endfor %}
                 </div>
             </div>
@@ -544,10 +632,67 @@
 
     <div id="modalBackdrop" class="modal-backdrop"></div>
 
+    <div id="settingsMenu" class="menu-overlay">
+        <div class="menu-content">
+            <span class="close-menu" onclick="closeSettingsMenu()">&times;</span>
+            <h3>Settings</h3>
+            <div class="settings-grid">
+                <div class="settings-section">
+                    <h4>System</h4>
+                    <button class="btn btn-terminal w-100 mb-2" onclick="openTerminal()">
+                        <i class="fas fa-terminal"></i> Terminal
+                    </button>
+                    <button class="btn btn-warning w-100 mb-2" id="searchLockBtn" onclick="toggleSearchLock(); closeSettingsMenu();">
+                        Lock Searches
+                    </button>
+                    <button class="btn btn-primary w-100 mb-2" id="displayModeBtn" onclick="toggleDisplayMode(); closeSettingsMenu();">
+                        Show Names
+                    </button>
+                </div>
+                <div class="settings-section">
+                    <h4>User Management</h4>
+                    <button class="btn btn-primary w-100 mb-2" onclick="showUserMenu()">
+                        Manage Users
+                    </button>
+                </div>
+                <div class="settings-section">
+                    <h4>Backup</h4>
+                    <div class="dropdown w-100 mb-3">
+                        <button class="btn btn-outline-primary w-100 dropdown-toggle" type="button" id="backupDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Download Backup
+                        </button>
+                        <ul class="dropdown-menu w-100" aria-labelledby="backupDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('download_backup', filename='users.json') }}">Users Backup</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('download_backup', filename='presets.json') }}">Presets Backup</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('download_backup', filename='utilities.json') }}">Utilities Backup</a></li>
+                        </ul>
+                    </div>
+                    <form onsubmit="uploadBackup(event)" class="mb-2">
+                        <div class="form-group mb-2">
+                            <select class="form-control" name="backupType" required>
+                                <option value="">Select backup type</option>
+                                <option value="users.json">Users Backup</option>
+                                <option value="presets.json">Presets Backup</option>
+                                <option value="utilities.json">Utilities Backup</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <input type="file" class="form-control" name="backupFile" accept=".json" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Upload Backup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FontAwesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
+        // Add this at the very top of the script section
+        let showOnlyIds = true; // Initialize to true for showing IDs by default
+        
         function toggleItem(element) {
             element.classList.toggle('active');
             
@@ -924,6 +1069,7 @@
         }
 
         function showUserMenu() {
+            document.getElementById('settingsMenu').style.display = 'none';
             document.getElementById('userMenu').style.display = 'block';
             loadUsers();
         }
@@ -1062,9 +1208,117 @@
             );
         }
 
+        function showSettingsMenu() {
+            document.getElementById('userMenu').style.display = 'none';
+            document.getElementById('componentMenu').style.display = 'none';
+            document.getElementById('presetMenu').style.display = 'none';
+            document.getElementById('settingsMenu').style.display = 'block';
+        }
+
+        function closeSettingsMenu() {
+            document.getElementById('settingsMenu').style.display = 'none';
+        }
+
+        function openTerminal() {
+            document.getElementById('settingsMenu').style.display = 'none';
+            window.location.href = '/terminal';
+        }
+
+        function uploadBackup(event) {
+            event.preventDefault();
+            const formData = new FormData();
+            const fileInput = event.target.querySelector('input[type="file"]');
+            const backupType = event.target.querySelector('select[name="backupType"]').value;
+            
+            formData.append('file', fileInput.files[0]);
+            formData.append('type', backupType);
+            
+            fetch('/api/upload_backup', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showSuccessMessage('Backup uploaded successfully');
+                    event.target.reset();
+                } else {
+                    showErrorMessage(data.error || 'Error uploading backup');
+                }
+            })
+            .catch(error => {
+                showErrorMessage('Error: ' + error);
+            });
+        }
+
         // Update button onclick handlers
         document.querySelector('[onclick="showComponentModal()"]').onclick = showComponentMenu;
         document.querySelector('[onclick="showPresetModal()"]').onclick = showPresetMenu;
+
+        // Add this after the variable declaration and before other functions
+        // Initialize display mode on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('displayModeBtn');
+            btn.textContent = 'Show Names'; // Initial state shows IDs, so button should offer to show names
+            
+            document.querySelectorAll('.item-content').forEach(item => {
+                const id = item.dataset.id;
+                item.textContent = id; // Always start with IDs
+            });
+        });
+
+        function toggleDisplayMode() {
+            showOnlyIds = !showOnlyIds;
+            const btn = document.getElementById('displayModeBtn');
+            btn.textContent = showOnlyIds ? 'Show Names' : 'Show Only IDs';
+            
+            document.querySelectorAll('.item-content').forEach(item => {
+                const id = item.dataset.id;
+                const name = item.dataset.name;
+                item.textContent = showOnlyIds ? id : (name || id);
+            });
+
+            fetch('/api/set_display_mode', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ show_only_ids: showOnlyIds })
+            });
+        }
+
+        // Update the state fetching to include display mode
+        setInterval(() => {
+            fetch('/api/state')
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(data => {
+                            if (data.redirect) {
+                                window.location.href = data.redirect;
+                            }
+                            throw new Error(data.error);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(state => {
+                    // ...existing state update code...
+                    
+                    // Update display mode
+                    if (state.show_only_ids !== undefined && state.show_only_ids !== showOnlyIds) {
+                        showOnlyIds = state.show_only_ids;
+                        const btn = document.getElementById('displayModeBtn');
+                        btn.textContent = showOnlyIds ? 'Show Names' : 'Show Only IDs';
+                        
+                        document.querySelectorAll('.item-content').forEach(item => {
+                            const id = item.dataset.id;
+                            const name = item.dataset.name;
+                            item.textContent = showOnlyIds ? id : (name || id);
+                        });
+                    }
+                })
+                .catch(console.error);
+        }, 1000);
     </script>
 </body>
 </html>

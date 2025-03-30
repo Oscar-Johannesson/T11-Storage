@@ -28,7 +28,7 @@ def toggle_lights():
         num_pixels = 360
         ORDER = neopixel.GRB
         
-        pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER)
+        pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.5, auto_write=False, pixel_order=ORDER)
         
 
         pixels.fill((0, 0, 0))
@@ -688,10 +688,49 @@ def start_web_server():
     from webpage import app
     app.run(host='0.0.0.0', port=80, debug=False)
 
+def fail_warning(e):
+        messagebox.showwarning("Critical error", e)
+        def warning_loop():
+            while True:
+                try:
+                    import board
+                    import neopixel
+                    import time
+                    pixel_pin = board.D18
+                    num_pixels = 360
+                    ORDER = neopixel.GRB
+                    pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=1.0, auto_write=False, pixel_order=ORDER)
+                    
+                    for _ in range(3):
+                        pixels.fill((255, 0, 0))  
+                        pixels.show()
+                        time.sleep(0.5)
+                        pixels.fill((0, 0, 0))    
+                        pixels.show() 
+                        time.sleep(0.5)
+                    
+                    time.sleep(2)  
+                    
+                except ImportError:
+                    print("Warning: RPi libraries not available")
+                return
+
+        warning_thread = threading.Thread(target=warning_loop)
+        warning_thread.start()
+        
+
 
 if __name__ == "__main__":
-    server_thread = threading.Thread(target=start_web_server)
-    server_thread.daemon = True
-    server_thread.start()
-
-    main_ui()
+    try:
+        server_thread = threading.Thread(target=start_web_server)
+        server_thread.daemon = True 
+        server_thread.start()
+        
+        main_ui()
+        
+    except Exception as e:
+        print(f"CRITICAL ERROR: {str(e)}")
+        with open("error.log", "a") as f:
+            f.write(f"CRITICAL ERROR: {str(e)}\n")
+        
+        fail_warning(e)

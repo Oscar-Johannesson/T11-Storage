@@ -7,6 +7,8 @@ import os.path
 from shared_state import load_state, save_state
 import subprocess
 import platform
+from datetime import datetime
+import shutil
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 app.secret_key = os.urandom(24)
@@ -64,6 +66,17 @@ def sync_with_main():
         }
     except ImportError:
         return {"searches": [], "rainbow": False}
+    
+def get_component_names():
+    components = {}
+    data = load_storage_data()
+    for sublist in data:
+        for item in sublist:
+            components[item["Id"]] = {
+                "name": item["utility"]
+            }
+    return components
+
 
 @app.route("/")
 def index():
@@ -71,7 +84,9 @@ def index():
         return redirect(url_for("login"))
     storage_data = load_storage_data()
     active_searches = get_active_searches()
+    components = get_component_names()
     return render_template("index.html", 
+                        components=components,
                          user=session["user"], 
                          items=storage_data,
                          active_searches=active_searches)
@@ -203,14 +218,14 @@ def save_preset():
 def add_component():
     if not session.get("user"):
         return {"success": False, "error": "Unauthorized"}, 401
-    print("Adding component")
-    print(request.form)
+    
     try:
+        component_id = request.form.get("componentId")
         name = request.form.get("componentName")
         category = request.form.get("componentCategory")
         description = request.form.get("componentDesc")
         
-        
+        # Icon selection logic
         if category == "resistor":
             icon = "resistor.png"
         elif category == "capacitor": 
@@ -232,9 +247,6 @@ def add_component():
         else:
             icon = "miscellaneous.png"
 
-        data = load_storage_data()
-        newid =  (int(data[-1][-1]["Id"] if data and data[-1] else 0)) + 1
-        
         new_component = {
             "utility": name,
             "description": description,
@@ -242,16 +254,29 @@ def add_component():
             "keywords": f"{name}",
             "favourite": "false",
             "number": "1",
-            "Id": str(newid)
+            "Id": str(component_id)
         }
-        data.append([new_component])
-        
+
         data = load_storage_data()
-        if data:
-            data[-1].append(new_component)
-        else:
-            data = [[new_component]]
-            
+        
+        # Look for existing component with same ID to replace
+        found = False
+        for sublist in data:
+            for i, item in enumerate(sublist):
+                if item["Id"] == str(component_id):
+                    sublist[i] = new_component
+                    found = True
+                    break
+            if found:
+                break
+                
+        # If no existing component found, add to last sublist
+        if not found:
+            if data:
+                data[-1].append(new_component)
+            else:
+                data = [[new_component]]
+
         with open(os.path.join(os.path.dirname(__file__), "dat", "utilities.json"), 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=4)
 
@@ -456,6 +481,88 @@ def toggle_search_lock():
         "allow_searches": state["allow_searches"],
         "searches": state["searches"]
     }
+
+@app.route("/download/<filename>")
+def download_backup(filename):
+    if not session.get("user"):
+        return {"error": "Not logged in"}, 401
+        
+    # Only allow specific JSON files
+    allowed_files = ['users.json', 'presets.json', 'utilities.json']
+    if filename not in allowed_files:
+        return {"error": "File not allowed"}, 403
+        
+    try:
+        # Get current date for the backup filename
+        date_str = datetime.now().strftime('%Y-%m-%d')
+        source_path = os.path.join('dat', filename)
+        
+        # Create backup filename: date_backup_originalname.json
+        backup_filename = f"{date_str}_backup_{filename}"
+        
+        # Create a temporary copy of the file
+        temp_path = os.path.join('dat', backup_filename)
+        shutil.copy2(source_path, temp_path)
+        
+        # Send file and then delete the temporary copy
+        response = send_from_directory('dat', backup_filename, as_attachment=True)
+        
+        @response.call_on_close
+        def cleanup():
+            try:
+                os.remove(temp_path)
+            except:
+                pass
+                
+        return response
+        
+    except Exception as e:
+        return {"error": f"Failed to create backup: {str(e)}"}, 500
+
+@app.route("/api/upload_backup", methods=["POST"])
+def upload_backup():
+    if not session.get("user"):
+        return {"error": "Not logged in"}, 401
+        
+    if 'file' not in request.files:
+        return {"error": "No file provided"}, 400
+        
+    file = request.files['file']
+    backup_type = request.form.get('type')
+    
+    if not backup_type or backup_type not in ['users.json', 'presets.json', 'utilities.json']:
+        return {"error": "Invalid backup type"}, 400
+        
+    if file.filename == '':
+        return {"error": "No file selected"}, 400
+        
+    if not file.filename.endswith('.json'):
+        return {"error": "File must be JSON format"}, 400
+        
+    try:
+        # Verify the file is valid JSON
+        try:
+            json.load(file)
+            file.seek(0)  # Reset file pointer after reading
+        except:
+            return {"error": "Invalid JSON file"}, 400
+            
+        target_path = os.path.join('dat', backup_type)
+        
+        # If existing file exists, rename it
+        if os.path.exists(target_path):
+            backup_name = os.path.join('dat', f'Old_{backup_type}')
+            if os.path.exists(backup_name):
+                os.remove(backup_name)  # Remove previous backup if exists
+            os.rename(target_path, backup_name)
+            
+        # Save new file
+        file.save(target_path)
+        
+        return {"success": True, "message": "Backup uploaded successfully"}
+        
+    except Exception as e:
+        return {"error": f"Failed to upload backup: {str(e)}"}, 500
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)

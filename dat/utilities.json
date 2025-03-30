@@ -1,52 +1,52 @@
 [
     [
         {
-            "utility": "\u00ad10 ohm",
+            "utility": "10 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "10 ohm resistor",
             "keywords": "10 ohm",
             "Id": "1"
         },
         {
-            "utility": "\u00ad12 ohm",
+            "utility": "12 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "12 ohm resistor",
             "keywords": "12 ohm",
             "Id": "2"
         },
         {
-            "utility": "\u00ad15 ohm",
+            "utility": "15 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "15 ohm resistor",
             "keywords": "15 ohm",
             "Id": "3"
         },
         {
-            "utility": "\u00ad18 ohm",
+            "utility": "18 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "18 ohm resistor",
             "keywords": "18 ohm",
             "Id": "4"
         },
         {
-            "utility": "\u00ad22 ohm",
+            "utility": "22 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "22 ohm resistor",
             "keywords": "22 ohm",
             "Id": "5"
         },
         {
-            "utility": "\u00ad27 ohm",
+            "utility": "27 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "27 ohm resistor",
             "keywords": "27 ohm",
             "Id": "6"
         },
         {
-            "utility": "\u00ad33 ohm",
+            "utility": "33 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "33 ohm resistor",
-            "keywords": "\u00ad33 ohm",
+            "keywords": "33 ohm",
             "Id": "7"
         },
         {
@@ -57,56 +57,56 @@
             "Id": "8"
         },
         {
-            "utility": "\u00ad47 ohm",
+            "utility": "47 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "47 ohm resistor",
-            "keywords": "\u00ad47 ohm",
+            "keywords": "47 ohm",
             "Id": "9"
         },
         {
-            "utility": "\u00ad56 ohm",
+            "utility": "56 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "56 ohm resistor",
-            "keywords": "\u00ad56 ohm",
+            "keywords": "56 ohm",
             "Id": "10"
         },
         {
-            "utility": "\u00ad68 ohm",
+            "utility": "68 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "68 ohm resistor",
-            "keywords": "\u00ad68 ohm",
+            "keywords": "68 ohm",
             "Id": "11"
         },
         {
-            "utility": "\u00ad82 ohm",
+            "utility": "82 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "82 ohm",
-            "keywords": "\u00ad82 ohm",
+            "keywords": "82 ohm",
             "Id": "12"
         },
         {
-            "utility": "\u00ad100 ohm",
+            "utility": "100 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "100 ohm resistor",
-            "keywords": "\u00ad100ohm",
+            "keywords": "100ohm",
             "Id": "13"
         },
         {
-            "utility": "\u00ad120 ohm",
+            "utility": "120 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "120 ohm resistor",
             "keywords": "120 ohm",
             "Id": "14"
         },
         {
-            "utility": "\u00ad150 ohm",
+            "utility": "150 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "150 ohm resistor",
             "keywords": "150 ohm",
             "Id": "15"
         },
         {
-            "utility": "\u00ad180 ohm",
+            "utility": "180 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "180 ohm resistor",
             "keywords": "180 ohm",
@@ -120,283 +120,283 @@
             "Id": "17"
         },
         {
-            "utility": "\u00ad270 ohm",
+            "utility": "270 ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad270 ohm resistor",
-            "keywords": "\u00ad270 ohm",
+            "description": "270 ohm resistor",
+            "keywords": "270 ohm",
             "Id": "18"
         },
         {
-            "utility": "\u00ad330 ohm",
+            "utility": "330 ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad330 ohm resistor",
-            "keywords": "\u00ad330 ohm",
+            "description": "330 ohm resistor",
+            "keywords": "330 ohm",
             "Id": "19"
         },
         {
-            "utility": "\u00ad390 ohm",
+            "utility": "390 ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad390 ohm resistor",
-            "keywords": "\u00ad390 ohm",
+            "description": "390 ohm resistor",
+            "keywords": "390 ohm",
             "Id": "20"
         },
         {
-            "utility": "\u00ad470 ohm ",
+            "utility": "470 ohm ",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad470 ohm resistor",
-            "keywords": "\u00ad470 ohm ",
+            "description": "470 ohm resistor",
+            "keywords": "470 ohm ",
             "Id": "21"
         },
         {
-            "utility": "\u00ad560 ohm",
+            "utility": "560 ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad560 ohm resistor",
-            "keywords": "\u00ad560 ohm",
+            "description": "560 ohm resistor",
+            "keywords": "560 ohm",
             "Id": "22"
         },
         {
-            "utility": "\u00ad680 ohm",
+            "utility": "680 ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad680 ohm resistor",
-            "keywords": "\u00ad680 ohm",
+            "description": "680 ohm resistor",
+            "keywords": "680 ohm",
             "Id": "23"
         },
         {
-            "utility": "\u00ad\u00ad820 ohm",
+            "utility": "820 ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad\u00ad820 ohm resistor",
-            "keywords": "\u00ad\u00ad820 ohm",
+            "description": "820 ohm resistor",
+            "keywords": "820 ohm",
             "Id": "24"
         },
         {
-            "utility": "\u00ad1k ohm",
+            "utility": "1k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad1k ohm resistor",
-            "keywords": "\u00ad1k 1000 ohm",
+            "description": "1k ohm resistor",
+            "keywords": "1k 1000 ohm",
             "Id": "25"
         },
         {
-            "utility": "\u00ad1.2k ohm",
+            "utility": "1.2k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad1.2 ohm resistor",
-            "keywords": "\u00ad1.2k 1200 ohm",
+            "description": "1.2 ohm resistor",
+            "keywords": "1.2k 1200 ohm",
             "Id": "26"
         },
         {
-            "utility": "\u00ad1.5k ohm",
+            "utility": "1.5k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad1.5k ohm resistor",
-            "keywords": "\u00ad1.5k 1500 ohm",
+            "description": "1.5k ohm resistor",
+            "keywords": "1.5k 1500 ohm",
             "Id": "27"
         },
         {
-            "utility": "\u00ad1.8k ohm",
+            "utility": "1.8k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad1.8k ohm resistor",
-            "keywords": "\u00ad1.8k 1800 ohm",
+            "description": "1.8k ohm resistor",
+            "keywords": "1.8k 1800 ohm",
             "Id": "28"
         },
         {
-            "utility": "\u00ad2.2k ohm",
+            "utility": "2.2k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad2.2k ohm resistor",
-            "keywords": "\u00ad2.2k 2200 ohm",
+            "description": "2.2k ohm resistor",
+            "keywords": "2.2k 2200 ohm",
             "Id": "29"
         },
         {
-            "utility": "\u00ad2.7k ohm",
+            "utility": "2.7k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad2.7k ohm resistor",
-            "keywords": "\u00ad2.7k 2700 ohm",
+            "description": "2.7k ohm resistor",
+            "keywords": "2.7k 2700 ohm",
             "Id": "30"
         },
         {
-            "utility": "\u00ad3.3k ohm",
+            "utility": "3.3k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad3.3k ohm resistor",
-            "keywords": "\u00ad3.3k 3300 ohm",
+            "description": "3.3k ohm resistor",
+            "keywords": "3.3k 3300 ohm",
             "Id": "31"
         },
         {
-            "utility": "\u00ad3.9k ohm",
+            "utility": "3.9k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad3.9k ohm resistor",
-            "keywords": "\u00ad3.9k 3900 ohm",
+            "description": "3.9k ohm resistor",
+            "keywords": "3.9k 3900 ohm",
             "Id": "32"
         },
         {
-            "utility": "\u00ad4.7k ohm",
+            "utility": "4.7k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad4.7k ohm resistor",
-            "keywords": "\u00ad4.7k 4700 ohm",
+            "description": "4.7k ohm resistor",
+            "keywords": "4.7k 4700 ohm",
             "Id": "33"
         },
         {
-            "utility": "\u00ad\u00ad5.6k ohm",
+            "utility": "5.6k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad\u00ad5.6k ohm resistor",
-            "keywords": "\u00ad\u00ad5.6k 5600 ohm",
+            "description": "5.6k ohm resistor",
+            "keywords": "5.6k 5600 ohm",
             "Id": "34"
         },
         {
-            "utility": "\u00ad6.8k ohm",
+            "utility": "6.8k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad6.8k ohm resistor",
-            "keywords": "\u00ad6.8k 6800 ohm",
+            "description": "6.8k ohm resistor",
+            "keywords": "6.8k 6800 ohm",
             "Id": "35"
         },
         {
-            "utility": "\u00ad8.2k ohm",
+            "utility": "8.2k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad8.2k ohm resistor",
-            "keywords": "\u00ad8.2k 8200 ohm",
+            "description": "8.2k ohm resistor",
+            "keywords": "8.2k 8200 ohm",
             "Id": "36"
         },
         {
-            "utility": "\u00ad10k ohm",
+            "utility": "10k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad\u00ad10k ohm resistor",
-            "keywords": "\u00ad10k ohm",
+            "description": "10k ohm resistor",
+            "keywords": "10k ohm",
             "Id": "37"
         },
         {
-            "utility": "\u00ad12k ohm",
+            "utility": "12k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad12k ohm resistor",
-            "keywords": "\u00ad12k ohm",
+            "description": "12k ohm resistor",
+            "keywords": "12k ohm",
             "Id": "38"
         },
         {
-            "utility": "\u00ad\u00ad15k ohm",
+            "utility": "15k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad\u00ad15k ohm resistor",
-            "keywords": "\u00ad\u00ad15k ohm",
+            "description": "15k ohm resistor",
+            "keywords": "15k ohm",
             "Id": "39"
         },
         {
-            "utility": "\u00ad18k ohm",
+            "utility": "18k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad18k ohm resistor",
-            "keywords": "\u00ad18k ohm",
+            "description": "18k ohm resistor",
+            "keywords": "18k ohm",
             "Id": "40"
         },
         {
-            "utility": "\u00ad22k ohm",
+            "utility": "22k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad22k ohm resistor",
-            "keywords": "\u00ad22k ohm",
+            "description": "22k ohm resistor",
+            "keywords": "22k ohm",
             "Id": "41"
         },
         {
-            "utility": "\u00ad27k ohm",
+            "utility": "27k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad27k ohm resistor",
-            "keywords": "\u00ad27k ohm",
+            "description": "27k ohm resistor",
+            "keywords": "27k ohm",
             "Id": "42"
         },
         {
-            "utility": "\u00ad33k ohm",
+            "utility": "33k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad33k ohm resistor",
-            "keywords": "\u00ad33k ohm",
+            "description": "33k ohm resistor",
+            "keywords": "33k ohm",
             "Id": "43"
         },
         {
-            "utility": "\u00ad39k ohm",
+            "utility": "39k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad39k ohm resistor",
-            "keywords": "\u00ad39k ohm",
+            "description": "39k ohm resistor",
+            "keywords": "39k ohm",
             "Id": "44"
         },
         {
-            "utility": "\u00ad47k ohm",
+            "utility": "47k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad47k ohm resistor",
-            "keywords": "\u00ad47k ohm",
+            "description": "47k ohm resistor",
+            "keywords": "47k ohm",
             "Id": "45"
         },
         {
-            "utility": "\u00ad56k ohm",
+            "utility": "56k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad56k ohm resistor",
-            "keywords": "\u00ad56k ohm",
+            "description": "56k ohm resistor",
+            "keywords": "56k ohm",
             "Id": "46"
         },
         {
-            "utility": "\u00ad68k ohm",
+            "utility": "68k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad68k ohm resistor",
-            "keywords": "\u00ad68k ohm",
+            "description": "68k ohm resistor",
+            "keywords": "68k ohm",
             "Id": "47"
         },
         {
-            "utility": "\u00ad82k ohm",
+            "utility": "82k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad82k ohm resistor ",
-            "keywords": "\u00ad82k ohm",
+            "description": "82k ohm resistor ",
+            "keywords": "82k ohm",
             "Id": "48"
         },
         {
-            "utility": "\u00ad100k ohm",
+            "utility": "100k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad100k ohm resistor",
-            "keywords": "\u00ad100k ohm",
+            "description": "100k ohm resistor",
+            "keywords": "100k ohm",
             "Id": "49"
         },
         {
-            "utility": "\u00ad120k ohm",
+            "utility": "120k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad120k ohm resistor",
-            "keywords": "\u00ad120k ohm",
+            "description": "120k ohm resistor",
+            "keywords": "120k ohm",
             "Id": "50"
         },
         {
-            "utility": "\u00ad150k ohm",
+            "utility": "150k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad150k ohm resistor",
-            "keywords": "\u00ad150k ohm",
+            "description": "150k ohm resistor",
+            "keywords": "150k ohm",
             "Id": "51"
         },
         {
-            "utility": "\u00ad180k ohm",
+            "utility": "180k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad180k ohm resistor",
-            "keywords": "\u00ad180k ohm",
+            "description": "180k ohm resistor",
+            "keywords": "180k ohm",
             "Id": "52"
         },
         {
-            "utility": "\u00ad220k ohm",
+            "utility": "220k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad220k ohm resistor",
-            "keywords": "\u00ad220k ohm",
+            "description": "220k ohm resistor",
+            "keywords": "220k ohm",
             "Id": "53"
         },
         {
-            "utility": "\u00ad270k ohm",
+            "utility": "270k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad270k ohm resistor",
-            "keywords": "\u00ad270k ohm",
+            "description": "270k ohm resistor",
+            "keywords": "270k ohm",
             "Id": "54"
         },
         {
-            "utility": "\u00ad330k ohm",
+            "utility": "330k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad330k ohm resistor",
-            "keywords": "\u00ad330k ohm",
+            "description": "330k ohm resistor",
+            "keywords": "330k ohm",
             "Id": "55"
         },
         {
-            "utility": "\u00ad390k ohm",
+            "utility": "390k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad390k ohm resistor",
-            "keywords": "\u00ad390k ohm",
+            "description": "390k ohm resistor",
+            "keywords": "390k ohm",
             "Id": "56"
         },
         {
-            "utility": "\u00ad470k ohm",
+            "utility": "470k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad470k ohm resistor",
-            "keywords": "\u00ad470k ohm",
+            "description": "470k ohm resistor",
+            "keywords": "470k ohm",
             "Id": "57"
         },
         {
@@ -407,23 +407,23 @@
             "Id": "58"
         },
         {
-            "utility": "\u00ad680k ohm",
+            "utility": "680k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad680k ohm resistor",
-            "keywords": "\u00ad680k ohm",
+            "description": "680k ohm resistor",
+            "keywords": "680k ohm",
             "Id": "59"
         },
         {
-            "utility": "\u00ad820k ohm",
+            "utility": "820k ohm",
             "icon": "..img/icons/resistor.png",
-            "description": "\u00ad820k ohm resistor",
-            "keywords": "\u00ad820k ohm",
+            "description": "820k ohm resistor",
+            "keywords": "820k ohm",
             "Id": "60"
         }
     ],
     [
         {
-            "utility": "\u00ad1M ohm",
+            "utility": "1M ohm",
             "icon": "..img/icons/resistor.png",
             "description": "1M ohm resistor",
             "keywords": "1M ohm",
@@ -432,7 +432,7 @@
             "Id": "61"
         },
         {
-            "utility": "\u00adSIL 100 ohm",
+            "utility": "SIL 100 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "SIL 100 ohm resistor",
             "keywords": "SIL 100 ohm ",
@@ -441,7 +441,7 @@
             "Id": "62"
         },
         {
-            "utility": "\u00adSIL 220 ohm",
+            "utility": "SIL 220 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "SIL 220 ohm resistor",
             "keywords": "SIL 220 ohm",
@@ -450,7 +450,7 @@
             "Id": "63"
         },
         {
-            "utility": "\u00adSIL 470 ohm",
+            "utility": "SIL 470 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "SIL 470 ohm resistor",
             "keywords": "SIL 470 ohm",
@@ -459,7 +459,7 @@
             "Id": "64"
         },
         {
-            "utility": "\u00adSIL 1k ohm",
+            "utility": "SIL 1k ohm",
             "icon": "..img/icons/resistor.png",
             "description": "SIL 1k ohm resistor",
             "keywords": "SIL 1k ohm",
@@ -468,7 +468,7 @@
             "Id": "65"
         },
         {
-            "utility": "\u00adSIL 2.2k ohm",
+            "utility": "SIL 2.2k ohm",
             "icon": "..img/icons/resistor.png",
             "description": "SIL 2.2k ohm resistor",
             "keywords": "SIL 2.2k ohm ",
@@ -477,7 +477,7 @@
             "Id": "66"
         },
         {
-            "utility": "\u00adSIL 4.7k ohm ",
+            "utility": "SIL 4.7k ohm ",
             "icon": "..img/icons/resistor.png",
             "description": "SIL 4.7k ohm resistor",
             "keywords": "SIL 4.7k ohm ",
@@ -486,7 +486,7 @@
             "Id": "67"
         },
         {
-            "utility": "\u00adSIL 6.8k ohm",
+            "utility": "SIL 6.8k ohm",
             "icon": "..img/icons/resistor.png",
             "description": "SIL 6.8k ohm resistor",
             "keywords": "SIL 6.8k ohm resistor",
@@ -495,7 +495,7 @@
             "Id": "68"
         },
         {
-            "utility": "\u00adSIL 10k ohm ",
+            "utility": "SIL 10k ohm ",
             "icon": "..img/icons/resistor.png",
             "description": "SIL 10k ohm resistor",
             "keywords": "SIL 10k ohm",
@@ -504,7 +504,7 @@
             "Id": "69"
         },
         {
-            "utility": "\u00adSIL 68k ohm",
+            "utility": "SIL 68k ohm",
             "icon": "..img/icons/resistor.png",
             "description": "SIL 68k ohm resistor",
             "keywords": "SIL 68k ohm ",
@@ -513,7 +513,7 @@
             "Id": "70"
         },
         {
-            "utility": "\u00ad10pF-27pF",
+            "utility": "10pF-27pF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "10pF-27pF",
@@ -522,7 +522,7 @@
             "Id": "71"
         },
         {
-            "utility": "\u00ad33pF-47pF",
+            "utility": "33pF-47pF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "33pF-47pF",
@@ -531,7 +531,7 @@
             "Id": "72"
         },
         {
-            "utility": "\u00ad100pF-150pF",
+            "utility": "100pF-150pF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "100pF-150pF",
@@ -540,7 +540,7 @@
             "Id": "73"
         },
         {
-            "utility": "\u00ad220pF-470pF",
+            "utility": "220pF-470pF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "220pF-470pF",
@@ -549,7 +549,7 @@
             "Id": "74"
         },
         {
-            "utility": "\u00ad1nF-2.2nF",
+            "utility": "1nF-2.2nF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "1nF-2.2nF",
@@ -558,7 +558,7 @@
             "Id": "75"
         },
         {
-            "utility": "\u00ad3.3nF-10nF",
+            "utility": "3.3nF-10nF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "3.3nF-10nF",
@@ -567,7 +567,7 @@
             "Id": "76"
         },
         {
-            "utility": "\u00ad22nF-47nF",
+            "utility": "22nF-47nF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "22nF-47nF",
@@ -576,7 +576,7 @@
             "Id": "77"
         },
         {
-            "utility": "\u00ad100nF",
+            "utility": "100nF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "100nF",
@@ -585,7 +585,7 @@
             "Id": "78"
         },
         {
-            "utility": "\u00ad220nF",
+            "utility": "220nF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "220nF",
@@ -594,7 +594,7 @@
             "Id": "79"
         },
         {
-            "utility": "\u00ad330nF-470nF",
+            "utility": "330nF-470nF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "330nF-470nF",
@@ -603,7 +603,7 @@
             "Id": "80"
         },
         {
-            "utility": "\u00ad1uF",
+            "utility": "1uF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "1uF",
@@ -612,7 +612,7 @@
             "Id": "81"
         },
         {
-            "utility": "\u00ad2.2uF",
+            "utility": "2.2uF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "2.2uF",
@@ -621,7 +621,7 @@
             "Id": "82"
         },
         {
-            "utility": "\u00ad3.3uF-4.7uF",
+            "utility": "3.3uF-4.7uF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "3.3uF-4.7uF",
@@ -630,7 +630,7 @@
             "Id": "83"
         },
         {
-            "utility": "\u00ad10uF/40v/63v",
+            "utility": "10uF/40v/63v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "10uF/40v/63v",
@@ -639,7 +639,7 @@
             "Id": "84"
         },
         {
-            "utility": "\u00ad22uF/16v",
+            "utility": "22uF/16v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "22uF/16v",
@@ -648,7 +648,7 @@
             "Id": "85"
         },
         {
-            "utility": "\u00ad22uF/25v",
+            "utility": "22uF/25v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "22uF/25v",
@@ -657,7 +657,7 @@
             "Id": "86"
         },
         {
-            "utility": "\u00ad22uF/50v-100v",
+            "utility": "22uF/50v-100v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "22uF/50v-100v",
@@ -666,7 +666,7 @@
             "Id": "87"
         },
         {
-            "utility": "\u00ad33uF-47uF",
+            "utility": "33uF-47uF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "33uF-47uF",
@@ -675,7 +675,7 @@
             "Id": "88"
         },
         {
-            "utility": "\u00ad100uF/16v/25v",
+            "utility": "100uF/16v/25v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "100uF/16v/25v",
@@ -684,7 +684,7 @@
             "Id": "89"
         },
         {
-            "utility": "\u00ad100uF/35v np",
+            "utility": "100uF/35v np",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "100uF/35v np",
@@ -693,7 +693,7 @@
             "Id": "90"
         },
         {
-            "utility": "\u00ad100uF/63v",
+            "utility": "100uF/63v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "100uF/63v",
@@ -702,7 +702,7 @@
             "Id": "91"
         },
         {
-            "utility": "\u00ad220uF/16v np",
+            "utility": "220uF/16v np",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "220uF/16v np",
@@ -711,7 +711,7 @@
             "Id": "92"
         },
         {
-            "utility": "\u00ad220uF/25v",
+            "utility": "220uF/25v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "220uF/25v",
@@ -720,7 +720,7 @@
             "Id": "93"
         },
         {
-            "utility": "\u00ad470uF",
+            "utility": "470uF",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "470uF",
@@ -729,7 +729,7 @@
             "Id": "94"
         },
         {
-            "utility": "\u00ad1000uF/16v",
+            "utility": "1000uF/16v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "1000uF/16v",
@@ -738,7 +738,7 @@
             "Id": "95"
         },
         {
-            "utility": "\u00ad1000uF/25v",
+            "utility": "1000uF/25v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "1000uF/25v",
@@ -747,7 +747,7 @@
             "Id": "96"
         },
         {
-            "utility": "\u00ad1000uF/35v",
+            "utility": "1000uF/35v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "1000uF/35v",
@@ -756,7 +756,7 @@
             "Id": "97"
         },
         {
-            "utility": "\u00ad1000uF/50v",
+            "utility": "1000uF/50v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "1000uF/50v",
@@ -765,7 +765,7 @@
             "Id": "98"
         },
         {
-            "utility": "\u00ad2200uF/25v",
+            "utility": "2200uF/25v",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "2200uF/25v",
@@ -774,7 +774,7 @@
             "Id": "99"
         },
         {
-            "utility": "\u00adLED bl\u00e5",
+            "utility": "LED bl\u00e5",
             "icon": "..img/icons/led.png",
             "description": "",
             "keywords": "LED bl\u00e5",
@@ -783,7 +783,7 @@
             "Id": "100"
         },
         {
-            "utility": "\u00adTrimmkondensator",
+            "utility": "Trimmkondensator",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "Trimmkondensator",
@@ -792,7 +792,7 @@
             "Id": "101"
         },
         {
-            "utility": "\u00adLED r\u00f6d",
+            "utility": "LED r\u00f6d",
             "icon": "..img/icons/led.png",
             "description": "",
             "keywords": "LED r\u00f6d",
@@ -801,7 +801,7 @@
             "Id": "102"
         },
         {
-            "utility": "\u00adLED gr\u00f6n",
+            "utility": "LED gr\u00f6n",
             "icon": "..img/icons/led.png",
             "description": "",
             "keywords": "LED gr\u00f6n",
@@ -810,7 +810,7 @@
             "Id": "103"
         },
         {
-            "utility": "\u00adLED gul",
+            "utility": "LED gul",
             "icon": "..img/icons/led.png",
             "description": "",
             "keywords": "LED gul",
@@ -819,7 +819,7 @@
             "Id": "104"
         },
         {
-            "utility": "\u00adLED vit",
+            "utility": "LED vit",
             "icon": "..img/icons/led.png",
             "description": "",
             "keywords": "LED vit",
@@ -828,7 +828,7 @@
             "Id": "105"
         },
         {
-            "utility": "\u00adPOT 220 ohm",
+            "utility": "POT 220 ohm",
             "icon": "..img/icons/resistor.png",
             "description": "",
             "keywords": "POT 220 ohm",
@@ -837,7 +837,7 @@
             "Id": "106"
         },
         {
-            "utility": "\u00adPOT 10k ohm",
+            "utility": "POT 10k ohm",
             "icon": "..img/icons/led.png",
             "description": "",
             "keywords": "POT 10k ohm",
@@ -846,7 +846,7 @@
             "Id": "107"
         },
         {
-            "utility": "\u00adPOT 100k ohm ",
+            "utility": "POT 100k ohm ",
             "icon": "..img/icons/resistor.png",
             "description": "",
             "keywords": "POT 100k ohm",
@@ -855,7 +855,7 @@
             "Id": "108"
         },
         {
-            "utility": "\u00adPOT 1M ohm",
+            "utility": "POT 1M ohm",
             "icon": "..img/icons/resistor.png",
             "description": "",
             "keywords": "POT 1M ohm",
@@ -864,7 +864,7 @@
             "Id": "109"
         },
         {
-            "utility": "\u00adDIL 8x330 ohm",
+            "utility": "DIL 8x330 ohm",
             "icon": "..img/icons/led.png",
             "description": "",
             "keywords": "DIL 8x330 ohm",
@@ -873,7 +873,7 @@
             "Id": "110"
         },
         {
-            "utility": "\u00adNTC-sensor",
+            "utility": "NTC-sensor",
             "icon": "..img/icons/sensor.png",
             "description": "",
             "keywords": "NTC-sensor",
@@ -882,7 +882,7 @@
             "Id": "111"
         },
         {
-            "utility": "\u00adR.fuktsensor",
+            "utility": "R.fuktsensor",
             "icon": "..img/icons/sensor.png",
             "description": "",
             "keywords": "Rfuktsensor",
@@ -891,7 +891,7 @@
             "Id": "112"
         },
         {
-            "utility": "\u00adLDR-sensor",
+            "utility": "LDR-sensor",
             "icon": "..img/icons/sensor.png",
             "description": "",
             "keywords": "LDR-sensor",
@@ -900,7 +900,7 @@
             "Id": "113"
         },
         {
-            "utility": "\u00ad801S-sensor",
+            "utility": "801S-sensor",
             "icon": "..img/icons/motor.png",
             "description": "",
             "keywords": "801S-sensor",
@@ -909,7 +909,7 @@
             "Id": "114"
         },
         {
-            "utility": "\u00adKTY84-sensor",
+            "utility": "KTY84-sensor",
             "icon": "..img/icons/sensor.png",
             "description": "",
             "keywords": "KTY84-sensor",
@@ -918,7 +918,7 @@
             "Id": "115"
         },
         {
-            "utility": "\u00adPTC-resistor B598",
+            "utility": "PTC-resistor B598",
             "icon": "..img/icons/resistor.png",
             "description": "",
             "keywords": "PTC-resistor B598",
@@ -927,7 +927,7 @@
             "Id": "116"
         },
         {
-            "utility": "\u00adKond.Mikrofon",
+            "utility": "Kond.Mikrofon",
             "icon": "..img/icons/speaker.png",
             "description": "",
             "keywords": "Kond.Mikrofon",
@@ -936,7 +936,7 @@
             "Id": "117"
         },
         {
-            "utility": "\u00adFerrit drossel 100uH/370mA",
+            "utility": "Ferrit drossel 100uH/370mA",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "Ferrit drossel 100uH/370mA",
@@ -954,7 +954,7 @@
             "Id": "119"
         },
         {
-            "utility": "\u00adFerrit drossel 100mH/20mA",
+            "utility": "Ferrit drossel 100mH/20mA",
             "icon": "..img/icons/kondensator.png",
             "description": "",
             "keywords": "Ferrit drossel 100mH/20mA",
@@ -965,7 +965,7 @@
     ],
     [
         {
-            "utility": "\u00adBC327/25",
+            "utility": "BC327/25",
             "icon": "..img/icons/transistor.png",
             "description": "PNP",
             "keywords": "BC327/25 PNP",
@@ -974,7 +974,7 @@
             "Id": "121"
         },
         {
-            "utility": "\u00adBC327/40",
+            "utility": "BC327/40",
             "icon": "..img/icons/transistor.png",
             "description": "PNP",
             "keywords": "BC327/40 PNP",
@@ -983,7 +983,7 @@
             "Id": "122"
         },
         {
-            "utility": "\u00adBC337/25",
+            "utility": "BC337/25",
             "icon": "..img/icons/transistor.png",
             "description": "NPN",
             "keywords": "BC337/25 NPN",
@@ -992,7 +992,7 @@
             "Id": "123"
         },
         {
-            "utility": "\u00adBC337/16",
+            "utility": "BC337/16",
             "icon": "..img/icons/transistor.png",
             "description": "NPN",
             "keywords": "BC337/16 NPN",
@@ -1001,7 +1001,7 @@
             "Id": "124"
         },
         {
-            "utility": "\u00adBC337/40",
+            "utility": "BC337/40",
             "icon": "..img/icons/transistor.png",
             "description": "NPN",
             "keywords": "BC337/40 NPN",
@@ -1010,7 +1010,7 @@
             "Id": "125"
         },
         {
-            "utility": "\u00adBD680G",
+            "utility": "BD680G",
             "icon": "..img/icons/transistor.png",
             "description": "PNP",
             "keywords": "BD680G PNP",
@@ -1019,7 +1019,7 @@
             "Id": "126"
         },
         {
-            "utility": "\u00adBD139/16",
+            "utility": "BD139/16",
             "icon": "..img/icons/transistor.png",
             "description": "NPN",
             "keywords": "BD139/16 NPN",
@@ -1028,7 +1028,7 @@
             "Id": "127"
         },
         {
-            "utility": "\u00ad2N3055G",
+            "utility": "2N3055G",
             "icon": "..img/icons/transistor.png",
             "description": "NPN",
             "keywords": "2N3055G NPN",
@@ -1046,7 +1046,7 @@
             "Id": "129"
         },
         {
-            "utility": "\u00adBD649",
+            "utility": "BD649",
             "icon": "..img/icons/transistor.png",
             "description": "NPN",
             "keywords": "BD649 NPN",
@@ -1073,7 +1073,7 @@
             "Id": "131"
         },
         {
-            "utility": "\u00adBD679",
+            "utility": "BD679",
             "icon": "..img/icons/transistor.png",
             "description": "NPN",
             "keywords": "BD679 NPN",
@@ -1082,7 +1082,7 @@
             "Id": "132"
         },
         {
-            "utility": "\u00adIRL3502",
+            "utility": "IRL3502",
             "icon": "..img/icons/transistor.png",
             "description": "MOSFET",
             "keywords": "IRL3502 MOSFET",
@@ -1091,7 +1091,7 @@
             "Id": "133"
         },
         {
-            "utility": "\u00adLM358N",
+            "utility": "LM358N",
             "icon": "..img/icons/transistor.png",
             "description": "Dual-Operational Amplifiers",
             "keywords": "LM358N Dual Operational Amplifiers",
@@ -1100,7 +1100,7 @@
             "Id": "134"
         },
         {
-            "utility": "\u00adNE5534P",
+            "utility": "NE5534P",
             "icon": "..img/icons/transistor.png",
             "description": "Low-Noise Operational Amplifiers",
             "keywords": "NE5534P Low-Noise Operational Amplifiers",
@@ -1109,7 +1109,7 @@
             "Id": "135"
         },
         {
-            "utility": "\u00adL7805 ",
+            "utility": "L7805 ",
             "icon": "..img/icons/transistor.png",
             "description": "Precision 1A Positive-Voltage Regulator",
             "keywords": "L7805 Positive Voltage Regulators ",
@@ -1127,7 +1127,7 @@
             "Id": "136"
         },
         {
-            "utility": "\u00adL7905",
+            "utility": "L7905",
             "icon": "..img/icons/transistor.png",
             "description": "Negative Voltage Regulators ",
             "keywords": "L7905 Negative Voltage Regulators",
@@ -1136,7 +1136,7 @@
             "Id": "137"
         },
         {
-            "utility": "\u00adLM317T",
+            "utility": "LM317T",
             "icon": "..img/icons/ic.png",
             "description": "3-Terminal Positive Adjustable Voltage regulator",
             "keywords": "LM317T 3-Terminal Positive Adjustable Voltage Regulator",
@@ -1154,7 +1154,7 @@
             "Id": "138"
         },
         {
-            "utility": "\u00adMC7812CT",
+            "utility": "MC7812CT",
             "icon": "..img/icons/transistor.png",
             "description": "3-Terminal Positive Voltage Regulator ",
             "keywords": "MC7812CT 3-Terminal Positive Voltage Regulators",
@@ -1163,7 +1163,7 @@
             "Id": "139"
         },
         {
-            "utility": "\u00ad2N5064",
+            "utility": "2N5064",
             "icon": "..img/icons/transistor.png",
             "description": "MOSTFET",
             "keywords": "2N5064  MOS Field Effect Transistor MOSTFET",
@@ -1172,7 +1172,7 @@
             "Id": "140"
         },
         {
-            "utility": "\u00adTIC106D",
+            "utility": "TIC106D",
             "icon": "..img/icons/transistor.png",
             "description": "PNP",
             "keywords": "TIC106D PNP",
@@ -1181,7 +1181,7 @@
             "Id": "141"
         },
         {
-            "utility": "\u00ad2N5060",
+            "utility": "2N5060",
             "icon": "..img/icons/transistor.png",
             "description": "Silicon Controlled Rectifiers",
             "keywords": "2N5060 Silicon controlled Rectifiers",
@@ -1190,7 +1190,7 @@
             "Id": "142"
         },
         {
-            "utility": "\u00adJ-FET n-transistor",
+            "utility": "J-FET n-transistor",
             "icon": "..img/icons/transistor.png",
             "description": "J-FET n-transistor N-CHANNEL",
             "keywords": "J-FET n-trasistor N-CHANNEL",
@@ -1199,7 +1199,7 @@
             "Id": "143"
         },
         {
-            "utility": "\u00adULN2003",
+            "utility": "ULN2003",
             "icon": "..img/icons/ic.png",
             "description": "Darlington Transistor Array Driver",
             "keywords": "ULN2003 Darlington Transistor Array Driver ",
@@ -1208,7 +1208,7 @@
             "Id": "144"
         },
         {
-            "utility": "\u00adULN2803",
+            "utility": "ULN2803",
             "icon": "..img/icons/ic.png",
             "description": "Dalington Pair",
             "keywords": "ULN2803 Dalington Pair",
@@ -1217,7 +1217,7 @@
             "Id": "145"
         },
         {
-            "utility": "\u00adIN5822",
+            "utility": "IN5822",
             "icon": "..img/icons/diode.png",
             "description": "Low Drop Power Schottky Rectifier",
             "keywords": "IN5822 Low Drop Power Schottky Rectifier",
@@ -1226,7 +1226,7 @@
             "Id": "146"
         },
         {
-            "utility": "\u00adIN4007",
+            "utility": "IN4007",
             "icon": "..img/icons/diode.png",
             "description": "General Purpose Plastic Rectifier ",
             "keywords": "IN4007 General Purpose Plastic Rectifier",
@@ -1235,7 +1235,7 @@
             "Id": "147"
         },
         {
-            "utility": "\u00adIN4148",
+            "utility": "IN4148",
             "icon": "..img/icons/diode.png",
             "description": "Small Signal Fast Switching Diodes",
             "keywords": "IN4148 \u015amall Signal Fast Switching Diodes",
@@ -1244,7 +1244,7 @@
             "Id": "148"
         },
         {
-            "utility": "\u00adADC0804LCN",
+            "utility": "ADC0804LCN",
             "icon": "..img/icons/ic.png",
             "description": "Analog to Digital Converters ",
             "keywords": "ADC0804LCN analog to Digital Converters ",
@@ -1253,7 +1253,7 @@
             "Id": "149"
         },
         {
-            "utility": "\u00adZenerdiod 5.1v",
+            "utility": "Zenerdiod 5.1v",
             "icon": "..img/icons/ic.png",
             "description": "Silicon Planer Power Zener Diodes ",
             "keywords": "Zenerdiod 5.1v Silicon Planer Power Zener Diodes",
@@ -1262,7 +1262,7 @@
             "Id": "150"
         },
         {
-            "utility": "\u00adZenerdiod 3v-24v",
+            "utility": "Zenerdiod 3v-24v",
             "icon": "..img/icons/diode.png",
             "description": "Silicon Planer Power Zener Diodes",
             "keywords": "Zenerdiod 3v-24v Silicon Planer Power Zener diodes ",
@@ -1271,7 +1271,7 @@
             "Id": "151"
         },
         {
-            "utility": "\u00adZenerdiod 2.4v-11v",
+            "utility": "Zenerdiod 2.4v-11v",
             "icon": "..img/icons/diode.png",
             "description": "Silicon Planer Power Zener Diodes",
             "keywords": "Zenerdiod 2.4v-11v Silicon Planer Power Zener Diodes",
@@ -1280,7 +1280,7 @@
             "Id": "153"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1289,7 +1289,7 @@
             "Id": "155"
         },
         {
-            "utility": "\u00ad3st 7-segment display",
+            "utility": "3st 7-segment display",
             "icon": "..img/icons/diode.png",
             "description": "Displays 3 Numbers ",
             "keywords": "3st 7-segment display",
@@ -1298,7 +1298,7 @@
             "Id": "161"
         },
         {
-            "utility": "\u00ad7-segment display",
+            "utility": "7-segment display",
             "icon": "..img/icons/diode.png",
             "description": "Displays 1 Number ",
             "keywords": "7-segment display",
@@ -1307,7 +1307,7 @@
             "Id": "163"
         },
         {
-            "utility": "\u00ad4st 7-segment display",
+            "utility": "4st 7-segment display",
             "icon": "..img/icons/diode.png",
             "description": "Displays 4 Numbers",
             "keywords": "4st 7-segment display",
@@ -1316,7 +1316,7 @@
             "Id": "165"
         },
         {
-            "utility": "\u00adS\u00e4kring 200mA",
+            "utility": "S\u00e4kring 200mA",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "S\u00e4kring 200mA",
@@ -1334,7 +1334,7 @@
             "Id": "168"
         },
         {
-            "utility": "\u00adS\u00e4kring 10A/600v",
+            "utility": "S\u00e4kring 10A/600v",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "S\u00e4kring 10A/600v",
@@ -1343,7 +1343,7 @@
             "Id": "170"
         },
         {
-            "utility": "\u00adFiberoptik Kablage",
+            "utility": "Fiberoptik Kablage",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Fiberoptik Kablage",
@@ -1354,7 +1354,7 @@
     ],
     [
         {
-            "utility": "\u00adTOCP155",
+            "utility": "TOCP155",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "TOCP155",
@@ -1363,7 +1363,7 @@
             "Id": "181"
         },
         {
-            "utility": "\u00adTOTX173",
+            "utility": "TOTX173",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "TOTX173",
@@ -1372,7 +1372,7 @@
             "Id": "182"
         },
         {
-            "utility": "\u00adTOTX141",
+            "utility": "TOTX141",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "TOTX141",
@@ -1381,7 +1381,7 @@
             "Id": "183"
         },
         {
-            "utility": "\u00adDammk\u00e5pa",
+            "utility": "Dammk\u00e5pa",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Dammk\u00e5pa",
@@ -1390,7 +1390,7 @@
             "Id": "184"
         },
         {
-            "utility": "\u00adTOTX179/P",
+            "utility": "TOTX179/P",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "TOTX179/P",
@@ -1399,7 +1399,7 @@
             "Id": "185"
         },
         {
-            "utility": "\u00adTORX173",
+            "utility": "TORX173",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "TORX173",
@@ -1408,7 +1408,7 @@
             "Id": "186"
         },
         {
-            "utility": "\u00adTORX141",
+            "utility": "TORX141",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "TORX141",
@@ -1417,7 +1417,7 @@
             "Id": "187"
         },
         {
-            "utility": "\u00adTORX179",
+            "utility": "TORX179",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "TORX179",
@@ -1426,7 +1426,7 @@
             "Id": "188"
         },
         {
-            "utility": "\u00adTORX111 ",
+            "utility": "TORX111 ",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "TORX111 ",
@@ -1444,7 +1444,7 @@
             "Id": "189"
         },
         {
-            "utility": "\u00adBPW34 ",
+            "utility": "BPW34 ",
             "icon": "..img/icons/diode.png",
             "description": "Silicon PIN Photodiode ",
             "keywords": "BPW34 Silicon PIN Photodiode",
@@ -1462,7 +1462,7 @@
             "Id": "190"
         },
         {
-            "utility": "\u00adBP104F",
+            "utility": "BP104F",
             "icon": "..img/icons/diode.png",
             "description": "Silicon PIN Photodiode",
             "keywords": "BP104F Silicon PIN Photodiode ",
@@ -1489,7 +1489,7 @@
             "Id": "192"
         },
         {
-            "utility": "\u00adSFH300 ",
+            "utility": "SFH300 ",
             "icon": "..img/icons/transistor.png",
             "description": "Silicon NPN Phototransistor ",
             "keywords": "SFH300 NPN Phototransistor ",
@@ -1498,7 +1498,7 @@
             "Id": "192"
         },
         {
-            "utility": "\u00adPC817 ",
+            "utility": "PC817 ",
             "icon": "..img/icons/ic.png",
             "description": "DIP 4 Pin General Purpose Photocoupler ",
             "keywords": "PC817 DIP 4 Pin Generial Purpose Photocoupler",
@@ -1516,7 +1516,7 @@
             "Id": "193"
         },
         {
-            "utility": "\u00adPC845",
+            "utility": "PC845",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "PC845 HIGH DENSITY MOUNTING PHOTOCOUPLER",
@@ -1525,7 +1525,7 @@
             "Id": "194"
         },
         {
-            "utility": "\u00adITR8102 ",
+            "utility": "ITR8102 ",
             "icon": "..img/icons/diode.png",
             "description": "",
             "keywords": "ITR8102 ",
@@ -1552,7 +1552,7 @@
             "Id": "196"
         },
         {
-            "utility": "\u00adTCST2103 ",
+            "utility": "TCST2103 ",
             "icon": "..img/icons/diode.png",
             "description": "",
             "keywords": "TCST2103 ",
@@ -1561,7 +1561,7 @@
             "Id": "196"
         },
         {
-            "utility": "\u00adOP290A",
+            "utility": "OP290A",
             "icon": "..img/icons/diode.png",
             "description": "",
             "keywords": "OP290A ",
@@ -1588,7 +1588,7 @@
             "Id": "198"
         },
         {
-            "utility": "\u00adOP295A ",
+            "utility": "OP295A ",
             "icon": "..img/icons/diode.png",
             "description": "",
             "keywords": "OP295A ",
@@ -1597,7 +1597,7 @@
             "Id": "198"
         },
         {
-            "utility": "\u00adIR7373C",
+            "utility": "IR7373C",
             "icon": "..img/icons/diode.png",
             "description": "",
             "keywords": "IR7373C",
@@ -1606,7 +1606,7 @@
             "Id": "199"
         },
         {
-            "utility": "\u00adHIR323C",
+            "utility": "HIR323C",
             "icon": "..img/icons/diode.png",
             "description": "",
             "keywords": "HIR323C",
@@ -1615,7 +1615,7 @@
             "Id": "200"
         },
         {
-            "utility": "\u00adIRM3628N3",
+            "utility": "IRM3628N3",
             "icon": "..img/icons/diode.png",
             "description": "",
             "keywords": "IRM3638N3",
@@ -1624,7 +1624,7 @@
             "Id": "201"
         },
         {
-            "utility": "\u00adDB154G",
+            "utility": "DB154G",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "DB154G Bridge Rectifier",
@@ -1633,7 +1633,7 @@
             "Id": "202"
         },
         {
-            "utility": "\u00ad\u00f6vrig likriktare",
+            "utility": "\u00f6vrig likriktare",
             "icon": "..img/icons/diode.png",
             "description": "",
             "keywords": "\u00f6vrig likriktare",
@@ -1642,7 +1642,7 @@
             "Id": "203"
         },
         {
-            "utility": "\u00adOP741",
+            "utility": "OP741",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "OP741 Operational Amplifier ",
@@ -1651,7 +1651,7 @@
             "Id": "204"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1660,7 +1660,7 @@
             "Id": "205"
         },
         {
-            "utility": "\u00ad74LS00",
+            "utility": "74LS00",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS00 NAND GATE",
@@ -1669,7 +1669,7 @@
             "Id": "206"
         },
         {
-            "utility": "\u00ad74LS02",
+            "utility": "74LS02",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS02 NOR GATE",
@@ -1678,7 +1678,7 @@
             "Id": "207"
         },
         {
-            "utility": "\u00ad74LS04",
+            "utility": "74LS04",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS04 NOT GATE",
@@ -1687,7 +1687,7 @@
             "Id": "208"
         },
         {
-            "utility": "\u00ad74LS08",
+            "utility": "74LS08",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS08 AND GATE",
@@ -1696,7 +1696,7 @@
             "Id": "209"
         },
         {
-            "utility": "74LS32\u00ad",
+            "utility": "74LS32",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS32 OR GATE",
@@ -1705,7 +1705,7 @@
             "Id": "210"
         },
         {
-            "utility": "\u00ad74LS74",
+            "utility": "74LS74",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS74 Dual D Flip-Flop",
@@ -1714,7 +1714,7 @@
             "Id": "211"
         },
         {
-            "utility": "\u00ad74LS76",
+            "utility": "74LS76",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74KLS76 Dual JK Flip-Flop",
@@ -1723,7 +1723,7 @@
             "Id": "212"
         },
         {
-            "utility": "\u00ad74LS86",
+            "utility": "74LS86",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS86 XOR GATE",
@@ -1732,7 +1732,7 @@
             "Id": "213"
         },
         {
-            "utility": "\u00ad74LS132",
+            "utility": "74LS132",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS132 Schmitt trigger NAND GATE",
@@ -1741,7 +1741,7 @@
             "Id": "214"
         },
         {
-            "utility": "\u00ad74LS138",
+            "utility": "74LS138",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS138 Decoders/demultiplexers",
@@ -1750,7 +1750,7 @@
             "Id": "215"
         },
         {
-            "utility": "\u00ad74LS151",
+            "utility": "74LS151",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS151 Selectors/Multiplexers",
@@ -1759,7 +1759,7 @@
             "Id": "216"
         },
         {
-            "utility": "\u00ad74HC190",
+            "utility": "74HC190",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74HC190 Presettable synchronous BCD decade up/down counter",
@@ -1768,7 +1768,7 @@
             "Id": "217"
         },
         {
-            "utility": "\u00ad74LS194",
+            "utility": "74LS194",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "74LS194 Bidirectional Universal shift Register",
@@ -1777,7 +1777,7 @@
             "Id": "218"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1786,7 +1786,7 @@
             "Id": "219"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1795,7 +1795,7 @@
             "Id": "220"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1804,7 +1804,7 @@
             "Id": "221"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1813,7 +1813,7 @@
             "Id": "222"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1822,7 +1822,7 @@
             "Id": "223"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1831,7 +1831,7 @@
             "Id": "224"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1840,7 +1840,7 @@
             "Id": "225"
         },
         {
-            "utility": "\u00adGL\u00d6DLAMPA",
+            "utility": "GL\u00d6DLAMPA",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "GL\u00d6DLAMPA",
@@ -1849,7 +1849,7 @@
             "Id": "226"
         },
         {
-            "utility": "\u00adDIP-switch",
+            "utility": "DIP-switch",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "DIP-switch",
@@ -1858,7 +1858,7 @@
             "Id": "228"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -1867,7 +1867,7 @@
             "Id": "230"
         },
         {
-            "utility": "\u00adZIF Sockel",
+            "utility": "ZIF Sockel",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "ZIF Sockel",
@@ -1887,7 +1887,7 @@
             "Id": "241"
         },
         {
-            "utility": "\u00adHCF4069",
+            "utility": "HCF4069",
             "icon": "..img/icons/ic.png",
             "description": "HEX inverter",
             "keywords": "HEX inverter HCF4069",
@@ -1914,7 +1914,7 @@
             "Id": "242"
         },
         {
-            "utility": "\u00adNTE74LSB",
+            "utility": "NTE74LSB",
             "icon": "..img/icons/transistor.png",
             "description": "NPN Transistor",
             "keywords": "NPN transistor NTE 74LS",
@@ -1923,7 +1923,7 @@
             "Id": "242"
         },
         {
-            "utility": "\u00adHEF4093",
+            "utility": "HEF4093",
             "icon": "..img/icons/ic.png",
             "description": "NAND Schmitt Trigger",
             "keywords": "NAND Schmitt Trigger HEF 4093",
@@ -1941,7 +1941,7 @@
             "Id": "244"
         },
         {
-            "utility": "\u00adHCE4071",
+            "utility": "HCE4071",
             "icon": "..img/icons/ic.png",
             "description": "OR Gate",
             "keywords": "OR Gate HCE 4071",
@@ -1950,7 +1950,7 @@
             "Id": "244"
         },
         {
-            "utility": "\u00ad74LS386",
+            "utility": "74LS386",
             "icon": "..img/icons/ic.png",
             "description": "XOR Gate",
             "keywords": "XOR Gate 74ls386",
@@ -1959,7 +1959,7 @@
             "Id": "245"
         },
         {
-            "utility": "\u00ad74HC377x8D",
+            "utility": "74HC377x8D",
             "icon": "..img/icons/ic.png",
             "description": "octal positive-edge triggered D-type FLIP-FLOP",
             "keywords": "octal positive-edge triggered D-type FLIP-FLOP 74HC377",
@@ -1977,7 +1977,7 @@
             "Id": "246"
         },
         {
-            "utility": "\u00ad74LS73",
+            "utility": "74LS73",
             "icon": "..img/icons/ic.png",
             "description": "Dual in-line JK FLIP-FLOP",
             "keywords": "Dual in-line JK FLIP-FLOP 74LS73",
@@ -1986,7 +1986,7 @@
             "Id": "247"
         },
         {
-            "utility": "\u00ad74LS385",
+            "utility": "74LS385",
             "icon": "..img/icons/ic.png",
             "description": "Positive-NAND buffer",
             "keywords": "Positive-NAND buffer 74LS385",
@@ -2013,7 +2013,7 @@
             "Id": "249"
         },
         {
-            "utility": "\u00ad4HCT393",
+            "utility": "4HCT393",
             "icon": "..img/icons/ic.png",
             "description": "dual 4-bit binary ripple counter",
             "keywords": "dual 4-bit binary ripple counter 4HCT393",
@@ -2040,7 +2040,7 @@
             "Id": "250"
         },
         {
-            "utility": "\u00ad74LS251",
+            "utility": "74LS251",
             "icon": "..img/icons/ic.png",
             "description": "multiplexer",
             "keywords": "multiplexer 74LS251",
@@ -2049,7 +2049,7 @@
             "Id": "250"
         },
         {
-            "utility": "\u00ad74HCT138",
+            "utility": "74HCT138",
             "icon": "..img/icons/ic.png",
             "description": "3 to 8 line decoder demultiplexer",
             "keywords": "3 to 8 line decoder demultiplexer 74HCT138",
@@ -2067,7 +2067,7 @@
             "Id": "251"
         },
         {
-            "utility": "\u00ad74LS85",
+            "utility": "74LS85",
             "icon": "..img/icons/ic.png",
             "description": "4-bit magnitude comparator",
             "keywords": "4-bit magnitude comparator 74LS85",
@@ -2076,7 +2076,7 @@
             "Id": "252"
         },
         {
-            "utility": "\u00ad74LS42",
+            "utility": "74LS42",
             "icon": "..img/icons/ic.png",
             "description": "BCD to decimal decoder",
             "keywords": "BCD to decimal decoder 74LS42",
@@ -2103,7 +2103,7 @@
             "Id": "254"
         },
         {
-            "utility": "\u00adA732B",
+            "utility": "A732B",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "A732B",
@@ -2121,7 +2121,7 @@
             "Id": "254"
         },
         {
-            "utility": "\u00ad74LS249",
+            "utility": "74LS249",
             "icon": "..img/icons/ic.png",
             "description": "BCD to 7-segment decoder/driver",
             "keywords": "BCD to 7-segment decoder driver 74LS249",
@@ -2148,7 +2148,7 @@
             "Id": "256"
         },
         {
-            "utility": "\u00ad74LS47",
+            "utility": "74LS47",
             "icon": "..img/icons/ic.png",
             "description": "BCD to 7-segment decoder/driver",
             "keywords": "BCD to 7-segment decoder driver 74LS47",
@@ -2166,7 +2166,7 @@
             "Id": "257"
         },
         {
-            "utility": "\u00ad74LS244",
+            "utility": "74LS244",
             "icon": "..img/icons/ic.png",
             "description": "octal buffer line driver",
             "keywords": "octal buffer line driver 74ls244",
@@ -2175,7 +2175,7 @@
             "Id": "257"
         },
         {
-            "utility": "\u00ad74LS245",
+            "utility": "74LS245",
             "icon": "..img/icons/ic.png",
             "description": "octal bus transmitter/receiver",
             "keywords": "octal bus transmitter receiver 74ls245",
@@ -2184,7 +2184,7 @@
             "Id": "258"
         },
         {
-            "utility": "\u00ad4116RLF",
+            "utility": "4116RLF",
             "icon": "..img/icons/ic.png",
             "description": "isolated resistor network",
             "keywords": "isolated resistor network 4116rlf",
@@ -2193,7 +2193,7 @@
             "Id": "259"
         },
         {
-            "utility": "\u00adDM74LS181",
+            "utility": "DM74LS181",
             "icon": "..img/icons/ic.png",
             "description": "4-bit arithmetic Logic Unit",
             "keywords": "4-bit arithmetic Logic Unit DM74LS181",
@@ -2211,7 +2211,7 @@
             "Id": "260"
         },
         {
-            "utility": "\u00ad68HC908",
+            "utility": "68HC908",
             "icon": "..img/icons/ic.png",
             "description": "Motorola Microcontroller",
             "keywords": "Motorola Microcontroller 68HC908",
@@ -2229,7 +2229,7 @@
             "Id": "261"
         },
         {
-            "utility": "\u00adNE555",
+            "utility": "NE555",
             "icon": "..img/icons/ic.png",
             "description": "precision timer",
             "keywords": "precision timer NE555 oscillator",
@@ -2238,7 +2238,7 @@
             "Id": "262"
         },
         {
-            "utility": "\u00adIQXO",
+            "utility": "IQXO",
             "icon": "..img/icons/ic.png",
             "description": "oscillator",
             "keywords": "oscillator IQXO",
@@ -2247,7 +2247,7 @@
             "Id": "263"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2256,7 +2256,7 @@
             "Id": "264"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2265,7 +2265,7 @@
             "Id": "265"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2274,7 +2274,7 @@
             "Id": "266"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2283,7 +2283,7 @@
             "Id": "267"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2292,7 +2292,7 @@
             "Id": "268"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2301,7 +2301,7 @@
             "Id": "269"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2310,7 +2310,7 @@
             "Id": "270"
         },
         {
-            "utility": "\u00adPIC18F 458-I/P",
+            "utility": "PIC18F 458-I/P",
             "icon": "..img/icons/ic.png",
             "description": "Atmel microcontroller",
             "keywords": "Atmel microcontroller PIC18F 458 I/P",
@@ -2319,7 +2319,7 @@
             "Id": "271"
         },
         {
-            "utility": "\u00adPIC16F886",
+            "utility": "PIC16F886",
             "icon": "..img/icons/ic.png",
             "description": "Atmel Microcontroller",
             "keywords": "Atmel Microcontroller PIC16F 886",
@@ -2328,7 +2328,7 @@
             "Id": "273"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2337,7 +2337,7 @@
             "Id": "275"
         },
         {
-            "utility": "\u00adSUMMER",
+            "utility": "SUMMER",
             "icon": "..img/icons/speaker.png",
             "description": "makes a monotone sound",
             "keywords": "Summer speaker sound",
@@ -2346,7 +2346,7 @@
             "Id": "281"
         },
         {
-            "utility": "\u00adTRAFO ST-22",
+            "utility": "TRAFO ST-22",
             "icon": "..img/icons/sensor.png",
             "description": "thermostat",
             "keywords": "thermostat ST-22",
@@ -2355,7 +2355,7 @@
             "Id": "283"
         },
         {
-            "utility": "\u00adDC-Motor",
+            "utility": "DC-Motor",
             "icon": "..img/icons/motor.png",
             "description": "",
             "keywords": "DC Motor",
@@ -2364,7 +2364,7 @@
             "Id": "285"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2373,7 +2373,7 @@
             "Id": "286"
         },
         {
-            "utility": "M\u00f6rdarkabel\u00ad",
+            "utility": "M\u00f6rdarkabel",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "kabel",
@@ -2382,7 +2382,7 @@
             "Id": "288"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2391,7 +2391,7 @@
             "Id": "290"
         },
         {
-            "utility": "\u00adH\u00f6gtalare",
+            "utility": "H\u00f6gtalare",
             "icon": "..img/icons/speaker.png",
             "description": "",
             "keywords": "Speaker H\u00f6gtalare sound",
@@ -2402,7 +2402,7 @@
     ],
     [
         {
-            "utility": "\u00adIC-SOCKEL",
+            "utility": "IC-SOCKEL",
             "icon": "..img/icons/ic.png",
             "description": "",
             "keywords": "IC-SOCKEL",
@@ -2411,7 +2411,7 @@
             "Id": "301"
         },
         {
-            "utility": "\u00adIC-SOCKEL",
+            "utility": "IC-SOCKEL",
             "icon": "..img/icons/diode.png",
             "description": "",
             "keywords": "IC-SOCKEL",
@@ -2420,7 +2420,7 @@
             "Id": "302"
         },
         {
-            "utility": "\u00adNO brytare",
+            "utility": "NO brytare",
             "icon": "..img/icons/brytare.png",
             "description": "",
             "keywords": "NO brytare",
@@ -2429,7 +2429,7 @@
             "Id": "303"
         },
         {
-            "utility": "\u00adS\u00e4kringsh\u00e5llare",
+            "utility": "S\u00e4kringsh\u00e5llare",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "S\u00e4kringsh\u00e5llare",
@@ -2438,7 +2438,7 @@
             "Id": "304"
         },
         {
-            "utility": "\u00adVinklad h\u00e5l Distansstycke",
+            "utility": "Vinklad h\u00e5l Distansstycke",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Vinklad h\u00e5l Distansstycke",
@@ -2447,7 +2447,7 @@
             "Id": "305"
         },
         {
-            "utility": "\u00adDistansr\u00f6r",
+            "utility": "Distansr\u00f6r",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Distansr\u00f6r",
@@ -2456,7 +2456,7 @@
             "Id": "306"
         },
         {
-            "utility": "\u00adKabelskor",
+            "utility": "Kabelskor",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Kabelskor",
@@ -2465,7 +2465,7 @@
             "Id": "307"
         },
         {
-            "utility": "\u00adStift-Hane",
+            "utility": "Stift-Hane",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Stift-Hane",
@@ -2483,7 +2483,7 @@
             "Id": "309"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2492,7 +2492,7 @@
             "Id": "310"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2501,7 +2501,7 @@
             "Id": "311"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2510,7 +2510,7 @@
             "Id": "312"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2519,7 +2519,7 @@
             "Id": "313"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2528,7 +2528,7 @@
             "Id": "314"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2537,7 +2537,7 @@
             "Id": "315"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2546,7 +2546,7 @@
             "Id": "316"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "..img/icons/motor.png",
             "description": "",
             "keywords": "",
@@ -2555,7 +2555,7 @@
             "Id": "317"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2564,7 +2564,7 @@
             "Id": "318"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2573,7 +2573,7 @@
             "Id": "319"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2582,7 +2582,7 @@
             "Id": "320"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2591,7 +2591,7 @@
             "Id": "321"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2600,7 +2600,7 @@
             "Id": "322"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2609,7 +2609,7 @@
             "Id": "323"
         },
         {
-            "utility": "\u00ad",
+            "utility": "",
             "icon": "images\\template.png",
             "description": "",
             "keywords": "",
@@ -2618,7 +2618,7 @@
             "Id": "324"
         },
         {
-            "utility": "\u00adM5 skruvar ",
+            "utility": "M5 skruvar ",
             "icon": "..img/icons/zeng.png",
             "description": "",
             "keywords": "M5 skruvar",
@@ -2627,7 +2627,7 @@
             "Id": "325"
         },
         {
-            "utility": "\u00adM5 skruvar",
+            "utility": "M5 skruvar",
             "icon": "..img/icons/zeng.png",
             "description": "",
             "keywords": "M5 skruvar",
@@ -2636,7 +2636,7 @@
             "Id": "326"
         },
         {
-            "utility": "\u00adM4 skruvar",
+            "utility": "M4 skruvar",
             "icon": "..img/icons/zeng.png",
             "description": "",
             "keywords": "M4 skruvar",
@@ -2645,7 +2645,7 @@
             "Id": "327"
         },
         {
-            "utility": "\u00adM1/M2/M3 Mutter",
+            "utility": "M1/M2/M3 Mutter",
             "icon": "..img/icons/zeng.png",
             "description": "",
             "keywords": "M1/M2/M3/ Mutter",
@@ -2654,7 +2654,7 @@
             "Id": "328"
         },
         {
-            "utility": "\u00adM2 skruvar",
+            "utility": "M2 skruvar",
             "icon": "..img/icons/zeng.png",
             "description": "",
             "keywords": "M2 Skruvar",
@@ -2663,7 +2663,7 @@
             "Id": "329"
         },
         {
-            "utility": "\u00adM3 Skruvar",
+            "utility": "M3 Skruvar",
             "icon": "..img/icons/zeng.png",
             "description": "",
             "keywords": "M3 Skruvar",
@@ -2672,7 +2672,7 @@
             "Id": "330"
         },
         {
-            "utility": "\u00adM5-6 Mutter",
+            "utility": "M5-6 Mutter",
             "icon": "..img/icons/zeng.png",
             "description": "",
             "keywords": "M5-6 Mutter",
@@ -2681,7 +2681,7 @@
             "Id": "331"
         },
         {
-            "utility": "\u00adDivers Brickor",
+            "utility": "Divers Brickor",
             "icon": "..img/icons/zeng.png",
             "description": "",
             "keywords": "Divers Brickor",
@@ -2690,7 +2690,7 @@
             "Id": "333"
         },
         {
-            "utility": "\u00adDivers Skruvar",
+            "utility": "Divers Skruvar",
             "icon": "..img/icons/zeng.png",
             "description": "",
             "keywords": "Divers Skruvar",
@@ -2699,7 +2699,7 @@
             "Id": "335"
         },
         {
-            "utility": "\u00adLab Proppe sv/r\u00f6d",
+            "utility": "Lab Proppe sv/r\u00f6d",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Lab Proppe sv/r\u00f6d",
@@ -2708,7 +2708,7 @@
             "Id": "341"
         },
         {
-            "utility": "\u00adBNC-hylsdom-2labpr",
+            "utility": "BNC-hylsdom-2labpr",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "BNC-hylsdom-2labpr",
@@ -2717,7 +2717,7 @@
             "Id": "343"
         },
         {
-            "utility": "\u00adKontakt (|)4mm r\u00f6/bl",
+            "utility": "Kontakt (|)4mm r\u00f6/bl",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Kontakt (|)4mm r\u00f6/bl",
@@ -2726,7 +2726,7 @@
             "Id": "345"
         },
         {
-            "utility": "\u00adLabhylsa (divers)",
+            "utility": "Labhylsa (divers)",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Labhylsa (divers)",
@@ -2735,7 +2735,7 @@
             "Id": "346"
         },
         {
-            "utility": "\u00ad9V-Batt kabelansl",
+            "utility": "9V-Batt kabelansl",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "9V-Batt kabelansl",
@@ -2744,7 +2744,7 @@
             "Id": "348"
         },
         {
-            "utility": "\u00adKrokodilkl\u00e4mma",
+            "utility": "Krokodilkl\u00e4mma",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Krokodilkl\u00e4mma",
@@ -2753,7 +2753,7 @@
             "Id": "350"
         },
         {
-            "utility": "\u00adDivers tillbeh\u00f6r",
+            "utility": "Divers tillbeh\u00f6r",
             "icon": "..img/icons/miscellaneous.png",
             "description": "",
             "keywords": "Divers tillbeh\u00f6r",
@@ -2767,6 +2767,7 @@
             "description": "den heliga baumanns sanna sj\u00e4lv",
             "keywords": "bausus",
             "favourite": "false",
+            "easteregg": "true",
             "number": "1",
             "Id": "359"
         },
@@ -2776,6 +2777,7 @@
             "description": "Den b\u00e4sta jokerl\u00e4rare!",
             "keywords": "Theo",
             "favourite": "false",
+            "easteregg": "true",
             "number": "1",
             "Id": "360"
         }
