@@ -233,7 +233,6 @@ def main_ui():
             root.after(0, update_searches)
             root.after(0, toggle_lights)
 
-    # Start monitoring shared state
     start_file_monitor(update_from_state)
 
     def settings():
@@ -328,6 +327,9 @@ def main_ui():
                 preview_frame = tk.Frame(background_frame, bg='#505050')
                 preview_frame.pack(pady=10)
 
+                preview_width = int(section_width * 0.6)  
+                preview_height = int(preview_width * 0.5) 
+
                 left_button = tk.Button(preview_frame, text="<", command=lambda: change_preview(-1))
                 left_button.pack(side=tk.LEFT, padx=5)
 
@@ -370,7 +372,7 @@ def main_ui():
                 def show_preview(filename):
                     bg_path = os.path.join(os.path.dirname(__file__), "img", "background", filename)
                     image = Image.open(bg_path)
-                    preview = image.resize((200, 100), Image.Resampling.LANCZOS)
+                    preview = image.resize((preview_width, preview_height), Image.Resampling.LANCZOS)
                     
                     for widget in preview_label.winfo_children():
                         if isinstance(widget, tk.Button):
@@ -381,7 +383,7 @@ def main_ui():
                             frames = []
                             try:
                                 while True:
-                                    preview = image.resize((200, 100), Image.Resampling.LANCZOS)
+                                    preview = image.resize((preview_width, preview_height), Image.Resampling.LANCZOS)
                                     frames.append(ImageTk.PhotoImage(preview))
                                     image.seek(len(frames))
                             except EOFError:
@@ -563,7 +565,11 @@ def main_ui():
                 network_frame = tk.Frame(root.settings_canvas, bg='#a0a0a0')
                 network_frame.place(x=section_width + 50, y=150)
 
-                current_label = tk.Label(network_frame,  text=f"Connected to: {current_network}",font=("Arial", 14), bg='#a0a0a0', fg='black')
+                list_width = int((section_width - 100) / 8)  
+                
+                current_label = tk.Label(network_frame, text=f"Connected to: {current_network}",
+                                       font=("Arial", 14), bg='#a0a0a0', fg='black',
+                                       wraplength=section_width-100)
                 current_label.pack(pady=5)
 
                 list_frame = tk.Frame(network_frame, bg='#505050')
@@ -572,7 +578,10 @@ def main_ui():
                 scrollbar = tk.Scrollbar(list_frame)
                 scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
-                network_list = tk.Listbox(list_frame, yscrollcommand=scrollbar.set,width=25, height=10,bg='#505050',fg='white', selectmode=tk.SINGLE)
+                network_list = tk.Listbox(list_frame, yscrollcommand=scrollbar.set,
+                                        width=list_width, height=10,
+                                        bg='#505050', fg='white',
+                                        selectmode=tk.SINGLE)
                 network_list.pack(side=tk.LEFT)
 
                 scrollbar.config(command=network_list.yview)

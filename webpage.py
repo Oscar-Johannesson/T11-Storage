@@ -82,19 +82,16 @@ def login():
         username = request.form.get("username")
         password = request.form.get("password")
         
-        # Reload users from file for each login attempt
         current_users = load_users()
         
-        # Case-insensitive username match
         matching_user = next((u for u in current_users.keys() if u.lower() == username.lower()), None)
         
         if matching_user and check_password_hash(current_users[matching_user], password):
-            session["user"] = {"name": matching_user}  # Use the original case from the stored username
+            session["user"] = {"name": matching_user}  
             return redirect(url_for("index"))
         flash("Invalid username or password")
     return render_template("login.html")
 
-# Change BASE_URL to use HTTP
 BASE_URL = "http://localhost:5000"
 
 @app.route("/microsoft_login")
@@ -299,7 +296,6 @@ def load_preset():
     data = request.get_json()
     items = data.get("items", [])
     
-    # Update the state with the preset items
     state = load_state()
     state["searches"] = items
     save_state(state)
@@ -351,11 +347,9 @@ def execute_command():
     
     command = request.json.get("command")
     
-    # List of allowed commands (for security)
     allowed_commands = ['ls', 'pwd', 'date', 'whoami', 'uname', 'df', 'free',
                        'top', 'ps', 'uptime', 'ip', 'hostname']
     
-    # Basic command validation
     cmd_parts = command.split()
     base_cmd = cmd_parts[0] if cmd_parts else ''
     
@@ -363,7 +357,6 @@ def execute_command():
         return {"error": f"Command not allowed. Allowed commands: {', '.join(allowed_commands)}"}
     
     try:
-        # Execute command with timeout
         result = subprocess.run(
             cmd_parts,
             capture_output=True,
@@ -398,7 +391,7 @@ def add_user():
             
         users[username] = generate_password_hash(password)
         save_users(users)
-        users = load_users()  # Reload users after saving
+        users = load_users()  
         return {"success": True, "message": "User added successfully"}
     except Exception as e:
         return {"error": f"Failed to add user: {str(e)}"}, 500
@@ -453,7 +446,6 @@ def toggle_search_lock():
     state = load_state()
     state["allow_searches"] = not state.get("allow_searches", True)
     
-    # Clear searches when locking
     if not state["allow_searches"]:
         state["searches"] = []
         

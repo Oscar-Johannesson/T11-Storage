@@ -12,7 +12,7 @@
         }
 
         body {
-            padding-top: 70px;  /* Add padding to prevent content from going under navbar */
+            padding-top: 70px;  
             background-color: #f0f2f5;
         }
 
@@ -239,21 +239,20 @@
             opacity: 0;
             transition: opacity 0.3s, transform 0.3s;
             z-index: 2000;
-            pointer-events: none;  /* Don't block clicks when invisible */
+            pointer-events: none;  
         }
 
         .success-message.show, .error-message.show, .confirm-modal.show {
-            pointer-events: auto;  /* Allow clicks when visible */
+            pointer-events: auto;   
         }
 
-        /* Update confirm modal to always be clickable since it needs interaction */
         .confirm-modal {
             pointer-events: auto;
-            display: none;  /* Hide by default */
+            display: none;  
         }
 
         .confirm-modal.show {
-            display: block;  /* Show when needed */
+            display: block;  
         }
 
         @keyframes checkmark {

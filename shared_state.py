@@ -17,7 +17,6 @@ def load_state():
     try:
         with open(STATE_FILE, 'r') as f:
             state = json.load(f)
-            # Ensure allow_searches exists in state
             if "allow_searches" not in state:
                 state["allow_searches"] = True
                 save_state(state)
