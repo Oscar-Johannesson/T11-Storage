@@ -685,17 +685,26 @@ def main_ui():
     root.mainloop()
 
 def start_web_server():
-    from webpage import app
-    app.run(host='0.0.0.0', port=80, debug=False)
+    try:
+        from webpage import app
+        app.run(host='0.0.0.0', port=80, debug=False)
+    except Exception as e:
+        fail_warning(e)
 
-def fail_warning(e):
-        messagebox.showwarning("Critical error", e)
+def fail_warning(e="unkownn error"):
+        from datetime import datetime
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"CRITICAL ERROR: {str(e)}")
+        with open("error.log", "a") as f:
+            f.write(f"{timestamp}::CRITICAL ERROR: {str(e)}\n")
+        
         def warning_loop():
             while True:
                 try:
                     import board
                     import neopixel
                     import time
+
                     pixel_pin = board.D18
                     num_pixels = 360
                     ORDER = neopixel.GRB
@@ -710,13 +719,14 @@ def fail_warning(e):
                         time.sleep(0.5)
                     
                     time.sleep(2)  
-                    
-                except ImportError:
-                    print("Warning: RPi libraries not available")
-                return
+                except Exception as e:
+                    print("Warning:  ", str(e))
+                    time.sleep(3)
 
         warning_thread = threading.Thread(target=warning_loop)
         warning_thread.start()
+        messagebox.showwarning("Critical error", e)
+        messagebox.showinfo("Potential solution", "Please restart the system to automatically attempt to fix the error \n if auto fix failed download original copy from github \n 'https://github.com/Oscar-Johannesson/T11-Storage'")
         
 
 
@@ -729,8 +739,5 @@ if __name__ == "__main__":
         main_ui()
         
     except Exception as e:
-        print(f"CRITICAL ERROR: {str(e)}")
-        with open("error.log", "a") as f:
-            f.write(f"CRITICAL ERROR: {str(e)}\n")
         
         fail_warning(e)

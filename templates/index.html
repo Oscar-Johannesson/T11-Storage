@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>T11-Storage - Admin Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="https://www.gtg.se/content/images/Ikoner/GTG_ikon_dator_spets_med-cirkel.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -385,7 +386,6 @@
             transform: translateY(-50%);
         }
 
-        /* Update these dropdown styles */
         .settings-section .dropdown {
             position: relative;
             width: 100%;
@@ -457,9 +457,11 @@
         <span class="checkmark">✕</span>
         <span id="errorText">Error occurred</span>
     </div>
-
     <div id="searchLockedWarning" class="alert alert-warning" style="display: none; position: fixed; top: 70px; left: 50%; transform: translateX(-50%); z-index: 1000;">
         Searches are currently disabled by admin
+    </div>
+    <div id="connectionWarning" class="alert alert-danger" style="display: none; position: fixed; top: 70px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+        Connection lost to server. Attempting to reconnect...
     </div>
 
     <div id="confirmModal" class="confirm-modal">
@@ -560,7 +562,6 @@
                 <div class="col-md-6">
                     <h4>Existing Users</h4>
                     <div id="userList" class="list-group">
-                        <!-- Users will be loaded here -->
                     </div>
                 </div>
             </div>
@@ -577,7 +578,6 @@
                             <button class="btn btn-primary" onclick="showPresetMenu()">Add New Preset</button>
                         </div>
                         <div id="presetList" class="list-group">
-                            <!-- Presets will be loaded here -->
                         </div>
                     </div>
                 </div>
@@ -687,11 +687,11 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FontAwesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
-        // Add this at the very top of the script section
-        let showOnlyIds = true; // Initialize to true for showing IDs by default
+        let showOnlyIds = true; 
+        let lastSuccessfulUpdate = Date.now();
+        let connectionWarningTimeout;
         
         function toggleItem(element) {
             element.classList.toggle('active');
@@ -735,8 +735,12 @@
                 });
         }
 
-        // Auto-update state
         setInterval(() => {
+            const currentTime = Date.now();
+            if (currentTime - lastSuccessfulUpdate > 5000) {
+                document.getElementById('connectionWarning').style.display = 'block';
+            }
+
             fetch('/api/state')
                 .then(response => {
                     if (!response.ok) {
@@ -750,12 +754,14 @@
                     return response.json();
                 })
                 .then(state => {
+                    lastSuccessfulUpdate = Date.now();
+                    document.getElementById('connectionWarning').style.display = 'none';
+                    
                     document.querySelectorAll('.grid-item').forEach(item => {
                         const isActive = state.searches.includes(item.dataset.id);
                         item.classList.toggle('active', isActive);
                     });
 
-                    // Update search lock UI
                     const btn = document.getElementById('searchLockBtn');
                     const warning = document.getElementById('searchLockedWarning');
                     if (state.allow_searches) {
@@ -769,17 +775,30 @@
                         btn.classList.add('btn-success');
                         warning.style.display = 'block';
                     }
+
+                    if (state.show_only_ids !== undefined && state.show_only_ids !== showOnlyIds) {
+                        showOnlyIds = state.show_only_ids;
+                        const btn = document.getElementById('displayModeBtn');
+                        btn.textContent = showOnlyIds ? 'Show Names' : 'Show Only IDs';
+                        
+                        document.querySelectorAll('.item-content').forEach(item => {
+                            const id = item.dataset.id;
+                            const name = item.dataset.name;
+                            item.textContent = showOnlyIds ? id : (name || id);
+                        });
+                    }
                 })
-                .catch(console.error);
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById('connectionWarning').style.display = 'block';
+                });
         }, 1000);
 
         function showComponentModal() {
-            // Component modal logic
             console.log("Add component clicked");
         }
 
         function showPresetModal() {
-            // Preset modal logic
             console.log("Add preset clicked");
         }
 
@@ -881,7 +900,7 @@
                     showSuccessMessage('Preset saved successfully');
                     closePresetMenu();
                     selectedPresetItems = [];
-                    loadPresets(); // Refresh the preset list
+                    loadPresets(); 
                 } else {
                     alert('Error saving preset');
                 }
@@ -1019,7 +1038,6 @@
                 if (data.success) {
                     showSuccessMessage('Preset loaded successfully');
                     togglePresetView();
-                    // The state auto-update will handle updating the grid
                 }
             });
         }
@@ -1251,19 +1269,16 @@
             });
         }
 
-        // Update button onclick handlers
         document.querySelector('[onclick="showComponentModal()"]').onclick = showComponentMenu;
         document.querySelector('[onclick="showPresetModal()"]').onclick = showPresetMenu;
 
-        // Add this after the variable declaration and before other functions
-        // Initialize display mode on page load
         document.addEventListener('DOMContentLoaded', () => {
             const btn = document.getElementById('displayModeBtn');
-            btn.textContent = 'Show Names'; // Initial state shows IDs, so button should offer to show names
+            btn.textContent = 'Show Names'; 
             
             document.querySelectorAll('.item-content').forEach(item => {
                 const id = item.dataset.id;
-                item.textContent = id; // Always start with IDs
+                item.textContent = id; 
             });
         });
 
@@ -1287,7 +1302,6 @@
             });
         }
 
-        // Update the state fetching to include display mode
         setInterval(() => {
             fetch('/api/state')
                 .then(response => {
@@ -1302,9 +1316,7 @@
                     return response.json();
                 })
                 .then(state => {
-                    // ...existing state update code...
                     
-                    // Update display mode
                     if (state.show_only_ids !== undefined && state.show_only_ids !== showOnlyIds) {
                         showOnlyIds = state.show_only_ids;
                         const btn = document.getElementById('displayModeBtn');
