@@ -1,14 +1,5 @@
 from flask import Flask, redirect, url_for, session, request, render_template, flash, send_from_directory
-import os
-from werkzeug.middleware.proxy_fix import ProxyFix
-from werkzeug.security import generate_password_hash, check_password_hash
-import json
-import os.path
-from shared_state import load_state, save_state
-import subprocess
-import platform
-from datetime import datetime
-import shutil
+from werkzeug.middleware.proxy_fix import ProxyFix; from werkzeug.security import generate_password_hash, check_password_hash; import json, os, os.path, subprocess, platform, shutil; from datetime import datetime; from shared_state import load_state, save_state
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 app.secret_key = os.urandom(24)
@@ -111,7 +102,7 @@ BASE_URL = "http://localhost:5000"
 
 @app.route("/microsoft_login")
 def microsoft_login():
-    flash("Microsoft har för höga krav på mig...")
+    flash("Microsoft har för höga krav...")
     return redirect(url_for("login"))
 
 @app.route("/logout")
@@ -471,8 +462,6 @@ def toggle_search_lock():
     state = load_state()
     state["allow_searches"] = not state.get("allow_searches", True)
     
-    if not state["allow_searches"]:
-        state["searches"] = []
         
     save_state(state)
     
@@ -487,24 +476,19 @@ def download_backup(filename):
     if not session.get("user"):
         return {"error": "Not logged in"}, 401
         
-    # Only allow specific JSON files
     allowed_files = ['users.json', 'presets.json', 'utilities.json']
     if filename not in allowed_files:
         return {"error": "File not allowed"}, 403
         
     try:
-        # Get current date for the backup filename
         date_str = datetime.now().strftime('%Y-%m-%d')
         source_path = os.path.join('dat', filename)
         
-        # Create backup filename: date_backup_originalname.json
         backup_filename = f"{date_str}_backup_{filename}"
         
-        # Create a temporary copy of the file
         temp_path = os.path.join('dat', backup_filename)
         shutil.copy2(source_path, temp_path)
         
-        # Send file and then delete the temporary copy
         response = send_from_directory('dat', backup_filename, as_attachment=True)
         
         @response.call_on_close
@@ -540,23 +524,20 @@ def upload_backup():
         return {"error": "File must be JSON format"}, 400
         
     try:
-        # Verify the file is valid JSON
         try:
             json.load(file)
-            file.seek(0)  # Reset file pointer after reading
+            file.seek(0)  
         except:
             return {"error": "Invalid JSON file"}, 400
             
         target_path = os.path.join('dat', backup_type)
         
-        # If existing file exists, rename it
         if os.path.exists(target_path):
             backup_name = os.path.join('dat', f'Old_{backup_type}')
             if os.path.exists(backup_name):
-                os.remove(backup_name)  # Remove previous backup if exists
+                os.remove(backup_name)  
             os.rename(target_path, backup_name)
             
-        # Save new file
         file.save(target_path)
         
         return {"success": True, "message": "Backup uploaded successfully"}
