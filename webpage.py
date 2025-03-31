@@ -8,10 +8,18 @@ app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 def load_users():
     try: 
         with open("dat/users.json", "r") as f:
-            return json.load(f)
+            data = json.load(f)
+            updated = False
+            for username, hash_value in data.items():
+                if not hash_value.startswith('pbkdf2:sha256:'):
+                    data[username] = generate_password_hash(hash_value.split('$')[-1])
+                    updated = True
+            if updated:
+                save_users(data)
+            return data
     except:
         default_users = {
-            "admin": generate_password_hash("1234")
+            "admin": generate_password_hash("1234", method='pbkdf2:sha256')
         }
         save_users(default_users)
         return default_users
@@ -92,9 +100,19 @@ def login():
         
         matching_user = next((u for u in current_users.keys() if u.lower() == username.lower()), None)
         
-        if matching_user and check_password_hash(current_users[matching_user], password):
-            session["user"] = {"name": matching_user}  
-            return redirect(url_for("index"))
+        if matching_user:
+            stored_hash = current_users[matching_user]
+            try:
+                if check_password_hash(stored_hash, password):
+                    session["user"] = {"name": matching_user}
+                    return redirect(url_for("index"))
+            except ValueError:
+                # If old hash format causes error, regenerate hash
+                current_users[matching_user] = generate_password_hash(password, method='pbkdf2:sha256')
+                save_users(current_users)
+                session["user"] = {"name": matching_user}
+                return redirect(url_for("index"))
+                
         flash("Invalid username or password")
     return render_template("login.html")
 
@@ -405,9 +423,8 @@ def add_user():
         if username in users:
             return {"error": "Username already exists"}, 400
             
-        users[username] = generate_password_hash(password)
+        users[username] = generate_password_hash(password, method='pbkdf2:sha256')
         save_users(users)
-        users = load_users()  
         return {"success": True, "message": "User added successfully"}
     except Exception as e:
         return {"error": f"Failed to add user: {str(e)}"}, 500
@@ -431,12 +448,14 @@ def change_password():
     username = session["user"]["name"]
     
     users = load_users()
-    if not check_password_hash(users[username], current_password):
-        return {"error": "Current password is incorrect"}, 400
-        
-    users[username] = generate_password_hash(new_password)
-    save_users(users)
-    return {"success": True, "message": "Password changed successfully"}
+    try:
+        if check_password_hash(users[username], current_password):
+            users[username] = generate_password_hash(new_password, method='pbkdf2:sha256')
+            save_users(users)
+            return {"success": True, "message": "Password changed successfully"}
+    except ValueError:
+        pass
+    return {"error": "Current password is incorrect"}, 400
 
 @app.route("/api/users/delete/<username>", methods=["DELETE"])
 def delete_user(username):

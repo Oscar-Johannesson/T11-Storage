@@ -2780,6 +2780,16 @@
             "easteregg": "true",
             "number": "1",
             "Id": "360"
+        },
+        {
+            "utility": "jesus is back",
+            "icon": "..img/icons/jesus.png",
+            "description": "jesus is back, Hej Ethan",
+            "keywords": "jesus",
+            "favourite": "false", 
+            "easteregg": "true",
+            "number": "1",
+            "Id": "361"
         }
     ]
 ]

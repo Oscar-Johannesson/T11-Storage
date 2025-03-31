@@ -1,10 +1,12 @@
 import os, json, random
 import tkinter as tk
-from PIL import Image, ImageTk
+from PIL import Image, ImageTk, ImageDraw
 import threading
 from tkinter import messagebox
 import subprocess
 from shared_state import load_state, save_state, start_file_monitor
+import time
+
 
 
 
@@ -28,7 +30,7 @@ def toggle_lights():
         num_pixels = 360
         ORDER = neopixel.GRB
         
-        pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.5, auto_write=False, pixel_order=ORDER)
+        pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=1.0, auto_write=False, pixel_order=ORDER)
         
 
         pixels.fill((0, 0, 0))
@@ -36,13 +38,15 @@ def toggle_lights():
             
         pixels.fill((0, 0, 0)) 
         for search_id in searches:
-            if 1 <= int(search_id) <= num_pixels:  
+            search_id = int(search_id)
+            if 1 <= search_id <= num_pixels: 
                 if Rainbow:
                     for i in range(255):
                         r = int((1 + i) % 255)
                         g = int((85 + i) % 255) 
                         b = int((170 + i) % 255)
                         pixels[int(search_id-1)] = (r, g, b)
+                        time.sleep(0.01)
                         pixels.show()
                     pixels[int(search_id)-1] = (255, 255, 255)
                 else:
@@ -50,8 +54,10 @@ def toggle_lights():
                     
         pixels.show()
     except ImportError as e:
+        print(e)
         messagebox.showerror("Import Error", "Could not import required modules: " + str(e))
     except Exception as e:
+        print(e)
         messagebox.showerror("Light Control Error", "Error controlling lights: " + str(e))
 
 def periodic_update():
@@ -110,9 +116,18 @@ def search_data(searchphrase):
     if not allow_searches:
         messagebox.showerror("Error - blocked by admin", "Searches are disabled by admin")
         return
+    
     json_filepath = os.path.join(os.path.dirname(__file__), "dat", "utilities.json")
+    presets_filepath = os.path.join(os.path.dirname(__file__), "dat", "presets.json")
+    
     with open(json_filepath, "r", encoding="utf-8") as file:
         data = json.load(file)
+    
+    try:
+        with open(presets_filepath, "r", encoding="utf-8") as file:
+            presets_data = json.load(file)
+    except:
+        presets_data = {}
     
     results = []
     for sublist in data:
@@ -120,6 +135,16 @@ def search_data(searchphrase):
             if searchphrase.lower() in item.get("utility", "").lower() or searchphrase.lower() in item.get("keywords", "").lower():
                 results.append(item["Id"])
 
+    for preset_name, preset_ids in presets_data.items():
+        if searchphrase.lower() in preset_name.lower():
+            preset_item = {
+                "Id": f"preset:{preset_name}",  # Add prefix to avoid ID conflicts
+                "utility": f"Preset: {preset_name}",
+                "description": f"Contains {len(preset_ids)} items",
+                "icon": os.path.join(os.path.dirname(__file__), "img", "icons", "preset.png"),
+                "preset_ids": preset_ids
+            }
+            results.append(preset_item)
 
     if hasattr(root, 'result_frame') or searchphrase == "": 
         root.result_frame.destroy()
@@ -139,74 +164,236 @@ def search_data(searchphrase):
         result_list.pack(side=tk.LEFT, fill=tk.BOTH)
 
         scrollbar.config(command=result_list.yview)
-        
-
         image_cache = {}
 
         for result in results:
-            for sublist in data:
-                for item in sublist:
-                    if item["Id"] == result:
-                        if os.name == 'nt': 
-                            icon_path = os.path.join(os.path.dirname(__file__), item["icon"].replace("..", "").replace("/", "\\"))
-                        else: 
-                            icon_path = os.path.join(os.path.dirname(__file__), item["icon"].replace("..", ""))
+            if isinstance(result, dict):  
+                item = result
+            else:  
+                item = next((item for sublist in data for item in sublist if item["Id"] == result), None)
+            
+            if item:
+                if os.name == 'nt': 
+                    icon_path = os.path.join(os.path.dirname(__file__), item["icon"].replace("..", "").replace("/", "\\"))
+                else: 
+                    icon_path = os.path.join(os.path.dirname(__file__), item["icon"].replace("..", ""))
 
-                        if icon_path in image_cache:
-                            icon_image = image_cache[icon_path]
+                if icon_path in image_cache:
+                    icon_image = image_cache[icon_path]
+                else:
+                    try:
+                        icon_image = ImageTk.PhotoImage(Image.open(icon_path).resize((70, 70), Image.Resampling.LANCZOS))
+                        image_cache[icon_path] = icon_image
+                    except FileNotFoundError:
+                        icon_image = None
+
+                root.update_idletasks()
+                result_box = tk.Frame(result_list, bg='#505050', bd=2, relief="groove")
+                
+                if isinstance(item.get("Id"), str) and item["Id"].startswith("preset:"):
+                    if all(str(pid) in searches for pid in item["preset_ids"]):
+                        result_box.config(bg='#19cb07')
+                elif item["Id"] in searches:
+                    result_box.config(bg='#19cb07')
+                    
+                result_box.pack_propagate(False)
+                boxy_widty = root.result_frame.winfo_width()
+                result_box.config(width=boxy_widty, height=100)
+                result_list.window_create(tk.END, window=result_box)
+                result_list.insert(tk.END, "\n")
+                result_list.tag_configure("center", justify='center')
+                result_list.tag_add("center", "1.0", "end")
+
+                def on_click(event, item=item, box=result_box):
+                    global searches
+                    current_color = box.cget("bg")
+                    new_color = '#19cb07' if current_color == '#505050' else '#505050'
+                    box.config(bg=new_color)
+                    
+                    if isinstance(item.get("Id"), str) and item["Id"].startswith("preset:"):
+                        preset_ids = item["preset_ids"]
+                        if new_color == '#19cb07':
+                            for pid in preset_ids:
+                                if str(pid) not in searches:
+                                    searches.append(str(pid))
                         else:
-                            try:
-                                icon_image = ImageTk.PhotoImage(Image.open(icon_path).resize((70, 70), Image.Resampling.LANCZOS))
-                                image_cache[icon_path] = icon_image
-                            except FileNotFoundError:
-                                icon_image = None
+                            searches = [s for s in searches if s not in preset_ids]
+                    else:
+                        if new_color == '#19cb07':
+                            searches.append(item["Id"])
+                        else:
+                            searches.remove(item["Id"])
+                            
+                    save_state({"searches": searches, "rainbow": Rainbow})
+                    update_searches()
+                    if os.name != 'nt':
+                        toggle_lights()
 
-                        
-                        root.update_idletasks()
-                        result_box = tk.Frame(result_list, bg='#505050', bd=2, relief="groove")
-                        if item["Id"] in searches:
-                            result_box.config(bg='#19cb07')
-                        result_box.pack_propagate(False)
-                        boxy_widty = root.result_frame.winfo_width()
-                        result_box.config(width=boxy_widty, height=100)
-                        result_list.window_create(tk.END, window=result_box)
-                        result_list.insert(tk.END, "\n")
-                        result_list.tag_configure("center", justify='center')
-                        result_list.tag_add("center", "1.0", "end")
+                result_box.bind("<Button-1>", on_click)
+                result_box.tag = item["Id"]
 
-                        def on_click(event, item_id=item["Id"], box=result_box):
-                            global searches
-                            current_color = box.cget("bg")
-                            new_color = '#19cb07' if current_color == '#505050' else '#505050'
-                            box.config(bg=new_color)
-                            if new_color == '#19cb07':
-                                searches.append(item_id)
-                            else:
-                                searches.remove(item_id)
-                            save_state({"searches": searches, "rainbow": Rainbow})  
-                            update_searches()
-                            if os.name == 'nt':
-                                print("warning windows operating system, no lights connected falling back")
-                            else:
-                                toggle_lights()
+                if icon_image:
+                    icon_label = tk.Label(result_box, image=icon_image, bg='#505050')
+                    icon_label.image = icon_image
+                    icon_label.pack(side=tk.LEFT, padx=5, pady=5)
+                    icon_label.bind("<Button-1>", lambda e, i=item: on_click(e, i, result_box))
 
-                        result_box.bind("<Button-1>", on_click)
-                        result_box.tag = item["Id"]
-
-                        if icon_image:
-                            icon_label = tk.Label(result_box, image=icon_image, bg='#505050')
-                            icon_label.image = icon_image
-                            icon_label.pack(side=tk.LEFT, padx=5, pady=5)
-                            icon_label.bind("<Button-1>", on_click)
-
-                        text_label = tk.Label(result_box, text=f"{item['utility']}: {item['description']}", font=("Arial", 14), bg='#505050', fg='white', wraplength=700, justify="left")
-                        text_label.pack(side=tk.LEFT, padx=5, pady=5)
-                        text_label.bind("<Button-1>", on_click)
-
-                        result_box.bind("<Button-1>", on_click)
-                        result_box.tag = item["Id"]
+                text_label = tk.Label(result_box, text=f"{item['utility']}: {item['description']}", 
+                                    font=("Arial", 14), bg='#505050', fg='white', 
+                                    wraplength=700, justify="left")
+                text_label.pack(side=tk.LEFT, padx=5, pady=5)
+                text_label.bind("<Button-1>", lambda e, i=item: on_click(e, i, result_box))
 
                      
+def sleep_animation(canvas, increment_timer, should_animate=True):
+    global backround, root
+    def rainbow_backround():
+        try:
+            if not should_animate:
+                return
+            if not hasattr(backround, 'is_animating'):
+                return
+            
+            import board
+            import neopixel
+            pixel_pin = board.D18
+            num_pixels = 360
+            ORDER = neopixel.GRB
+
+            pixels = neopixel.NeoPixel(
+                pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
+            )
+
+
+            def wheel(pos):
+                if pos < 0 or pos > 255:
+                    r = g = b = 0
+                elif pos < 85:
+                    r = int(pos * 3)
+                    g = int(255 - pos * 3)
+                    b = 0
+                elif pos < 170:
+                    pos -= 85
+                    r = int(255 - pos * 3)
+                    g = 0
+                    b = int(pos * 3)
+                else:
+                    pos -= 170
+                    r = 0
+                    g = int(pos * 3)
+                    b = int(255 - pos * 3)
+                return (r, g, b) if ORDER in (neopixel.RGB, neopixel.GRB) else (r, g, b, 0)
+
+
+            def rainbow_cycle(wait):
+                for j in range(0, 255, 2):
+                    for i in range(int(num_pixels/3)):
+                        pixel_index = (i * 256 // num_pixels) + j
+                        pixels[i] = wheel(pixel_index & 255)
+                        pixels[i+120] = wheel(pixel_index & 255)
+                        pixels[i+240] = wheel(pixel_index & 255)
+                    pixels.show()
+
+            while True:
+                rainbow_cycle(0.00001)
+        except ImportError as e:
+            print("Warning: RPi libraries not available")
+        except Exception as e:
+            messagebox.showerror("Error", "Error in rainbow_backround: " + str(e))
+
+    try:
+        if should_animate:
+            backround = tk.Frame(canvas, width=canvas.winfo_width(), height=canvas.winfo_height(), bg='black')
+            backround.pack_propagate(False)
+            backround.place(x=0, y=0)
+            image_path = os.path.join(os.path.dirname(__file__), "img", "joelpe.png")
+            screen_width = canvas.winfo_width()
+            screen_height = canvas.winfo_height()
+            image_size = min(screen_width, screen_height) // 8
+
+            image = Image.open(image_path)
+            resized_image = image.resize((image_size, image_size), Image.Resampling.LANCZOS)
+
+            mask = Image.new('L', (image_size, image_size), 0)
+            draw = ImageDraw.Draw(mask)
+            draw.ellipse((0, 0, image_size, image_size), fill=255)
+
+            output = Image.new('RGBA', (image_size, image_size), (0, 0, 0, 0))
+            output.paste(resized_image, (0, 0))
+            output.putalpha(mask)
+
+            photo_image = ImageTk.PhotoImage(output)
+            image_label = tk.Label(backround, image=photo_image, bg='black')
+            image_label.image = photo_image
+            
+            x, y = 0, 0
+            dx, dy = 2, 2
+            
+            def move_image():
+                global backround
+                nonlocal x, y, dx, dy
+                
+                x += dx
+                y += dy
+                
+                if x <= 0 or x + image_label.winfo_width() >= backround.winfo_width():
+                    dx *= -1
+                if y <= 0 or y + image_label.winfo_height() >= backround.winfo_height():
+                    dy *= -1
+                    
+                image_label.place(x=x, y=y)
+                
+                if should_animate:
+                    backround.after(20, move_image)
+            
+            move_image()
+            backround.is_animating = True
+            rainbowthread = threading.Thread(target=rainbow_backround, daemon=True).start()
+
+            def stop_animation(event=None):
+                global backround
+                if hasattr(backround, 'is_animating'):
+                    backround.is_animating = False
+                if rainbowthread and rainbowthread.is_alive():
+                    rainbowthread.join(timeout=1.0)
+
+                backround.destroy()
+                root.unbind_all('<Key>')
+                root.unbind_all('<Button-1>')
+                root.unbind_all('<Button-2>')
+                root.unbind_all('<Button-3>')
+                root.unbind_all('<Motion>')
+                root.update_idletasks()
+                root.after(1000, increment_timer) 
+            
+            root.bind_all('<Key>', stop_animation)
+            root.bind_all('<Button-1>', stop_animation)
+            root.bind_all('<Button-2>', stop_animation)
+            root.bind_all('<Button-3>', stop_animation)
+            root.bind_all('<Motion>', stop_animation)
+            
+    except Exception as e:
+        print("error in sleep animation:", str(e))
+
+def start_idle_timer():
+    global idle_timer
+    idle_timer = 0
+
+    def increment_timer():
+        global idle_timer
+        idle_timer += 1
+        if idle_timer >= 600:  # ändra denna till hur länge den ska vara idle innan den går in i "sleep mode" ( 600 = 10 min )
+            sleep_animation(root, start_idle_timer)  
+        else:
+            root.after(1000, increment_timer) 
+
+    increment_timer()
+
+def reset_idle_timer(event=None):
+    global idle_timer
+    idle_timer = 0
+
+
 
 
 def main_ui():
@@ -234,6 +421,12 @@ def main_ui():
             root.after(0, toggle_lights)
 
     start_file_monitor(update_from_state)
+
+    root.bind_all("<Motion>", reset_idle_timer)  
+    root.bind_all("<Key>", reset_idle_timer)    
+    root.bind_all("<Button>", reset_idle_timer) 
+
+    start_idle_timer()
 
     def settings():
         if hasattr(root, 'settings_canvas') and root.settings_canvas.winfo_exists(): 
@@ -703,7 +896,6 @@ def fail_warning(e="unkownn error"):
                 try:
                     import board
                     import neopixel
-                    import time
 
                     pixel_pin = board.D18
                     num_pixels = 360
@@ -727,7 +919,7 @@ def fail_warning(e="unkownn error"):
         warning_thread.start()
         messagebox.showwarning("Critical error", e)
         messagebox.showinfo("Potential solution", "Please restart the system to automatically attempt to fix the error \n if auto fix failed download original copy from github \n 'https://github.com/Oscar-Johannesson/T11-Storage'")
-        
+    
 
 
 if __name__ == "__main__":
