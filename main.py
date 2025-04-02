@@ -1,11 +1,12 @@
 import os, json, random
 import tkinter as tk
-from PIL import Image, ImageTk, ImageDraw
+from PIL import Image, ImageTk, ImageDraw, ImageFilter
 import threading
 from tkinter import messagebox
 import subprocess
 from shared_state import load_state, save_state, start_file_monitor
 import time
+from multiprocessing import Process
 
 
 
@@ -13,6 +14,8 @@ import time
 searches = []
 Rainbow = False 
 allow_searches = True
+should_animate = False
+a_light_sleep = True
 
     
 
@@ -40,15 +43,19 @@ def toggle_lights():
         for search_id in searches:
             search_id = int(search_id)
             if 1 <= search_id <= num_pixels: 
-                if Rainbow:
-                    for i in range(255):
-                        r = int((1 + i) % 255)
-                        g = int((85 + i) % 255) 
-                        b = int((170 + i) % 255)
-                        pixels[int(search_id-1)] = (r, g, b)
-                        time.sleep(0.01)
-                        pixels.show()
-                    pixels[int(search_id)-1] = (255, 255, 255)
+                if Rainbow and search_id == len(searches): 
+                    def rainbow_cycle():
+                            for i in range(255):
+                                r = int((1 + i) % 255)
+                                g = int((85 + i) % 255) 
+                                b = int((170 + i) % 255)
+                                pixels[int(search_id-1)] = (r, g, b)
+                                time.sleep(0.01)
+                                pixels.show()
+                            pixels[int(search_id)-1] = (255, 255, 255)
+                    rainbow_process = Process(target=rainbow_cycle)
+                    rainbow_process.daemon = True
+                    rainbow_process.start()
                 else:
                     pixels[int(search_id)-1] = (255, 255, 255)  
                     
@@ -61,10 +68,16 @@ def toggle_lights():
         messagebox.showerror("Light Control Error", "Error controlling lights: " + str(e))
 
 def periodic_update():
+    global should_animate, searches
     try:
+        old_searches = searches
         update_searches()
-        if os.name != 'nt':
-            toggle_lights()
+        if old_searches != searches:
+            should_animate = False
+        
+        if not should_animate:
+            if os.name != 'nt':
+                toggle_lights()
         root.after(5000, periodic_update)
     except:
         pass
@@ -245,9 +258,11 @@ def search_data(searchphrase):
                 text_label.bind("<Button-1>", lambda e, i=item: on_click(e, i, result_box))
 
                      
-def sleep_animation(canvas, increment_timer, should_animate=True):
-    global backround, root
+def sleep_animation(canvas, increment_timer):
+    global backround, root, should_animate, a_light_sleep
+    should_animate = True
     def rainbow_backround():
+        global backround, should_animate, a_light_sleep
         try:
             if not should_animate:
                 return
@@ -286,15 +301,79 @@ def sleep_animation(canvas, increment_timer, should_animate=True):
 
 
             def rainbow_cycle(wait):
-                for j in range(0, 255, 2):
+                for j in range(0, 255):
                     for i in range(int(num_pixels/3)):
+                        if not hasattr(backround, 'is_animating') or not should_animate:
+                            pixels.fill((0, 0, 0)) 
+                            pixels.show()
+                            return
                         pixel_index = (i * 256 // num_pixels) + j
                         pixels[i] = wheel(pixel_index & 255)
                         pixels[i+120] = wheel(pixel_index & 255)
                         pixels[i+240] = wheel(pixel_index & 255)
                     pixels.show()
+                    time.sleep(0.001)
+            def rainbow_text(text):
+                letters = {
+                    'G': [
+                        [1,1,1,1,1],
+                        [1,0,0,0,0],
+                        [1,0,1,1,1],
+                        [1,0,0,0,1],
+                        [1,1,1,1,1]
+                    ],
+                    'T': [
+                        [1,1,1,1,1],
+                        [0,0,1,0,0],
+                        [0,0,1,0,0],
+                        [0,0,1,0,0],
+                        [0,0,1,0,0]
+                    ]
+                }
+
+                text_pixels = []
+                for char in text:
+                    if char in letters:
+                        for row in letters[char]:
+                            text_pixels.append(row)
+                        text_pixels.append([0,0,0,0,0])
+
+                pattern_width = len(text_pixels[0])
+                pattern_height = len(text_pixels)
+                
+                pixels.fill((0, 0, 0))
+                pixels.show()
+                
+                for col in range(0, 3):  
+                    for y in range(pattern_height):
+                        for x in range(pattern_width):
+                            if not hasattr(backround, 'is_animating') or not should_animate:
+                                return
+                                
+                            base_pos = col * 120
+                            led_pos = base_pos + (y * 5 + x)
+                            
+                            if y < len(text_pixels) and x < len(text_pixels[y]):
+                                if text_pixels[y][x] == 1:
+                                    hue = (x * 50 + y * 10) % 255
+                                    r,g,b = wheel(hue)
+                                    if led_pos < num_pixels:
+                                        pixels[led_pos] = (r,g,b)
+                                else:
+                                    if led_pos < num_pixels:
+                                        pixels[led_pos] = (0, 0, 0)  
+                pixels.show()
+                time.sleep(0.1)
+
+                
 
             while True:
+                if not hasattr(backround, 'is_animating') or not should_animate and a_light_sleep:
+                    pixels.fill((0, 0, 0)) 
+                    pixels.show()
+                    return
+                rainbow_text('GTG')
+                time.sleep(0.1)
                 rainbow_cycle(0.00001)
         except ImportError as e:
             print("Warning: RPi libraries not available")
@@ -306,23 +385,23 @@ def sleep_animation(canvas, increment_timer, should_animate=True):
             backround = tk.Frame(canvas, width=canvas.winfo_width(), height=canvas.winfo_height(), bg='black')
             backround.pack_propagate(False)
             backround.place(x=0, y=0)
-            image_path = os.path.join(os.path.dirname(__file__), "img", "joelpe.png")
+            image_path = os.path.join(os.path.dirname(__file__), "img", "GTG_spets.png")
             screen_width = canvas.winfo_width()
             screen_height = canvas.winfo_height()
             image_size = min(screen_width, screen_height) // 8
 
-            image = Image.open(image_path)
+            image = Image.open(image_path).convert('RGBA')
             resized_image = image.resize((image_size, image_size), Image.Resampling.LANCZOS)
 
             mask = Image.new('L', (image_size, image_size), 0)
             draw = ImageDraw.Draw(mask)
-            draw.ellipse((0, 0, image_size, image_size), fill=255)
+            padding = 1
+            draw.ellipse((padding, padding, image_size-padding, image_size-padding), fill=255)
+            mask = mask.filter(ImageFilter.BLUR)
 
-            output = Image.new('RGBA', (image_size, image_size), (0, 0, 0, 0))
-            output.paste(resized_image, (0, 0))
-            output.putalpha(mask)
+            resized_image.putalpha(mask)
 
-            photo_image = ImageTk.PhotoImage(output)
+            photo_image = ImageTk.PhotoImage(resized_image)
             image_label = tk.Label(backround, image=photo_image, bg='black')
             image_label.image = photo_image
             
@@ -348,14 +427,14 @@ def sleep_animation(canvas, increment_timer, should_animate=True):
             
             move_image()
             backround.is_animating = True
-            rainbowthread = threading.Thread(target=rainbow_backround, daemon=True).start()
+            should_animate = True
+            if a_light_sleep:
+                backround.rainbowthread = threading.Thread(target=rainbow_backround, daemon=True).start()
 
             def stop_animation(event=None):
-                global backround
-                if hasattr(backround, 'is_animating'):
-                    backround.is_animating = False
-                if rainbowthread and rainbowthread.is_alive():
-                    rainbowthread.join(timeout=1.0)
+                global backround, should_animate
+                backround.is_animating = False
+                should_animate = False
 
                 backround.destroy()
                 root.unbind_all('<Key>')
@@ -365,7 +444,7 @@ def sleep_animation(canvas, increment_timer, should_animate=True):
                 root.unbind_all('<Motion>')
                 root.update_idletasks()
                 root.after(1000, increment_timer) 
-            
+            time.sleep(0.5)
             root.bind_all('<Key>', stop_animation)
             root.bind_all('<Button-1>', stop_animation)
             root.bind_all('<Button-2>', stop_animation)
@@ -381,7 +460,7 @@ def start_idle_timer():
 
     def increment_timer():
         global idle_timer
-        idle_timer += 1
+        idle_timer += 1 # ändra så denna rad ska vara en kommen tar eller inte om man vill att sytemet automatisk går in i "sleep mode"
         if idle_timer >= 600:  # ändra denna till hur länge den ska vara idle innan den går in i "sleep mode" ( 600 = 10 min )
             sleep_animation(root, start_idle_timer)  
         else:
@@ -412,9 +491,10 @@ def main_ui():
         root.bind('<F11>', toggle_fullscreen)
 
     def update_from_state(state):
-        global searches, Rainbow, allow_searches
+        global searches, Rainbow, allow_searches, a_light_sleep
         searches = state["searches"]
         Rainbow = state["rainbow"]
+        a_light_sleep = state["a_light_sleep"]
         allow_searches = state.get("allow_searches", True)
         if hasattr(root, 'search_history_frame'):
             root.after(0, update_searches)
@@ -482,12 +562,17 @@ def main_ui():
 
                 frame.bind('<Button-1>', toggle)
                 switch.bind('<Button-1>', toggle)
+            
+                func_name = callFunction.__name__
                 
-                if "A_Animate" in globals() and callFunction == allow_animate_background:
-                    draw_toggle(callFunction(checkstatus=True))
-                elif "myra" in globals() and callFunction == myra:
-                    draw_toggle(callFunction(checkstatus=True))
-                elif "Rainbow" in globals() and callFunction == "rainbow_toggle":
+                state_vars = {
+                    'allow_animate_background': 'A_Animate',
+                    'myra': 'myra', 
+                    'rainbow_toggle': 'Rainbow',
+                    'rainbow_backround_allow_lights': 'a_light_sleep'
+                }
+                
+                if func_name in state_vars and state_vars[func_name] in globals():
                     draw_toggle(callFunction(checkstatus=True))
                 else:
                     draw_toggle()
@@ -560,7 +645,7 @@ def main_ui():
                         canvas.delete('gif')
                         canvas.create_image(0, 0, image=img[frame_index], anchor="nw", tags='gif')
                         next_frame = (frame_index + 1) % len(img)
-                        canvas.after(60, lambda: animate_gif(canvas, img, next_frame))
+                        canvas.after(60 - (50 if current_bg == "one_and_zeroes.gif"else 0), lambda: animate_gif(canvas, img, next_frame))
                     except:
                         pass
 
@@ -739,10 +824,20 @@ def main_ui():
                 Rainbow = is_on
                 save_state({"searches": searches, "rainbow": is_on})
                 toggle_lights()
+            
+            def rainbow_backround_allow_lights(is_on=False, checkstatus=False):
+                global a_light_sleep
+                if checkstatus:
+                    return a_light_sleep
+                a_light_sleep = is_on
+                save_state({"searches": searches, "rainbow": Rainbow, "a_light_sleep": is_on})
+
 
             root.update_idletasks()
             create_toggle(root.settings_canvas.winfo_width()-(root.settings_canvas.winfo_width() * (29.20 / 100)), 150, rainbow_toggle, "rainbow lights", root.settings_canvas)
-
+            create_toggle(root.settings_canvas.winfo_width()-(root.settings_canvas.winfo_width() * (29.20 / 100)), 200, rainbow_backround_allow_lights, "rainbow background att sleep", root.settings_canvas)
+            sleep_button = tk.Button(root.settings_canvas, text="sleep", command=lambda: sleep_animation(root, start_idle_timer), font=("Arial", 12), bg='#808080', fg='white')
+            sleep_button.place(x=root.settings_canvas.winfo_width()-(root.settings_canvas.winfo_width() * (29.20 / 100)), y = 255)
             def check_connected_network():
                 def get_network_info():
                     try:
@@ -909,6 +1004,7 @@ def fail_warning(e="unkownn error"):
                 try:
                     import board
                     import neopixel
+                    
 
                     pixel_pin = board.D18
                     num_pixels = 360

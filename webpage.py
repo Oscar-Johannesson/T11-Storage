@@ -381,7 +381,7 @@ def execute_command():
     
     command = request.json.get("command")
     
-    allowed_commands = ['ls', 'cd', 'date', 'whoami', 'reboot', 'uptime', 'ip', 'hostname', 'shutdown', 'nano', 'reinstall']
+    allowed_commands = ['ls', 'cd', 'date', 'whoami', 'reboot', 'uptime', 'ip', 'hostname', 'shutdown', 'nano', 'reinstall', 'help']
     
     cmd_parts = command.split()
     base_cmd = cmd_parts[0] if cmd_parts else ''
