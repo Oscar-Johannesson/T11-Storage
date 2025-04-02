@@ -381,14 +381,63 @@ def execute_command():
     
     command = request.json.get("command")
     
-    allowed_commands = ['ls', 'pwd', 'date', 'whoami', 'uname', 'df', 'free',
-                       'top', 'ps', 'uptime', 'ip', 'hostname']
+    allowed_commands = ['ls', 'cd', 'date', 'whoami', 'reboot', 'uptime', 'ip', 'hostname', 'shutdown', 'nano', 'reinstall']
     
     cmd_parts = command.split()
     base_cmd = cmd_parts[0] if cmd_parts else ''
     
     if base_cmd not in allowed_commands:
         return {"error": f"Command not allowed. Allowed commands: {', '.join(allowed_commands)}"}
+    
+    if base_cmd == 'reinstall': #denna är en custom commafo för att instalera och validera att filerna är rätt variant
+        try:
+            repo_path = os.path.join(os.path.dirname(__file__), "temp_repo")
+            if os.path.exists(repo_path):
+                shutil.rmtree(repo_path)
+            
+            subprocess.run(["git", "clone", "https://github.com/Oscar-Johannesson/T11-Storage.git", repo_path], check=True)
+            
+            required_files = ["dat/utilities.json", "dat/presets.json"]
+            template_files = ["templates/index.html", "templates/login.html", "templates/terminal.html"]
+            python_files = ["main.py", "shared_state.py", "webpage.py"]
+
+            for file in required_files:
+                src = os.path.join(repo_path, file)
+                dst = os.path.join(os.path.dirname(__file__), file)
+                if os.path.exists(src):
+                    with open(src, 'r') as f:
+                        json.load(f)  
+                    os.makedirs(os.path.dirname(dst), exist_ok=True)
+                    shutil.copy2(src, dst)
+                else:
+                    raise FileNotFoundError(f"Required file {file} not found in repository")
+
+            for file in template_files:
+                src = os.path.join(repo_path, file)
+                dst = os.path.join(os.path.dirname(__file__), file)
+                if os.path.exists(src):
+                    os.makedirs(os.path.dirname(dst), exist_ok=True)
+                    shutil.copy2(src, dst)
+                else:
+                    raise FileNotFoundError(f"Required template {file} not found in repository")
+
+            for file in python_files:
+                src = os.path.join(repo_path, file)
+                dst = os.path.join(os.path.dirname(__file__), file)
+                if os.path.exists(src):
+                    with open(src, 'r') as f:
+                        compile(f.read(), file, 'exec') 
+                    shutil.copy2(src, dst)
+                else:
+                    raise FileNotFoundError(f"Required Python file {file} not found in repository")
+
+            shutil.rmtree(repo_path)
+            
+        except Exception as e:
+            return {"error": f"Failed to reinstall files: {str(e)}"}
+        
+        return {"success": True, "message": "validated files reinstalled"}
+
     
     try:
         result = subprocess.run(

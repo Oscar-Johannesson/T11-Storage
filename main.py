@@ -487,6 +487,8 @@ def main_ui():
                     draw_toggle(callFunction(checkstatus=True))
                 elif "myra" in globals() and callFunction == myra:
                     draw_toggle(callFunction(checkstatus=True))
+                elif "Rainbow" in globals() and callFunction == "rainbow_toggle":
+                    draw_toggle(callFunction(checkstatus=True))
                 else:
                     draw_toggle()
                 
@@ -730,6 +732,17 @@ def main_ui():
 
             create_toggle(30, 150, myra, "myra?", root.settings_canvas)
 
+            def rainbow_toggle(is_on=False, checkstatus=False):
+                global Rainbow
+                if checkstatus:
+                    return Rainbow
+                Rainbow = is_on
+                save_state({"searches": searches, "rainbow": is_on})
+                toggle_lights()
+
+            root.update_idletasks()
+            create_toggle(root.settings_canvas.winfo_width()-(root.settings_canvas.winfo_width() * (29.20 / 100)), 150, rainbow_toggle, "rainbow lights", root.settings_canvas)
+
             def check_connected_network():
                 def get_network_info():
                     try:
@@ -824,7 +837,7 @@ def main_ui():
         def on_leave(e):
             e.widget['background'] = '#808080'
 
-        home_button = create_rounded_button(root, text="Home", command=lambda: print("Home clicked"), **button_style)
+        home_button = create_rounded_button(root, text="Home", command=lambda: messagebox.showinfo("Home button", "you are already here? are you not?"), **button_style)
         home_button.bind("<Enter>", on_enter)
         home_button.bind("<Leave>", on_leave)
         home_button.place(x=10, y=10)
@@ -834,7 +847,7 @@ def main_ui():
         settings_button.bind("<Leave>", on_leave)
         settings_button.place(x=10, y=40)
 
-        admin_button = create_rounded_button(root, text="Admin", command=lambda: messagebox.showerror("nej", "du får inte!"), **button_style)
+        admin_button = create_rounded_button(root, text="Admin", command=lambda: messagebox.showwarning("nej", "du får inte!"), **button_style)
         admin_button.bind("<Enter>", on_enter)
         admin_button.bind("<Leave>", on_leave)
         admin_button.place(x=10, y=70)
@@ -870,7 +883,7 @@ def main_ui():
         clear_button = create_rounded_button(root, text="Clear Searches", command=lambda: clear_searches(), **button_style)
         clear_button.bind("<Enter>", on_enter)
         clear_button.bind("<Leave>", on_leave)
-        clear_button.place(x=screen_width - 150, y=120)
+        clear_button.place(x=screen_width - 165, y=110)
 
         periodic_update()
 
